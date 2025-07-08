@@ -1,0 +1,288 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'uz'}},
+    {params: {lang: 'en'}},
+    {params: {lang: 'ru'}}
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Cultura Uzbeka - Tradiciones, Gastronomía y Arte" description="Descubre la rica cultura de Uzbekistán: gastronomía tradicional, arquitectura islámica, artesanías y costumbres locales.">
+	<Navigation />
+	
+	<section class="section hero-culture">
+		<div class="container">
+			<div class="section-content">
+				<h1>Cultura Uzbeka</h1>
+				<p class="lead">Un fascinante mosaico de tradiciones que han perdurado durante siglos en el corazón de Asia Central.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section gastronomy">
+		<div class="container">
+			<div class="section-content">
+				<h2>Gastronomía Tradicional</h2>
+				<div class="culture-grid">
+					<div class="culture-card">
+						<img src="https://images.pexels.com/photos/5853815/pexels-photo-5853815.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plov uzbeko" />
+						<div class="culture-content">
+							<h3>🍚 Plov - El Plato Nacional</h3>
+							<p>Más que un simple arroz, el plov es una ceremonia culinaria. Preparado tradicionalmente por hombres en grandes calderos, combina arroz, carne de cordero, zanahorias y especias únicas como el comino y la cúrcuma.</p>
+						</div>
+					</div>
+					
+					<div class="culture-card">
+						<img src="https://images.pexels.com/photos/18134988/pexels-photo-18134988.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Somsa tradicional" />
+						<div class="culture-content">
+							<h3>🥟 Somsa - Sabor en Cada Bocado</h3>
+							<p>Estos deliciosos pasteles horneados en hornos de barro tradicionales (tandir) están rellenos de carne, cebolla y especias. Su forma triangular y su masa crujiente los convierten en el aperitivo perfecto.</p>
+						</div>
+					</div>
+					
+					<div class="culture-card">
+						<img src="https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ceremonia del té" />
+						<div class="culture-content">
+							<h3>🍵 Ceremonia del Té</h3>
+							<p>El té verde es sagrado en Uzbekistán. Se sirve en pequeños cuencos llamados 'piala' y representa hospitalidad. La primera taza se vierte, se vacía y se vuelve a llenar tres veces antes de servir.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section traditions">
+		<div class="container">
+			<div class="section-content">
+				<h2>Tradiciones y Costumbres</h2>
+				<div class="traditions-grid">
+					<div class="tradition-item">
+						<div class="tradition-icon">💃</div>
+						<h3>Danzas Tradicionales</h3>
+						<p>Los bailes uzbekos como el "Lazgi" y "Khorezm" narran historias de amor, naturaleza y vida cotidiana con movimientos elegantes y vestuarios coloridos.</p>
+					</div>
+					
+					<div class="tradition-item">
+						<div class="tradition-icon">👘</div>
+						<h3>Vestimenta Tradicional</h3>
+						<p>Los chapanes (túnicas de seda) y los doppi (gorros tradicionales) reflejan la maestría textil uzbeka. Las mujeres usan atlas (seda iridiscente) en colores vibrantes.</p>
+					</div>
+					
+					<div class="tradition-item">
+						<div class="tradition-icon">🏛️</div>
+						<h3>Arquitectura Islámica</h3>
+						<p>Las madrasas, mezquitas y mausoleos muestran la perfección geométrica islámica con azulejos turquesa, cúpulas doradas y minaretes elegantes.</p>
+					</div>
+					
+					<div class="tradition-item">
+						<div class="tradition-icon">🎨</div>
+						<h3>Artesanías</h3>
+						<p>Desde alfombras de seda hasta cerámica de Rishtan, pasando por la talla de madera y la orfebrería, cada región tiene su especialidad artesanal.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section cultural-tips">
+		<div class="container">
+			<div class="section-content">
+				<h2>Etiqueta Cultural</h2>
+				<div class="tips-container">
+					<div class="tip-card">
+						<h3>🏠 En las Casas</h3>
+						<ul>
+							<li>Siempre quítate los zapatos al entrar</li>
+							<li>Trae un pequeño regalo para los anfitriones</li>
+							<li>Acepta siempre el té que te ofrezcan</li>
+							<li>Respeta a los mayores y déjalos hablar primero</li>
+						</ul>
+					</div>
+					
+					<div class="tip-card">
+						<h3>🕌 En Lugares Sagrados</h3>
+						<ul>
+							<li>Viste de forma conservadora</li>
+							<li>Las mujeres deben cubrir la cabeza</li>
+							<li>Habla en voz baja y muestra respeto</li>
+							<li>Pregunta antes de tomar fotografías</li>
+						</ul>
+					</div>
+					
+					<div class="tip-card">
+						<h3>🛍️ En el Bazar</h3>
+						<ul>
+							<li>El regateo es parte de la cultura</li>
+							<li>Muestra interés genuino por los productos</li>
+							<li>Sé paciente y disfruta la conversación</li>
+							<li>Un apretón de manos sella el trato</li>
+						</ul>
+					</div>
+				</div>
+				
+				<a href={getLocalizedPath('/', lang)} class="back-to-top">{t('back.home')}</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-culture {
+		background: linear-gradient(135deg, #1A365D 0%, #2C5282 100%);
+		color: white;
+		text-align: center;
+		padding: 8rem 0 5rem;
+	}
+
+	.hero-culture h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	.lead {
+		font-size: 1.3rem;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.culture-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 3rem;
+		margin-top: 3rem;
+	}
+
+	.culture-card {
+		background: white;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.culture-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.culture-card img {
+		width: 100%;
+		height: 200px;
+		object-fit: cover;
+	}
+
+	.culture-content {
+		padding: 2rem;
+	}
+
+	.culture-content h3 {
+		color: #2C5282;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.traditions-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.tradition-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		text-align: center;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s ease;
+	}
+
+	.tradition-item:hover {
+		transform: translateY(-3px);
+	}
+
+	.tradition-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.tradition-item h3 {
+		color: #2C5282;
+		margin-bottom: 1rem;
+	}
+
+	.cultural-tips {
+		background: #F8F9FA;
+	}
+
+	.tips-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.tip-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+	}
+
+	.tip-card h3 {
+		color: #2C5282;
+		margin-bottom: 1.5rem;
+		font-size: 1.2rem;
+	}
+
+	.tip-card ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.tip-card li {
+		padding: 0.5rem 0;
+		color: #4A5568;
+		border-bottom: 1px solid #E2E8F0;
+	}
+
+	.tip-card li:last-child {
+		border-bottom: none;
+	}
+
+	.tip-card li:before {
+		content: "✓";
+		color: #D4AF37;
+		font-weight: bold;
+		margin-right: 0.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.culture-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.traditions-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.tips-container {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-culture h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>

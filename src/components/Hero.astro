@@ -1,3 +1,10 @@
+---
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class="hero">
 	<div class="hero-background">
 		<img src="https://images.pexels.com/photos/13811843/pexels-photo-13811843.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop" alt="Registan, Samarkand" />
@@ -7,17 +14,17 @@
 	<div class="container">
 		<div class="hero-content">
 			<h1 class="hero-title">
-				Descubre Uzbekistán<br>
-				<span class="hero-subtitle">con todos tus sentidos</span>
+				{t('hero.title')}<br>
+				<span class="hero-subtitle">{t('hero.subtitle')}</span>
 			</h1>
 			
 			<p class="hero-description">
-				Una tierra de hospitalidad, historia y belleza donde cada rincón cuenta una historia milenaria de la Ruta de la Seda.
+				{t('hero.description')}
 			</p>
 			
 			<div class="hero-actions">
-				<a href="/itinerarios" class="btn btn-primary">Planifica tu viaje</a>
-				<a href="/cultura" class="btn btn-secondary">Explorar cultura</a>
+				<a href={getLocalizedPath('/itinerarios', lang)} class="btn btn-primary">{t('hero.plan')}</a>
+				<a href={getLocalizedPath('/cultura', lang)} class="btn btn-secondary">{t('hero.explore')}</a>
 			</div>
 		</div>
 	</div>

@@ -1,5 +1,19 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
 <!doctype html>
-<html lang="es">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +22,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-		<title>{Astro.props.title || "Uzbekistán - Guía de Viaje Cultural"}</title>
-		<meta name="description" content={Astro.props.description || "Descubre la magia de Uzbekistán con nuestra guía completa para viajeros españoles. Cultura, destinos, consejos y rutas por la Ruta de la Seda."} />
+		<title>{title || t('site.title')}</title>
+		<meta name="description" content={description || t('site.description')} />
 	</head>
 	<body>
 		<slot />

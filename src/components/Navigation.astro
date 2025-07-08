@@ -1,10 +1,20 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <nav class="navbar">
 	<div class="container">
 		<div class="nav-content">
-			<a href="/" class="logo">
+			<a href={getLocalizedPath('/', lang)} class="logo">
 				<span class="logo-text">Uzbekistán</span>
 				<span class="logo-subtitle">Guía Cultural</span>
 			</a>
+			
+			<LanguageSwitcher />
 			
 			<button class="menu-toggle" id="menuToggle">
 				<span></span>
@@ -13,13 +23,13 @@
 			</button>
 			
 			<ul class="nav-menu" id="navMenu">
-				<li><a href="/">Inicio</a></li>
-				<li><a href="/cultura">Cultura</a></li>
-				<li><a href="/destinos">Destinos</a></li>
-				<li><a href="/consejos">Consejos</a></li>
-				<li><a href="/itinerarios">Itinerarios</a></li>
-				<li><a href="/galeria">Galería</a></li>
-				<li><a href="/contacto">Contacto</a></li>
+				<li><a href={getLocalizedPath('/', lang)}>{t('nav.home')}</a></li>
+				<li><a href={getLocalizedPath('/cultura', lang)}>{t('nav.culture')}</a></li>
+				<li><a href={getLocalizedPath('/destinos', lang)}>{t('nav.destinations')}</a></li>
+				<li><a href={getLocalizedPath('/consejos', lang)}>{t('nav.tips')}</a></li>
+				<li><a href={getLocalizedPath('/itinerarios', lang)}>{t('nav.itineraries')}</a></li>
+				<li><a href={getLocalizedPath('/galeria', lang)}>{t('nav.gallery')}</a></li>
+				<li><a href={getLocalizedPath('/contacto', lang)}>{t('nav.contact')}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -41,6 +51,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		gap: 2rem;
 	}
 
 	.logo {
@@ -61,6 +72,11 @@
 		font-size: 0.8rem;
 		color: #D4AF37;
 		font-weight: 400;
+	}
+
+	.nav-content > :nth-child(2) {
+		margin-left: auto;
+		margin-right: 1rem;
 	}
 
 	.nav-menu {
@@ -104,6 +120,10 @@
 	@media (max-width: 768px) {
 		.menu-toggle {
 			display: flex;
+		}
+		
+		.nav-content > :nth-child(2) {
+			margin-right: 0;
 		}
 
 		.nav-menu {

@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Contacto - Planifica tu Viaje a Uzbekistán" description="Ponte en contacto con nosotros para planificar tu viaje a Uzbekistán. Consultas personalizadas, asesoramiento y ayuda para organizar tu aventura.">
@@ -23,7 +27,7 @@ import Navigation from '../components/Navigation.astro';
 						<div class="contact-icon">📧</div>
 						<h3>Email</h3>
 						<p>Para consultas detalladas y planificación personalizada</p>
-						<a href="mailto:info@uzbekistan-guia.com" class="contact-link">info@uzbekistan-guia.com</a>
+						<a href="mailto:torex.amaki@gmail.com" class="contact-link">torex.amaki@gmail.com</a>
 						<small>Respuesta en 24 horas</small>
 					</div>
 					
@@ -31,7 +35,7 @@ import Navigation from '../components/Navigation.astro';
 						<div class="contact-icon">📱</div>
 						<h3>WhatsApp</h3>
 						<p>Consultas rápidas y asesoramiento inmediato</p>
-						<a href="https://wa.me/34600000000" class="contact-link" target="_blank">+34 600 000 000</a>
+						<a href="https://wa.me/998995340313" class="contact-link" target="_blank">+998 99 534 03 13</a>
 						<small>Lunes a Viernes 9:00-18:00</small>
 					</div>
 					
@@ -39,7 +43,7 @@ import Navigation from '../components/Navigation.astro';
 						<div class="contact-icon">✈️</div>
 						<h3>Telegram</h3>
 						<p>Canal directo para viajeros frecuentes</p>
-						<a href="https://t.me/uzbekistan_guia" class="contact-link" target="_blank">@uzbekistan_guia</a>
+						<a href="https://t.me/+998995340313" class="contact-link" target="_blank">+998 99 534 03 13</a>
 						<small>Soporte en español</small>
 					</div>
 				</div>
@@ -233,12 +237,12 @@ import Navigation from '../components/Navigation.astro';
 					</div>
 					
 					<div class="faq-item">
-						<h3>¿Cuántos días necesito para ver lo principal?</h3>
+						<p>Email: torex.amaki@gmail.com</p>
 						<p>Mínimo 5 días para las ciudades principales (Tashkent, Samarkand, Bukhara). Para una experiencia completa, recomendamos 7-10 días.</p>
 					</div>
 				</div>
 				
-				<a href="/" class="back-to-top">← Volver al inicio</a>
+				<a href={getLocalizedPath('/', lang)} class="back-to-top">{t('back.home')}</a>
 			</div>
 		</div>
 	</section>
