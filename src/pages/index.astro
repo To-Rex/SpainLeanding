@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="Uzbekistán - Guía de Viaje Cultural para Españoles" description="Descubre la magia de Uzbekistán con nuestra guía completa para viajeros españoles. Cultura, destinos, consejos y rutas por la Ruta de la Seda.">
+	<Navigation />
+	<Hero />
+	
+	<section class="section highlights">
+		<div class="container">
+			<div class="section-content">
+				<h2>¿Por qué visitar Uzbekistán?</h2>
+				<div class="highlights-grid">
+					<div class="highlight-card">
+						<div class="highlight-icon">🏛️</div>
+						<h3>Patrimonio UNESCO</h3>
+						<p>Ciudades como Samarkand, Bukhara y Khiva son joyas arquitectónicas declaradas Patrimonio de la Humanidad.</p>
+					</div>
+					
+					<div class="highlight-card">
+						<div class="highlight-icon">🍽️</div>
+						<h3>Gastronomía Única</h3>
+						<p>Descubre sabores auténticos como el plov, somsa y el ritual del té en un ambiente de hospitalidad incomparable.</p>
+					</div>
+					
+					<div class="highlight-card">
+						<div class="highlight-icon">🚗</div>
+						<h3>Fácil para Españoles</h3>
+						<p>Sin visa para estancias cortas, vuelos directos desde España y una moneda accesible para viajeros europeos.</p>
+					</div>
+				</div>
+				
+				<div class="cta-section">
+					<h3>¡Comienza tu aventura uzbeque!</h3>
+					<p>Explora nuestras secciones para planificar el viaje perfecto por la Ruta de la Seda.</p>
+					<div class="cta-buttons">
+						<a href="/destinos" class="btn">Ver destinos</a>
+						<a href="/consejos" class="btn btn-outline">Consejos útiles</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.highlights {
+		background: linear-gradient(135deg, #F8F9FA 0%, #E6F3FF 100%);
+		padding: 6rem 0;
+	}
+
+	.highlights-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2.5rem;
+		margin: 3rem 0;
+	}
+
+	.highlight-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 12px;
+		text-align: center;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.highlight-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+	}
+
+	.highlight-icon {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.highlight-card h3 {
+		color: #2C5282;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.highlight-card p {
+		color: #4A5568;
+		line-height: 1.6;
+	}
+
+	.cta-section {
+		text-align: center;
+		margin-top: 5rem;
+		padding: 3rem;
+		background: white;
+		border-radius: 16px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+	}
+
+	.cta-section h3 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 1.8rem;
+	}
+
+	.cta-section p {
+		font-size: 1.1rem;
+		margin-bottom: 2rem;
+		color: #4A5568;
+	}
+
+	.cta-buttons {
+		display: flex;
+		gap: 1.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.btn-outline {
+		background: transparent;
+		border: 2px solid #D4AF37;
+		color: #D4AF37;
+	}
+
+	.btn-outline:hover {
+		background: #D4AF37;
+		color: #1A365D;
+	}
+
+	@media (max-width: 768px) {
+		.highlights-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.highlight-card {
+			padding: 2rem;
+		}
+
+		.cta-section {
+			padding: 2rem;
+		}
+
+		.cta-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn {
+			width: 100%;
+			max-width: 250px;
+		}
+	}
+</style>
