@@ -2,9 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Uzbekistán - Guía de Viaje Cultural para Españoles" description="Descubre la magia de Uzbekistán con nuestra guía completa para viajeros españoles. Cultura, destinos, consejos y rutas por la Ruta de la Seda.">
+<Layout title={t('site.title')} description={t('site.description')}>
 	<Navigation />
 	<Hero />
 	
