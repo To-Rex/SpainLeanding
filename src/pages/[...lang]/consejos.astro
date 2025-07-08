@@ -1,0 +1,608 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'uz'}},
+    {params: {lang: 'en'}},
+    {params: {lang: 'ru'}}
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Consejos Útiles para Viajar a Uzbekistán desde España" description="Guía completa con consejos prácticos para españoles: visados, transporte, dinero, comunicación y normas culturales.">
+	<Navigation />
+	
+	<section class="section hero-tips">
+		<div class="container">
+			<div class="section-content">
+				<h1>Consejos Útiles</h1>
+				<p class="lead">Todo lo que necesitas saber para planificar tu viaje a Uzbekistán desde España de forma exitosa.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section visa-info">
+		<div class="container">
+			<div class="section-content">
+				<h2>📋 Visado y Documentación</h2>
+				<div class="info-grid">
+					<div class="info-card visa-card">
+						<h3>🇪🇸 Para Ciudadanos Españoles</h3>
+						<div class="visa-details">
+							<div class="visa-option">
+								<h4>Sin Visa (hasta 30 días)</h4>
+								<ul>
+									<li>Entrada libre para turismo</li>
+									<li>Pasaporte válido por 6 meses</li>
+									<li>Billete de ida y vuelta</li>
+									<li>Registro obligatorio en hoteles</li>
+								</ul>
+							</div>
+							<div class="visa-option">
+								<h4>E-Visa (más de 30 días)</h4>
+								<ul>
+									<li>Solicitud online: <a href="https://e-visa.gov.uz" target="_blank">e-visa.gov.uz</a></li>
+									<li>Proceso: 3-5 días hábiles</li>
+									<li>Costo: 20-40 USD</li>
+									<li>Válida hasta 90 días</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="info-card documents-card">
+						<h3>📄 Documentos Necesarios</h3>
+						<ul class="documents-list">
+							<li>Pasaporte con vigencia mínima de 6 meses</li>
+							<li>Seguro de viaje internacional</li>
+							<li>Prueba de alojamiento (reserva hotel)</li>
+							<li>Billete de avión ida y vuelta</li>
+							<li>Formulario de migración (en el avión)</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section money-transport">
+		<div class="container">
+			<div class="section-content">
+				<h2>💰 Dinero y Transporte</h2>
+				<div class="info-grid">
+					<div class="info-card money-card">
+						<h3>💵 Moneda y Cambio</h3>
+						<div class="money-info">
+							<p><strong>Moneda:</strong> Som uzbeko (UZS)</p>
+							<p><strong>Cambio aproximado:</strong> 1 EUR = 12,000-13,000 UZS</p>
+							<div class="money-tips">
+								<h4>Consejos financieros:</h4>
+								<ul>
+									<li>Lleva euros o dólares en efectivo</li>
+									<li>Cambio en bancos oficiales o casas de cambio</li>
+									<li>Tarjetas aceptadas en hoteles y restaurantes principales</li>
+									<li>Retiros en cajeros automáticos disponibles en ciudades</li>
+									<li>Negocia precios en som, no en euros</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="info-card transport-card">
+						<h3>🚗 Transporte Interno</h3>
+						<div class="transport-options">
+							<div class="transport-option">
+								<h4>🚄 Trenes de Alta Velocidad</h4>
+								<p>Afrosiyob conecta Tashkent-Samarkand-Bukhara (3-4 horas)</p>
+								<p><strong>Precio:</strong> 15-30 EUR</p>
+							</div>
+							<div class="transport-option">
+								<h4>🚌 Autobuses</h4>
+								<p>Económicos entre ciudades principales</p>
+								<p><strong>Precio:</strong> 5-10 EUR</p>
+							</div>
+							<div class="transport-option">
+								<h4>🚗 Taxi/Uber</h4>
+								<p>Yandex Taxi funciona en ciudades principales</p>
+								<p><strong>Precio:</strong> 2-5 EUR trayectos urbanos</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section communication">
+		<div class="container">
+			<div class="section-content">
+				<h2>📱 Comunicación y Internet</h2>
+				<div class="info-grid">
+					<div class="info-card sim-card">
+						<h3>📶 Tarjetas SIM</h3>
+						<div class="sim-providers">
+							<div class="provider">
+								<h4>Ucell</h4>
+								<p>Mejor cobertura nacional</p>
+								<p><strong>Precio:</strong> 5-10 EUR (5-10 GB)</p>
+							</div>
+							<div class="provider">
+								<h4>Beeline</h4>
+								<p>Buena velocidad 4G</p>
+								<p><strong>Precio:</strong> 3-8 EUR (3-8 GB)</p>
+							</div>
+							<div class="provider">
+								<h4>UMS</h4>
+								<p>Opción económica</p>
+								<p><strong>Precio:</strong> 2-5 EUR (2-5 GB)</p>
+							</div>
+						</div>
+						<p class="sim-note">💡 Compra en el aeropuerto o tiendas oficiales. Necesitas pasaporte para el registro.</p>
+					</div>
+					
+					<div class="info-card internet-card">
+						<h3>💻 Internet y WiFi</h3>
+						<ul>
+							<li>WiFi gratuito en hoteles, restaurantes y cafés</li>
+							<li>Velocidad decent en ciudades principales</li>
+							<li>Algunas redes sociales pueden tener restricciones</li>
+							<li>VPN recomendado para acceso completo</li>
+							<li>Aplicaciones de traducción funcionan sin problemas</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section cultural-norms">
+		<div class="container">
+			<div class="section-content">
+				<h2>🎭 Normas Culturales y Vestimenta</h2>
+				<div class="cultural-grid">
+					<div class="cultural-card dress-code">
+						<h3>👔 Código de Vestimenta</h3>
+						<div class="dress-sections">
+							<div class="dress-section">
+								<h4>👩 Para Mujeres</h4>
+								<ul>
+									<li>Cubre hombros y piernas en lugares religiosos</li>
+									<li>Lleva pañuelo para cubrir la cabeza en mezquitas</li>
+									<li>Ropa holgada y modesta</li>
+									<li>Evita escotes pronunciados</li>
+								</ul>
+							</div>
+							<div class="dress-section">
+								<h4>👨 Para Hombres</h4>
+								<ul>
+									<li>Pantalones largos en lugares sagrados</li>
+									<li>Camisa con mangas en mezquitas</li>
+									<li>Zapatos fáciles de quitar</li>
+									<li>Evita shorts en sitios religiosos</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="cultural-card etiquette">
+						<h3>🤝 Etiqueta Social</h3>
+						<div class="etiquette-tips">
+							<h4>✅ Hacer</h4>
+							<ul>
+								<li>Saluda con la mano derecha</li>
+								<li>Acepta invitaciones a té</li>
+								<li>Quítate los zapatos en casas</li>
+								<li>Respeta a los mayores</li>
+								<li>Pide permiso para fotografiar personas</li>
+							</ul>
+							
+							<h4>❌ Evitar</h4>
+							<ul>
+								<li>Mostrar plantas de los pies</li>
+								<li>Usar la mano izquierda para comer</li>
+								<li>Rechazar hospitalidad bruscamente</li>
+								<li>Displays públicos de afecto</li>
+								<li>Alcohol en público (excepto restaurantes)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section health-safety">
+		<div class="container">
+			<div class="section-content">
+				<h2>🏥 Salud y Seguridad</h2>
+				<div class="health-grid">
+					<div class="health-card vaccinations">
+						<h3>💉 Vacunas y Salud</h3>
+						<ul>
+							<li><strong>Obligatorias:</strong> Ninguna para españoles</li>
+							<li><strong>Recomendadas:</strong> Hepatitis A, Tétanos actualizado</li>
+							<li><strong>Agua:</strong> Bebe agua embotellada</li>
+							<li><strong>Comida:</strong> Restaurantes establecidos son seguros</li>
+							<li><strong>Seguro:</strong> Contrata seguro médico internacional</li>
+						</ul>
+					</div>
+					
+					<div class="health-card safety">
+						<h3>🛡️ Seguridad General</h3>
+						<ul>
+							<li>Uzbekistán es muy seguro para turistas</li>
+							<li>Criminalidad baja en zonas turísticas</li>
+							<li>Policía turística en sitios principales</li>
+							<li>Evita frontera con Afganistán</li>
+							<li>Guarda copias de documentos importantes</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section emergency-contacts">
+		<div class="container">
+			<div class="section-content">
+				<h2>🚨 Contactos de Emergencia</h2>
+				<div class="emergency-grid">
+					<div class="emergency-card">
+						<h3>📞 Números Útiles</h3>
+						<ul class="emergency-list">
+							<li><strong>Emergencias:</strong> 112</li>
+							<li><strong>Policía:</strong> 102</li>
+							<li><strong>Bomberos:</strong> 101</li>
+							<li><strong>Ambulancia:</strong> 103</li>
+							<li><strong>Embajada España en Tashkent:</strong> +998 71 120 8660</li>
+						</ul>
+					</div>
+					
+					<div class="emergency-card">
+						<h3>🏢 Servicios Consulares</h3>
+						<p><strong>Embajada de España en Uzbekistán</strong></p>
+						<p>Dirección: Afrosiyob St 8, Tashkent</p>
+						<p>Email: emb.tashkent@maec.es</p>
+						<p>Horario: Lunes-Viernes 9:00-17:00</p>
+					</div>
+				</div>
+				
+				<a href={getLocalizedPath('/', lang)} class="back-to-top">{t('back.home')}</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-tips {
+		background: linear-gradient(135deg, #3182CE 0%, #4299E1 100%);
+		color: white;
+		text-align: center;
+		padding: 8rem 0 5rem;
+	}
+
+	.hero-tips h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	.lead {
+		font-size: 1.3rem;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.info-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	}
+
+	.info-card h3 {
+		color: #2C5282;
+		margin-bottom: 1.5rem;
+		font-size: 1.3rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.visa-details {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.visa-option {
+		padding: 1rem;
+		background: #F8F9FA;
+		border-radius: 8px;
+		border-left: 4px solid #D4AF37;
+	}
+
+	.visa-option h4 {
+		color: #1A365D;
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	.visa-option ul,
+	.documents-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.visa-option li,
+	.documents-list li {
+		padding: 0.3rem 0;
+		color: #4A5568;
+	}
+
+	.visa-option li:before,
+	.documents-list li:before {
+		content: "✓";
+		color: #38A169;
+		font-weight: bold;
+		margin-right: 0.5rem;
+	}
+
+	.money-info p {
+		margin-bottom: 0.5rem;
+		color: #4A5568;
+	}
+
+	.money-tips {
+		margin-top: 1rem;
+		padding: 1rem;
+		background: #E6F3FF;
+		border-radius: 8px;
+	}
+
+	.money-tips h4 {
+		color: #2C5282;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+	}
+
+	.transport-options {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.transport-option {
+		padding: 1rem;
+		background: #F8F9FA;
+		border-radius: 8px;
+		border-left: 4px solid #38A169;
+	}
+
+	.transport-option h4 {
+		color: #1A365D;
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+
+	.transport-option p {
+		color: #4A5568;
+		margin-bottom: 0.3rem;
+		font-size: 0.9rem;
+	}
+
+	.sim-providers {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.provider {
+		padding: 1rem;
+		background: #F8F9FA;
+		border-radius: 8px;
+		border-left: 4px solid #667EEA;
+	}
+
+	.provider h4 {
+		color: #2C5282;
+		margin-bottom: 0.5rem;
+		font-size: 1rem;
+	}
+
+	.provider p {
+		color: #4A5568;
+		margin-bottom: 0.3rem;
+		font-size: 0.9rem;
+	}
+
+	.sim-note {
+		background: #FFF5F5;
+		padding: 1rem;
+		border-radius: 8px;
+		border-left: 4px solid #F56565;
+		color: #C53030;
+		font-size: 0.9rem;
+	}
+
+	.cultural-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.cultural-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	}
+
+	.cultural-card h3 {
+		color: #2C5282;
+		margin-bottom: 1.5rem;
+		font-size: 1.3rem;
+	}
+
+	.dress-sections {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	.dress-section {
+		padding: 1rem;
+		background: #F8F9FA;
+		border-radius: 8px;
+	}
+
+	.dress-section h4 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+	}
+
+	.etiquette-tips h4 {
+		color: #1A365D;
+		margin: 1rem 0 0.5rem 0;
+		font-size: 1rem;
+	}
+
+	.etiquette-tips ul {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 1rem;
+	}
+
+	.etiquette-tips li {
+		padding: 0.3rem 0;
+		color: #4A5568;
+		font-size: 0.9rem;
+	}
+
+	.etiquette-tips li:before {
+		margin-right: 0.5rem;
+		font-weight: bold;
+	}
+
+	.health-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.health-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	}
+
+	.health-card h3 {
+		color: #2C5282;
+		margin-bottom: 1.5rem;
+		font-size: 1.3rem;
+	}
+
+	.health-card ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.health-card li {
+		padding: 0.5rem 0;
+		color: #4A5568;
+		border-bottom: 1px solid #E2E8F0;
+	}
+
+	.health-card li:last-child {
+		border-bottom: none;
+	}
+
+	.health-card li:before {
+		content: "•";
+		color: #3182CE;
+		font-weight: bold;
+		margin-right: 0.5rem;
+	}
+
+	.emergency-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.emergency-card {
+		background: #FFF5F5;
+		padding: 2rem;
+		border-radius: 12px;
+		border-left: 4px solid #F56565;
+	}
+
+	.emergency-card h3 {
+		color: #C53030;
+		margin-bottom: 1.5rem;
+		font-size: 1.3rem;
+	}
+
+	.emergency-list {
+		list-style: none;
+		padding: 0;
+	}
+
+	.emergency-list li {
+		padding: 0.5rem 0;
+		color: #4A5568;
+		border-bottom: 1px solid #FED7D7;
+	}
+
+	.emergency-list li:last-child {
+		border-bottom: none;
+	}
+
+	.emergency-card p {
+		color: #4A5568;
+		margin-bottom: 0.5rem;
+		font-size: 0.9rem;
+	}
+
+	@media (max-width: 768px) {
+		.info-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.cultural-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.health-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.emergency-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-tips h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>

@@ -1,0 +1,559 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'uz'}},
+    {params: {lang: 'en'}},
+    {params: {lang: 'ru'}}
+  ];
+}
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Contacto - Planifica tu Viaje a Uzbekistán" description="Ponte en contacto con nosotros para planificar tu viaje a Uzbekistán. Consultas personalizadas, asesoramiento y ayuda para organizar tu aventura.">
+	<Navigation />
+	
+	<section class="section hero-contact">
+		<div class="container">
+			<div class="section-content">
+				<h1>Contacto</h1>
+				<p class="lead">¿Listo para tu aventura uzbeka? Te ayudamos a planificar el viaje perfecto adaptado a tus intereses y presupuesto.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contact-options">
+		<div class="container">
+			<div class="section-content">
+				<div class="contact-grid">
+					<div class="contact-card">
+						<div class="contact-icon">📧</div>
+						<h3>Email</h3>
+						<p>Para consultas detalladas y planificación personalizada</p>
+						<a href="mailto:torex.amaki@gmail.com" class="contact-link">torex.amaki@gmail.com</a>
+						<small>Respuesta en 24 horas</small>
+					</div>
+					
+					<div class="contact-card">
+						<div class="contact-icon">📱</div>
+						<h3>WhatsApp</h3>
+						<p>Consultas rápidas y asesoramiento inmediato</p>
+						<a href="https://wa.me/998995340313" class="contact-link" target="_blank">+998 99 534 03 13</a>
+						<small>Lunes a Viernes 9:00-18:00</small>
+					</div>
+					
+					<div class="contact-card">
+						<div class="contact-icon">✈️</div>
+						<h3>Telegram</h3>
+						<p>Canal directo para viajeros frecuentes</p>
+						<a href="https://t.me/+998995340313" class="contact-link" target="_blank">+998 99 534 03 13</a>
+						<small>Soporte en español</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contact-form">
+		<div class="container">
+			<div class="section-content">
+				<div class="form-container">
+					<div class="form-header">
+						<h2>Consulta Personalizada</h2>
+						<p>Cuéntanos sobre tu viaje ideal y te ayudaremos a hacerlo realidad</p>
+					</div>
+					
+					<form class="contact-form-element" id="contactForm">
+						<div class="form-row">
+							<div class="form-group">
+								<label for="name">Nombre completo *</label>
+								<input type="text" id="name" name="name" required>
+							</div>
+							
+							<div class="form-group">
+								<label for="email">Email *</label>
+								<input type="email" id="email" name="email" required>
+							</div>
+						</div>
+						
+						<div class="form-row">
+							<div class="form-group">
+								<label for="phone">Teléfono (opcional)</label>
+								<input type="tel" id="phone" name="phone">
+							</div>
+							
+							<div class="form-group">
+								<label for="city">Ciudad de origen</label>
+								<input type="text" id="city" name="city" placeholder="ej. Madrid, Barcelona...">
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="duration">Duración del viaje</label>
+							<select id="duration" name="duration">
+								<option value="">Selecciona duración</option>
+								<option value="3-5">3-5 días</option>
+								<option value="5-7">5-7 días</option>
+								<option value="7-10">7-10 días</option>
+								<option value="10+">Más de 10 días</option>
+							</select>
+						</div>
+						
+						<div class="form-row">
+							<div class="form-group">
+								<label for="travelers">Número de viajeros</label>
+								<select id="travelers" name="travelers">
+									<option value="1">1 persona</option>
+									<option value="2">2 personas</option>
+									<option value="3-4">3-4 personas</option>
+									<option value="5+">5+ personas</option>
+								</select>
+							</div>
+							
+							<div class="form-group">
+								<label for="budget">Presupuesto aproximado</label>
+								<select id="budget" name="budget">
+									<option value="">Selecciona presupuesto</option>
+									<option value="500-1000">500-1000 EUR</option>
+									<option value="1000-2000">1000-2000 EUR</option>
+									<option value="2000-3000">2000-3000 EUR</option>
+									<option value="3000+">Más de 3000 EUR</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="interests">Intereses principales</label>
+							<div class="checkbox-group">
+								<label class="checkbox-label">
+									<input type="checkbox" name="interests" value="cultura">
+									<span>Cultura e historia</span>
+								</label>
+								<label class="checkbox-label">
+									<input type="checkbox" name="interests" value="gastronomia">
+									<span>Gastronomía</span>
+								</label>
+								<label class="checkbox-label">
+									<input type="checkbox" name="interests" value="arquitectura">
+									<span>Arquitectura</span>
+								</label>
+								<label class="checkbox-label">
+									<input type="checkbox" name="interests" value="artesania">
+									<span>Artesanías</span>
+								</label>
+								<label class="checkbox-label">
+									<input type="checkbox" name="interests" value="fotografia">
+									<span>Fotografía</span>
+								</label>
+								<label class="checkbox-label">
+									<input type="checkbox" name="interests" value="aventura">
+									<span>Aventura</span>
+								</label>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="message">Mensaje adicional</label>
+							<textarea id="message" name="message" rows="5" placeholder="Cuéntanos más sobre tu viaje ideal, fechas preferidas, necesidades especiales..."></textarea>
+						</div>
+						
+						<button type="submit" class="btn btn-primary">Enviar consulta</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section services">
+		<div class="container">
+			<div class="section-content">
+				<h2>¿Cómo te podemos ayudar?</h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-icon">🗺️</div>
+						<h3>Planificación de Itinerarios</h3>
+						<p>Diseñamos rutas personalizadas según tus intereses, duración y presupuesto</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">🏨</div>
+						<h3>Reservas de Alojamiento</h3>
+						<p>Hoteles boutique, casas tradicionales y experiencias auténticas</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">🚗</div>
+						<h3>Transporte</h3>
+						<p>Trenes de alta velocidad, vuelos domésticos y transfers privados</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">👥</div>
+						<h3>Experiencias Culturales</h3>
+						<p>Talleres de cocina, visitas a artesanos y encuentros con locales</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">📋</div>
+						<h3>Gestión de Visados</h3>
+						<p>Te ayudamos con toda la documentación necesaria para tu viaje</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">🎯</div>
+						<h3>Asesoramiento Especializado</h3>
+						<p>Consejos de expertos que conocen el país en profundidad</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section faq">
+		<div class="container">
+			<div class="section-content">
+				<h2>Preguntas Frecuentes</h2>
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>¿Cuánto cuesta viajar a Uzbekistán?</h3>
+						<p>Un viaje de 7 días puede costar entre 800-2000 EUR por persona, incluyendo vuelos, alojamiento, comidas y actividades. El presupuesto varía según el nivel de comodidad y experiencias elegidas.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>¿Cuál es la mejor época para viajar?</h3>
+						<p>Primavera (marzo-mayo) y otoño (septiembre-noviembre) son ideales. El clima es agradable, hay menos turistas y los precios son más accesibles.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>¿Necesito visa para viajar desde España?</h3>
+						<p>No necesitas visa para estancias turísticas de hasta 30 días. Solo necesitas pasaporte válido por 6 meses y billete de regreso.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>¿Es seguro viajar a Uzbekistán?</h3>
+						<p>Sí, Uzbekistán es uno de los países más seguros de Asia Central. Tiene baja criminalidad y las autoridades están muy enfocadas en proteger a los turistas.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>¿Qué idiomas se hablan?</h3>
+						<p>El idioma oficial es el uzbeko, pero el ruso es ampliamente hablado. En zonas turísticas, muchos hablan inglés básico.</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>¿Cuántos días necesito para ver lo principal?</h3>
+						<p>Mínimo 5 días para las ciudades principales (Tashkent, Samarkand, Bukhara). Para una experiencia completa, recomendamos 7-10 días.</p>
+					</div>
+				</div>
+				
+				<a href={getLocalizedPath('/', lang)} class="back-to-top">{t('back.home')}</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-contact {
+		background: linear-gradient(135deg, #764BA2 0%, #667EEA 100%);
+		color: white;
+		text-align: center;
+		padding: 8rem 0 5rem;
+	}
+
+	.hero-contact h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	.lead {
+		font-size: 1.3rem;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.contact-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 16px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.contact-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.contact-icon {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-card h3 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.contact-card p {
+		color: #4A5568;
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-link {
+		display: inline-block;
+		color: #D4AF37;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		transition: color 0.3s ease;
+	}
+
+	.contact-link:hover {
+		color: #B8860B;
+	}
+
+	.contact-card small {
+		color: #718096;
+		font-size: 0.9rem;
+	}
+
+	.contact-form {
+		background: #F8F9FA;
+		padding: 6rem 0;
+	}
+
+	.form-container {
+		max-width: 800px;
+		margin: 0 auto;
+		background: white;
+		padding: 3rem;
+		border-radius: 16px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+	}
+
+	.form-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.form-header h2 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 2rem;
+	}
+
+	.form-header p {
+		color: #4A5568;
+		font-size: 1.1rem;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.form-group label {
+		display: block;
+		color: #2C5282;
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+	}
+
+	.form-group input,
+	.form-group select,
+	.form-group textarea {
+		width: 100%;
+		padding: 0.75rem;
+		border: 2px solid #E2E8F0;
+		border-radius: 8px;
+		font-size: 1rem;
+		transition: border-color 0.3s ease;
+	}
+
+	.form-group input:focus,
+	.form-group select:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-color: #D4AF37;
+	}
+
+	.checkbox-group {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
+
+	.checkbox-label {
+		display: flex;
+		align-items: center;
+		color: #4A5568;
+		cursor: pointer;
+		font-weight: normal;
+	}
+
+	.checkbox-label input[type="checkbox"] {
+		width: auto;
+		margin-right: 0.5rem;
+	}
+
+	.btn-primary {
+		background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
+		color: #1A365D;
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 8px;
+		font-size: 1.1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		width: 100%;
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.service-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.service-card:hover {
+		transform: translateY(-3px);
+	}
+
+	.service-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 {
+		color: #2C5282;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.service-card p {
+		color: #4A5568;
+		line-height: 1.6;
+	}
+
+	.faq {
+		background: #F8F9FA;
+		padding: 6rem 0;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.faq-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+		border-left: 4px solid #D4AF37;
+	}
+
+	.faq-item h3 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.faq-item p {
+		color: #4A5568;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+
+		.form-container {
+			padding: 2rem;
+		}
+
+		.checkbox-group {
+			grid-template-columns: 1fr;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.faq-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-contact h1 {
+			font-size: 2.5rem;
+		}
+	}
+</style>
+
+<script>
+	document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+		e.preventDefault();
+		
+		// Collect form data
+		const formData = new FormData(this);
+		const data = Object.fromEntries(formData.entries());
+		
+		// Get all checked interests
+		const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
+			.map(checkbox => checkbox.value);
+		data.interests = interests;
+		
+		// Here you would normally send the data to your server
+		console.log('Form submitted:', data);
+		
+		// Show success message
+		alert('¡Gracias por tu consulta! Te responderemos en las próximas 24 horas.');
+		
+		// Reset form
+		this.reset();
+	});
+</script>
