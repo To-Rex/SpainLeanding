@@ -287,7 +287,7 @@ export const ui = {
     'contact.form.message': 'Additional message',
     'contact.form.submit': 'Send inquiry',
     'contact.services.title': 'How can we help you?',
-    'contact.faq.title': 'Frequently Asked Questions'
+    'contact.faq.title': 'Frequently Asked Questions',
     
     // Destinations page
     'destinations.title': 'Main Destinations',
@@ -540,7 +540,7 @@ export const ui = {
     'contact.form.message': 'Дополнительное сообщение',
     'contact.form.submit': 'Отправить запрос',
     'contact.services.title': 'Как мы можем вам помочь?',
-    'contact.faq.title': 'Часто задаваемые вопросы'
+    'contact.faq.title': 'Часто задаваемые вопросы',
     
     // Destinations page
     'destinations.title': 'Основные Направления',
