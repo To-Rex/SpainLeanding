@@ -15,7 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title="Destinos Principales de Uzbekistán - Ciudades de la Ruta de la Seda" description="Explora las ciudades más fascinantes de Uzbekistán: Samarkand, Bukhara, Khiva, Tashkent y el Valle de Ferghana.">
+<Layout title={t('destinations.title')} description={t('destinations.subtitle')}>
 	<Navigation />
 	
 	<section class="section hero-destinations">

@@ -15,7 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title="Contacto - Planifica tu Viaje a Uzbekistán" description="Ponte en contacto con nosotros para planificar tu viaje a Uzbekistán. Consultas personalizadas, asesoramiento y ayuda para organizar tu aventura.">
+<Layout title={t('contact.title')} description={t('contact.subtitle')}>
 	<Navigation />
 	
 	<section class="section hero-contact">

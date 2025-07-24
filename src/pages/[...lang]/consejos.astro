@@ -15,7 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title="Consejos Útiles para Viajar a Uzbekistán desde España" description="Guía completa con consejos prácticos para españoles: visados, transporte, dinero, comunicación y normas culturales.">
+<Layout title={t('tips.title')} description={t('tips.subtitle')}>
 	<Navigation />
 	
 	<section class="section hero-tips">

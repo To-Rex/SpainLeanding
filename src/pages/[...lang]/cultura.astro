@@ -15,7 +15,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title="Cultura Uzbeka - Tradiciones, Gastronomía y Arte" description="Descubre la rica cultura de Uzbekistán: gastronomía tradicional, arquitectura islámica, artesanías y costumbres locales.">
+<Layout title={t('culture.title')} description={t('culture.subtitle')}>
 	<Navigation />
 	
 	<section class="section hero-culture">
