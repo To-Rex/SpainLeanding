@@ -272,10 +272,58 @@ export const ui = {
     'contact.form.duration': 'Duración del viaje',
     'contact.form.travelers': 'Número de viajeros',
     'contact.form.budget': 'Presupuesto aproximado',
-    'contact.form.interests': 'Intereses principales',
+      title: '¿Cómo te podemos ayudar?',
+      itineraries: {
+        title: 'Planificación de Itinerarios',
+        desc: 'Diseñamos rutas personalizadas según tus intereses, duración y presupuesto'
+      },
+      accommodation: {
+        title: 'Reservas de Alojamiento',
+        desc: 'Hoteles boutique, casas tradicionales y experiencias auténticas'
+      },
+      transport: {
+        title: 'Transporte',
+        desc: 'Trenes de alta velocidad, vuelos domésticos y transfers privados'
+      },
+      cultural: {
+        title: 'Experiencias Culturales',
+        desc: 'Talleres de cocina, visitas a artesanos y encuentros con locales'
+      },
+      visa: {
+        title: 'Gestión de Visados',
+        desc: 'Te ayudamos con toda la documentación necesaria para tu viaje'
+      },
+      consulting: {
+        title: 'Asesoramiento Especializado',
+        desc: 'Consejos de expertos que conocen el país en profundidad'
+      }
     'contact.form.message': 'Mensaje adicional',
     'contact.form.submit': 'Enviar consulta',
-    'contact.services.title': '¿Cómo te podemos ayudar?',
+      title: 'Preguntas Frecuentes',
+      cost: {
+        q: '¿Cuánto cuesta viajar a Uzbekistán?',
+        a: 'Un viaje de 7 días puede costar entre 800-2000 EUR por persona, incluyendo vuelos, alojamiento, comidas y actividades. El presupuesto varía según el nivel de comodidad y experiencias elegidas.'
+      },
+      season: {
+        q: '¿Cuál es la mejor época para viajar?',
+        a: 'Primavera (marzo-mayo) y otoño (septiembre-noviembre) son ideales. El clima es agradable, hay menos turistas y los precios son más accesibles.'
+      },
+      visa_faq: {
+        q: '¿Necesito visa para viajar desde España?',
+        a: 'No necesitas visa para estancias turísticas de hasta 30 días. Solo necesitas pasaporte válido por 6 meses y billete de regreso.'
+      },
+      safety: {
+        q: '¿Es seguro viajar a Uzbekistán?',
+        a: 'Sí, Uzbekistán es uno de los países más seguros de Asia Central. Tiene baja criminalidad y las autoridades están muy enfocadas en proteger a los turistas.'
+      },
+      language: {
+        q: '¿Qué idiomas se hablan?',
+        a: 'El idioma oficial es el uzbeko, pero el ruso es ampliamente hablado. En zonas turísticas, muchos hablan inglés básico.'
+      },
+      duration: {
+        q: '¿Cuántos días necesito para ver lo principal?',
+        a: 'Mínimo 5 días para las ciudades principales (Tashkent, Samarkand, Bukhara). Para una experiencia completa, recomendamos 7-10 días.'
+      }
     'contact.faq.title': 'Preguntas Frecuentes'
   },
   uz: {
@@ -542,10 +590,58 @@ export const ui = {
     'contact.form.duration': 'Sayohat davomiyligi',
     'contact.form.travelers': 'Sayohatchilar soni',
     'contact.form.budget': 'Taxminiy byudjet',
-    'contact.form.interests': 'Asosiy qiziqishlar',
+      title: 'Sizga qanday yordam bera olamiz?',
+      itineraries: {
+        title: 'Marshrutlarni rejalashtirish',
+        desc: 'Sizning qiziqishlaringiz, davomiyligi va byudjetingizga qarab shaxsiy marshrutlar yaratamiz'
+      },
+      accommodation: {
+        title: 'Turar joy bron qilish',
+        desc: 'Butik mehmonxonalar, an\'anaviy uylar va haqiqiy tajribalar'
+      },
+      transport: {
+        title: 'Transport',
+        desc: 'Yuqori tezlikdagi poyezdlar, ichki parvozlar va shaxsiy transferlar'
+      },
+      cultural: {
+        title: 'Madaniy tajribalar',
+        desc: 'Oshpazlik darslari, hunarmandlar bilan uchrashuvlar va mahalliylar bilan suhbat'
+      },
+      visa: {
+        title: 'Viza rasmiylashtirish',
+        desc: 'Sayohatingiz uchun barcha kerakli hujjatlar bilan yordam beramiz'
+      },
+      consulting: {
+        title: 'Mutaxassis maslahatlari',
+        desc: 'Mamlakatni chuqur biladigan mutaxassislardan maslahatlar'
+      }
     'contact.form.message': 'Qo\'shimcha xabar',
     'contact.form.submit': 'So\'rov yuborish',
-    'contact.services.title': 'Sizga qanday yordam bera olamiz?',
+      title: 'Tez-tez so\'raladigan savollar',
+      cost: {
+        q: 'O\'zbekistonga sayohat qancha turadi?',
+        a: '7 kunlik sayohat bir kishi uchun 800-2000 EUR turishi mumkin, bu parvozlar, turar joy, ovqat va faoliyatlarni o\'z ichiga oladi. Byudjet qulaylik darajasi va tanlangan tajribalarga qarab farq qiladi.'
+      },
+      season: {
+        q: 'Sayohat qilish uchun eng yaxshi vaqt qachon?',
+        a: 'Bahor (mart-may) va kuz (sentyabr-noyabr) ideal. Ob-havo yoqimli, turistlar kam va narxlar qulayroq.'
+      },
+      visa_faq: {
+        q: 'Ispaniyadan sayohat qilish uchun viza kerakmi?',
+        a: '30 kungacha turistik qolish uchun viza kerak emas. Faqat 6 oy amal qiladigan pasport va qaytish chiptasi kerak.'
+      },
+      safety: {
+        q: 'O\'zbekistonga sayohat qilish xavfsizmi?',
+        a: 'Ha, O\'zbekiston Markaziy Osiyoning eng xavfsiz mamlakatlaridan biri. Jinoyatchilik darajasi past va hukumat turistlarni himoya qilishga katta e\'tibor beradi.'
+      },
+      language: {
+        q: 'Qanday tillar gaplashiladi?',
+        a: 'Rasmiy til o\'zbek tili, lekin rus tili keng tarqalgan. Turistik hududlarda ko\'pchilik oddiy ingliz tilini biladi.'
+      },
+      duration: {
+        q: 'Asosiy joylarni ko\'rish uchun necha kun kerak?',
+        a: 'Asosiy shaharlar (Toshkent, Samarqand, Buxoro) uchun kamida 5 kun. To\'liq tajriba uchun 7-10 kun tavsiya etamiz.'
+      }
     'contact.faq.title': 'Tez-tez So\'raladigan Savollar'
   },
   en: {
@@ -812,10 +908,58 @@ export const ui = {
     'contact.form.duration': 'Trip duration',
     'contact.form.travelers': 'Number of travelers',
     'contact.form.budget': 'Approximate budget',
-    'contact.form.interests': 'Main interests',
+      title: 'How can we help you?',
+      itineraries: {
+        title: 'Itinerary Planning',
+        desc: 'We design personalized routes according to your interests, duration and budget'
+      },
+      accommodation: {
+        title: 'Accommodation Booking',
+        desc: 'Boutique hotels, traditional houses and authentic experiences'
+      },
+      transport: {
+        title: 'Transportation',
+        desc: 'High-speed trains, domestic flights and private transfers'
+      },
+      cultural: {
+        title: 'Cultural Experiences',
+        desc: 'Cooking workshops, visits to artisans and encounters with locals'
+      },
+      visa: {
+        title: 'Visa Management',
+        desc: 'We help you with all the necessary documentation for your trip'
+      },
+      consulting: {
+        title: 'Specialized Consulting',
+        desc: 'Expert advice from those who know the country in depth'
+      }
     'contact.form.message': 'Additional message',
     'contact.form.submit': 'Send inquiry',
-    'contact.services.title': 'How can we help you?',
+      title: 'Frequently Asked Questions',
+      cost: {
+        q: 'How much does it cost to travel to Uzbekistan?',
+        a: 'A 7-day trip can cost between 800-2000 EUR per person, including flights, accommodation, meals and activities. The budget varies according to the level of comfort and experiences chosen.'
+      },
+      season: {
+        q: 'What is the best time to travel?',
+        a: 'Spring (March-May) and autumn (September-November) are ideal. The weather is pleasant, there are fewer tourists and prices are more accessible.'
+      },
+      visa_faq: {
+        q: 'Do I need a visa to travel from Spain?',
+        a: 'You do not need a visa for tourist stays of up to 30 days. You only need a passport valid for 6 months and a return ticket.'
+      },
+      safety: {
+        q: 'Is it safe to travel to Uzbekistan?',
+        a: 'Yes, Uzbekistan is one of the safest countries in Central Asia. It has low crime rates and authorities are very focused on protecting tourists.'
+      },
+      language: {
+        q: 'What languages are spoken?',
+        a: 'The official language is Uzbek, but Russian is widely spoken. In tourist areas, many speak basic English.'
+      },
+      duration: {
+        q: 'How many days do I need to see the main sites?',
+        a: 'Minimum 5 days for the main cities (Tashkent, Samarkand, Bukhara). For a complete experience, we recommend 7-10 days.'
+      }
     'contact.faq.title': 'Frequently Asked Questions'
   },
   ru: {
@@ -1082,10 +1226,58 @@ export const ui = {
     'contact.form.duration': 'Продолжительность поездки',
     'contact.form.travelers': 'Количество путешественников',
     'contact.form.budget': 'Примерный бюджет',
-    'contact.form.interests': 'Основные интересы',
+      title: 'Как мы можем вам помочь?',
+      itineraries: {
+        title: 'Планирование маршрутов',
+        desc: 'Мы создаем персонализированные маршруты в соответствии с вашими интересами, продолжительностью и бюджетом'
+      },
+      accommodation: {
+        title: 'Бронирование жилья',
+        desc: 'Бутик-отели, традиционные дома и аутентичные впечатления'
+      },
+      transport: {
+        title: 'Транспорт',
+        desc: 'Скоростные поезда, внутренние рейсы и частные трансферы'
+      },
+      cultural: {
+        title: 'Культурные впечатления',
+        desc: 'Кулинарные мастер-классы, посещения ремесленников и встречи с местными жителями'
+      },
+      visa: {
+        title: 'Оформление виз',
+        desc: 'Мы поможем вам со всей необходимой документацией для поездки'
+      },
+      consulting: {
+        title: 'Специализированные консультации',
+        desc: 'Экспертные советы от тех, кто глубоко знает страну'
+      }
     'contact.form.message': 'Дополнительное сообщение',
     'contact.form.submit': 'Отправить запрос',
-    'contact.services.title': 'Как мы можем вам помочь?',
+      title: 'Часто задаваемые вопросы',
+      cost: {
+        q: 'Сколько стоит поездка в Узбекистан?',
+        a: '7-дневная поездка может стоить от 800 до 2000 евро на человека, включая перелеты, проживание, питание и мероприятия. Бюджет варьируется в зависимости от уровня комфорта и выбранных впечатлений.'
+      },
+      season: {
+        q: 'Какое лучшее время для путешествий?',
+        a: 'Весна (март-май) и осень (сентябрь-ноябрь) идеальны. Погода приятная, туристов меньше, а цены более доступные.'
+      },
+      visa_faq: {
+        q: 'Нужна ли виза для поездки из Испании?',
+        a: 'Виза не нужна для туристических поездок до 30 дней. Нужен только паспорт, действительный 6 месяцев, и обратный билет.'
+      },
+      safety: {
+        q: 'Безопасно ли путешествовать в Узбекистан?',
+        a: 'Да, Узбекистан - одна из самых безопасных стран Центральной Азии. Низкий уровень преступности, власти очень сосредоточены на защите туристов.'
+      },
+      language: {
+        q: 'На каких языках говорят?',
+        a: 'Официальный язык - узбекский, но русский широко распространен. В туристических районах многие говорят на базовом английском.'
+      },
+      duration: {
+        q: 'Сколько дней нужно, чтобы увидеть основные достопримечательности?',
+        a: 'Минимум 5 дней для основных городов (Ташкент, Самарканд, Бухара). Для полного опыта рекомендуем 7-10 дней.'
+      }
     'contact.faq.title': 'Часто Задаваемые Вопросы'
   }
 } as const;
