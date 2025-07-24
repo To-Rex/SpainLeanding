@@ -50,51 +50,9 @@ const t = useTranslations(lang);
 				<p>Registon maydonining sehrli manzarasi</p>
 			</div>
 		</div>
-		<div class="slide">
-			<img src="https://cs7.pikabu.ru/post_img/2019/01/07/5/og_og_1546843490250621787.jpg" alt="Registon madrasalari" />
-			<div class="slide-info">
-				<h3>Registon Madrasalari</h3>
-				<p>Ulug'bek, Sher-Dor, Tillakori</p>
-			</div>
-		</div>
-		<div class="slide">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Ulugh_Beg_observatory.JPG/1600px-Ulugh_Beg_observatory.JPG" alt="Ulug'bek rasadxonasi" />
-			<div class="slide-info">
-				<h3>Ulug'bek Rasadxonasi</h3>
-				<p>XV asrda qurilgan eng katta rasadxona</p>
-			</div>
-		</div>
-		<div class="slide">
-			<img src="https://avatars.mds.yandex.net/i?id=184bc5e19418521993b6a43ad82149769f93bc1c-5242655-images-thumbs&n=13" alt="Ulug'bek madrasasi" />
-			<div class="slide-info">
-				<h3>Ulug'bek Madrasasi</h3>
-				<p>Buyuk astronom va matematik maktabi</p>
-			</div>
-		</div>
-		<div class="slide">
-			<img src="https://avatars.mds.yandex.net/i?id=de4d6281dc6d0e8d32a19827fd5bc33c-5195024-images-thumbs&n=13" alt="Qo'qon xon saroyi" />
-			<div class="slide-info">
-				<h3>Qo'qon Xon Saroyi</h3>
-				<p>Farg'ona vodiysining poytaxti</p>
-			</div>
-		</div>
-		<div class="slide">
-			<img src="https://avatars.mds.yandex.net/i?id=1f62aa38bb17d3b5e9cafe32aeeec15f_l-8276139-images-thumbs&n=13" alt="Qo'qon yodgorliklari" />
-			<div class="slide-info">
-				<h3>Qo'qon Yodgorliklari</h3>
-				<p>Farg'ona madaniyatining namunalari</p>
-			</div>
-		</div>
 		
 		<!-- Slider overlay -->
 		<div class="hero-overlay"></div>
-		
-		<!-- Navigation buttons -->
-		<button class="slider-btn prev-btn" id="prevBtn">‹</button>
-		<button class="slider-btn next-btn" id="nextBtn">›</button>
-		
-		<!-- Dots indicator -->
-		<div class="slider-dots" id="sliderDots"></div>
 	</div>
 	
 	<div class="container">
@@ -120,6 +78,7 @@ const t = useTranslations(lang);
 	.hero {
 		position: relative;
 		height: 100vh;
+		min-height: 600px;
 		display: flex;
 		align-items: center;
 		overflow: hidden;
@@ -141,7 +100,7 @@ const t = useTranslations(lang);
 		width: 100%;
 		height: 100%;
 		opacity: 0;
-		transition: opacity 1s ease-in-out;
+		transition: opacity 2s ease-in-out;
 	}
 
 	.slide.active {
@@ -152,6 +111,7 @@ const t = useTranslations(lang);
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		object-position: center;
 	}
 
 	.slide-info {
@@ -161,20 +121,22 @@ const t = useTranslations(lang);
 		background: rgba(0, 0, 0, 0.7);
 		color: white;
 		padding: 1rem 1.5rem;
-		border-radius: 8px;
+		border-radius: 12px;
 		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.slide-info h3 {
 		color: #F7DC6F;
 		margin-bottom: 0.5rem;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
+		font-weight: 600;
 	}
 
 	.slide-info p {
 		color: rgba(255, 255, 255, 0.9);
 		margin: 0;
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 	}
 
 	.hero-overlay {
@@ -185,68 +147,16 @@ const t = useTranslations(lang);
 		height: 100%;
 		background: linear-gradient(
 			135deg,
-			rgba(26, 54, 93, 0.8) 0%,
-			rgba(44, 82, 130, 0.6) 50%,
-			rgba(212, 175, 55, 0.3) 100%
+			rgba(26, 54, 93, 0.7) 0%,
+			rgba(44, 82, 130, 0.5) 50%,
+			rgba(212, 175, 55, 0.2) 100%
 		);
 		z-index: -1;
 	}
 
-	.slider-btn {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background: rgba(255, 255, 255, 0.2);
-		border: none;
-		color: white;
-		font-size: 2rem;
-		padding: 1rem 1.5rem;
-		cursor: pointer;
-		border-radius: 50%;
-		transition: all 0.3s ease;
-		backdrop-filter: blur(10px);
-		z-index: 10;
-	}
-
-	.slider-btn:hover {
-		background: rgba(255, 255, 255, 0.3);
-		transform: translateY(-50%) scale(1.1);
-	}
-
-	.prev-btn {
-		left: 2rem;
-	}
-
-	.next-btn {
-		right: 2rem;
-	}
-
-	.slider-dots {
-		position: absolute;
-		bottom: 6rem;
-		left: 50%;
-		transform: translateX(-50%);
-		display: flex;
-		gap: 0.5rem;
-		z-index: 10;
-	}
-
-	.dot {
-		width: 12px;
-		height: 12px;
-		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.5);
-		cursor: pointer;
-		transition: all 0.3s ease;
-	}
-
-	.dot.active {
-		background: #F7DC6F;
-		transform: scale(1.2);
-	}
 	.hero-content {
 		text-align: center;
-		max-width: 800px;
+		max-width: 700px;
 		margin: 0 auto;
 		padding: 2rem;
 		color: white;
@@ -255,44 +165,63 @@ const t = useTranslations(lang);
 	}
 
 	.hero-title {
-		font-size: 2.8rem;
+		font-size: 2.2rem;
 		font-weight: 600;
 		margin-bottom: 1rem;
-		text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-		line-height: 1.1;
+		text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+		line-height: 1.2;
 	}
 
 	.hero-subtitle {
-		font-size: 2rem;
+		font-size: 1.6rem;
 		font-style: italic;
 		color: #F7DC6F;
 		display: block;
 		margin-top: 0.5rem;
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 	}
 
 	.hero-description {
-		font-size: 1.1rem;
-		margin-bottom: 2.5rem;
+		font-size: 1rem;
+		margin-bottom: 2rem;
 		color: rgba(255, 255, 255, 0.9);
 		line-height: 1.6;
-		max-width: 600px;
+		max-width: 500px;
 		margin-left: auto;
 		margin-right: auto;
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 	}
 
 	.hero-actions {
 		display: flex;
-		gap: 1.5rem;
+		gap: 1rem;
 		justify-content: center;
 		flex-wrap: wrap;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.9rem 1.8rem;
+		border-radius: 8px;
+		font-weight: 500;
+		text-decoration: none;
+		transition: all 0.3s ease;
+		font-size: 0.95rem;
+		text-align: center;
+		white-space: nowrap;
+		min-width: 140px;
 	}
 
 	.btn-primary {
 		background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
 		color: #1A365D;
 		font-weight: 600;
-		padding: 1.2rem 2.5rem;
-		font-size: 1.1rem;
+		box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+	}
+
+	.btn-primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 	}
 
 	.btn-secondary {
@@ -300,27 +229,33 @@ const t = useTranslations(lang);
 		color: white;
 		border: 2px solid rgba(255, 255, 255, 0.3);
 		backdrop-filter: blur(10px);
-		padding: 1.2rem 2.5rem;
-		font-size: 1.1rem;
 	}
 
 	.btn-secondary:hover {
 		background: rgba(255, 255, 255, 0.2);
 		border-color: rgba(255, 255, 255, 0.5);
+		transform: translateY(-2px);
 	}
 
+	/* Tablet styles */
+	@media (max-width: 1024px) {
+		.hero-title {
+			font-size: 2rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.4rem;
+		}
+
+		.hero-description {
+			font-size: 0.95rem;
+		}
+	}
+
+	/* Mobile styles */
 	@media (max-width: 768px) {
-		.slider-btn {
-			font-size: 1.5rem;
-			padding: 0.8rem 1rem;
-		}
-
-		.prev-btn {
-			left: 1rem;
-		}
-
-		.next-btn {
-			right: 1rem;
+		.hero {
+			min-height: 500px;
 		}
 
 		.slide-info {
@@ -338,54 +273,78 @@ const t = useTranslations(lang);
 			font-size: 0.8rem;
 		}
 
+		.hero-content {
+			padding: 1.5rem;
+		}
+
 		.hero-title {
-			font-size: 2rem;
+			font-size: 1.8rem;
 		}
 
 		.hero-subtitle {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 		}
 
 		.hero-description {
-			font-size: 1rem;
+			font-size: 0.9rem;
+			margin-bottom: 1.5rem;
 		}
 
 		.hero-actions {
 			flex-direction: column;
 			align-items: center;
+			gap: 0.8rem;
 		}
 
-		.btn-primary,
-		.btn-secondary {
+		.btn {
 			width: 100%;
-			max-width: 300px;
+			max-width: 250px;
+			padding: 0.8rem 1.5rem;
+			font-size: 0.9rem;
+		}
+	}
+
+	/* Small mobile styles */
+	@media (max-width: 480px) {
+		.hero {
+			min-height: 450px;
+		}
+
+		.hero-title {
+			font-size: 1.6rem;
+		}
+
+		.hero-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.hero-description {
+			font-size: 0.85rem;
+		}
+
+		.slide-info {
+			padding: 0.6rem 0.8rem;
+		}
+
+		.slide-info h3 {
+			font-size: 0.9rem;
+		}
+
+		.slide-info p {
+			font-size: 0.75rem;
 		}
 	}
 </style>
+
 <script>
-	// Slider functionality
+	// Slider functionality - ONLY AUTO PLAY
 	let currentSlide = 0;
 	const slides = document.querySelectorAll('.slide');
 	const totalSlides = slides.length;
 	
-	// Create dots
-	const dotsContainer = document.getElementById('sliderDots');
-	for (let i = 0; i < totalSlides; i++) {
-		const dot = document.createElement('div');
-		dot.classList.add('dot');
-		if (i === 0) dot.classList.add('active');
-		dot.addEventListener('click', () => goToSlide(i));
-		dotsContainer?.appendChild(dot);
-	}
-	
-	const dots = document.querySelectorAll('.dot');
-	
 	function showSlide(index: number) {
 		slides.forEach((slide, i) => {
 			slide.classList.toggle('active', i === index);
-		});
-		dots.forEach((dot, i) => {
-			dot.classList.toggle('active', i === index);
 		});
 	}
 	
@@ -394,30 +353,6 @@ const t = useTranslations(lang);
 		showSlide(currentSlide);
 	}
 	
-	function prevSlide() {
-		currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-		showSlide(currentSlide);
-	}
-	
-	function goToSlide(index: number) {
-		currentSlide = index;
-		showSlide(currentSlide);
-	}
-	
-	// Event listeners
-	document.getElementById('nextBtn')?.addEventListener('click', nextSlide);
-	document.getElementById('prevBtn')?.addEventListener('click', prevSlide);
-	
-	// Auto-play slider
-	let autoPlay = setInterval(nextSlide, 5000);
-	
-	// Pause on hover
-	const heroSlider = document.getElementById('heroSlider');
-	heroSlider?.addEventListener('mouseenter', () => {
-		clearInterval(autoPlay);
-	});
-	
-	heroSlider?.addEventListener('mouseleave', () => {
-		autoPlay = setInterval(nextSlide, 5000);
-	});
+	// Auto-play slider - 5 seconds interval
+	setInterval(nextSlide, 5000);
 </script>
