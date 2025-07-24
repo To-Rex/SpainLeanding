@@ -289,6 +289,7 @@ export const ui = {
     'contact.services.title': 'How can we help you?',
     'contact.faq.title': 'Frequently Asked Questions',
     
+    
     // Destinations page
     'destinations.title': 'Main Destinations',
     'destinations.subtitle': 'Legendary cities that have witnessed the glory of the Silk Road for over a thousand years.',
