@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -15,39 +15,39 @@ const t = useTranslations(lang);
 	<section class="section highlights">
 		<div class="container">
 			<div class="section-content">
-				<h2>Nima uchun Uzbekistonni ziyorat qilish kerak?</h2>
+				<h2>{t('home.why_visit')}</h2>
 				<div class="highlights-grid">
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="Registan Square UNESCO Heritage" />
+							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt={t('home.unesco.title')} />
 						</div>
-						<h3>UNESCO Merosi</h3>
-						<p>Samarqand, Buxoro va Xiva kabi shaharlar UNESCO tomonidan e'tirof etilgan me'moriy durdonalardir.</p>
+						<h3>{t('home.unesco.title')}</h3>
+						<p>{t('home.unesco.desc')}</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=100&h=100&q=80" alt="Traditional Uzbek Plov" />
+							<img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=100&h=100&q=80" alt={t('home.gastronomy.title')} />
 						</div>
-						<h3>Noyob Oshxona</h3>
-						<p>Plov, somsa va choy marosimi kabi haqiqiy ta'mlarni tengsiz mehmondo'stlik muhitida kashf eting.</p>
+						<h3>{t('home.gastronomy.title')}</h3>
+						<p>{t('home.gastronomy.desc')}</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=100&h=100&q=80" alt="Uzbekistan Travel" />
+							<img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=100&h=100&q=80" alt={t('home.easy.title')} />
 						</div>
-						<h3>Ispanlar uchun Oson</h3>
-						<p>Qisqa muddatli tashrif uchun viza talab qilinmaydi, Ispaniyadan to'g'ridan-to'g'ri parvozlar va Yevropa sayohatchilari uchun qulay valyuta.</p>
+						<h3>{t('home.easy.title')}</h3>
+						<p>{t('home.easy.desc')}</p>
 					</div>
 				</div>
 				
 				<div class="cta-section">
-					<h2>Uzbek sarguzashtingizni boshlang!</h2>
-					<p>Ipak yo'li bo'ylab mukammal sayohatni rejalashtirish uchun bizning bo'limlarimizni o'rganing.</p>
+					<h2>{t('home.cta.title')}</h2>
+					<p>{t('home.cta.desc')}</p>
 					<div class="cta-buttons">
-						<a href="/destinos" class="btn">Manzillarni ko'rish</a>
-						<a href="/consejos" class="btn btn-outline">Foydali maslahatlar</a>
+						<a href={getLocalizedPath('/destinos', lang)} class="btn">{t('home.cta.destinations')}</a>
+						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">{t('home.cta.tips')}</a>
 					</div>
 				</div>
 			</div>
@@ -57,62 +57,62 @@ const t = useTranslations(lang);
 	<section class="section image-slider">
 		<div class="container">
 			<div class="section-content">
-				<h2>🏛️ Uzbekistonning Go'zalliklari</h2>
-				<p class="slider-description">Haqiqiy suratlar orqali mamlakatimizning ajoyib joylarini kashf eting</p>
+				<h2>🏛️ {t('home.slider.title')}</h2>
+				<p class="slider-description">{t('home.slider.desc')}</p>
 				
 				<div class="main-slider" id="mainSlider">
 					<div class="slider-container">
 						<div class="slider-slide active">
-							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="Registan maydoni, Samarqand" />
+							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt={t('slider.registan.title')} />
 							<div class="slide-content">
-								<h3>Registan Maydoni</h3>
-								<p>Samarqandning eng mashhur maydoni - uchta go'zal madrasa bilan bezatilgan</p>
-								<span class="slide-location">📍 Samarqand, Uzbekiston</span>
+								<h3>{t('slider.registan.title')}</h3>
+								<p>{t('slider.registan.desc')}</p>
+								<span class="slide-location">📍 {t('slider.registan.location')}</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://i.pinimg.com/originals/4d/ed/6f/4ded6fb046f27e10c43b843b66c5dc22.jpg" alt="Ichan-qala, Xiva" />
+							<img src="https://i.pinimg.com/originals/4d/ed/6f/4ded6fb046f27e10c43b843b66c5dc22.jpg" alt={t('slider.khiva.title')} />
 							<div class="slide-content">
-								<h3>Ichan-qala</h3>
-								<p>Xivaning qadimiy qal'asi - to'liq saqlanib qolgan o'rta asr shahri</p>
-								<span class="slide-location">📍 Xiva, Xorazm</span>
+								<h3>{t('slider.khiva.title')}</h3>
+								<p>{t('slider.khiva.desc')}</p>
+								<span class="slide-location">📍 {t('slider.khiva.location')}</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://wallpapers.com/images/hd/khiva-textiles-for-sale-gd2sxjotwxypuyyy.jpg" alt="Xiva hunarmandchiligi" />
+							<img src="https://wallpapers.com/images/hd/khiva-textiles-for-sale-gd2sxjotwxypuyyy.jpg" alt={t('slider.crafts.title')} />
 							<div class="slide-content">
-								<h3>Xiva Hunarmandchiligi</h3>
-								<p>An'anaviy to'qimachilik va qo'l san'ati - ming yillik madaniyat</p>
-								<span class="slide-location">📍 Xiva Bozori</span>
+								<h3>{t('slider.crafts.title')}</h3>
+								<p>{t('slider.crafts.desc')}</p>
+								<span class="slide-location">📍 {t('slider.crafts.location')}</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://media.vand.ru/tourgallery/123127/ib17300449413337.webp" alt="Buxoro tarixi" />
+							<img src="https://media.vand.ru/tourgallery/123127/ib17300449413337.webp" alt={t('slider.bukhara.title')} />
 							<div class="slide-content">
-								<h3>Buxoro Tarixi</h3>
-								<p>2500 yillik tarixga ega muqaddas shahar - 140 ta me'moriy yodgorlik</p>
-								<span class="slide-location">📍 Buxoro, Uzbekiston</span>
+								<h3>{t('slider.bukhara.title')}</h3>
+								<p>{t('slider.bukhara.desc')}</p>
+								<span class="slide-location">📍 {t('slider.bukhara.location')}</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://i.pinimg.com/736x/c9/76/ae/c976ae20a2064eada0913fbdc0fec064.jpg" alt="Buxoro madrasalari" />
+							<img src="https://i.pinimg.com/736x/c9/76/ae/c976ae20a2064eada0913fbdc0fec064.jpg" alt={t('slider.madrasas.title')} />
 							<div class="slide-content">
-								<h3>Buxoro Madrasalari</h3>
-								<p>Islom me'morchiligining eng go'zal namunalari - ilm va ma'rifat markazlari</p>
-								<span class="slide-location">📍 Buxoro Markazi</span>
+								<h3>{t('slider.madrasas.title')}</h3>
+								<p>{t('slider.madrasas.desc')}</p>
+								<span class="slide-location">📍 {t('slider.madrasas.location')}</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://a.d-cd.net/6f5f8804l8c-1920.jpg" alt="Samarqand kechqurun" />
+							<img src="https://a.d-cd.net/6f5f8804l8c-1920.jpg" alt={t('slider.evening.title')} />
 							<div class="slide-content">
-								<h3>Samarqand Kechqurun</h3>
-								<p>Registon maydonining sehrli kechki manzarasi - yorug'lik spektakli</p>
-								<span class="slide-location">📍 Registon Maydoni</span>
+								<h3>{t('slider.evening.title')}</h3>
+								<p>{t('slider.evening.desc')}</p>
+								<span class="slide-location">📍 {t('slider.evening.location')}</span>
 							</div>
 						</div>
 					</div>
