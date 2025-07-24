@@ -34,6 +34,111 @@ export const ui = {
     'home.cta.destinations': 'Ver destinos',
     'home.cta.tips': 'Consejos útiles',
     'back.home': '← Volver al inicio'
+    
+    // Hero section
+    'hero.title': 'Descubre Uzbekistán',
+    'hero.subtitle': 'Perla de la Ruta de la Seda',
+    'hero.description': 'Un viaje fascinante por ciudades legendarias, arquitectura islámica y hospitalidad única en el corazón de Asia Central.',
+    'hero.plan': 'Planificar viaje',
+    'hero.explore': 'Explorar cultura',
+    
+    // Home page
+    'home.why_visit': '¿Por qué visitar Uzbekistán?',
+    'home.unesco.title': 'Patrimonio UNESCO',
+    'home.unesco.desc': 'Ciudades como Samarkand, Bukhara y Khiva son joyas arquitectónicas reconocidas por la UNESCO.',
+    'home.gastronomy.title': 'Gastronomía Única',
+    'home.gastronomy.desc': 'Descubre sabores auténticos como el plov, somsa y la ceremonia del té en un ambiente de hospitalidad incomparable.',
+    'home.easy.title': 'Fácil para Españoles',
+    'home.easy.desc': 'Sin visa para estancias cortas, vuelos directos desde España y moneda favorable para viajeros europeos.',
+    'home.cta.title': '¡Comienza tu aventura uzbeka!',
+    'home.cta.desc': 'Explora nuestras secciones para planificar el viaje perfecto por la Ruta de la Seda.',
+    'home.cta.destinations': 'Ver destinos',
+    'home.cta.tips': 'Consejos útiles',
+    
+    // Slider section
+    'home.slider.title': 'Bellezas de Uzbekistán',
+    'home.slider.desc': 'Descubre los lugares más impresionantes del país a través de fotografías auténticas',
+    
+    // Slider images
+    'slider.registan.title': 'Plaza del Registan',
+    'slider.registan.desc': 'La plaza más famosa de Samarkand - decorada con tres hermosas madrasas',
+    'slider.registan.location': 'Samarkand, Uzbekistán',
+    
+    'slider.khiva.title': 'Ichan-Kala',
+    'slider.khiva.desc': 'La antigua fortaleza de Khiva - una ciudad medieval completamente preservada',
+    'slider.khiva.location': 'Khiva, Khorezm',
+    
+    'slider.crafts.title': 'Artesanías de Khiva',
+    'slider.crafts.desc': 'Textiles tradicionales y artesanías manuales - cultura milenaria',
+    'slider.crafts.location': 'Bazar de Khiva',
+    
+    'slider.bukhara.title': 'Historia de Bukhara',
+    'slider.bukhara.desc': 'Ciudad sagrada con 2500 años de historia - 140 monumentos arquitectónicos',
+    'slider.bukhara.location': 'Bukhara, Uzbekistán',
+    
+    'slider.madrasas.title': 'Madrasas de Bukhara',
+    'slider.madrasas.desc': 'Los mejores ejemplos de arquitectura islámica - centros de ciencia y educación',
+    'slider.madrasas.location': 'Centro de Bukhara',
+    
+    'slider.evening.title': 'Samarkand Nocturno',
+    'slider.evening.desc': 'Vista mágica nocturna de la Plaza del Registan - espectáculo de luces',
+    'slider.evening.location': 'Plaza del Registan',
+    
+    // Gallery
+    'gallery.title': 'Galería y Opiniones',
+    'gallery.subtitle': 'Descubre Uzbekistán a través de los ojos de viajeros reales',
+    'gallery.moments.title': 'Momentos Auténticos',
+    
+    'gallery.registan.title': 'Plaza del Registan',
+    'gallery.registan.desc': 'La plaza central de la ciudad de Samarkand',
+    'gallery.registan.built': 'Siglos XV-XVII',
+    'gallery.registan.architect': 'Ulugh Beg, Yalangtosh Bahadur',
+    'gallery.registan.unesco': 'Patrimonio Mundial (2001)',
+    'gallery.registan.info': 'Tres madrasas - Ulugh Beg (1420), Sher-Dor (1636), Tillakori (1660). Una de las plazas más hermosas de Oriente.',
+    
+    'gallery.bukhara.title': 'Ichan-Kala de Khiva',
+    'gallery.bukhara.desc': 'Ciudad antigua completamente preservada',
+    'gallery.bukhara.built': 'Siglo X (forma actual XVII-XIX siglos)',
+    'gallery.bukhara.area': '26 hectáreas',
+    'gallery.bukhara.unesco': 'Patrimonio Mundial (1990)',
+    'gallery.bukhara.info': 'Muralla de 2.2 km, 4 puertas, 51 monumentos. Llamado "museo al aire libre".',
+    
+    'gallery.khiva.title': 'Artesanías de Khiva',
+    'gallery.khiva.desc': 'Arte tradicional de 1000 años',
+    'gallery.khiva.field': 'Textiles tradicionales',
+    'gallery.khiva.products': 'Alfombras, suzani, atlas, adras',
+    'gallery.khiva.technique': 'Tejido manual, tintes naturales',
+    'gallery.khiva.history': 'Tradición milenaria',
+    'gallery.khiva.info': 'Los artesanos de Khiva tejen atlas y adras famosos mundialmente. Cada patrón tiene su propio significado.',
+    
+    'gallery.plov.title': 'Historia de Bukhara',
+    'gallery.plov.desc': 'Ciudad con 2500 años de historia',
+    'gallery.plov.history': '2500 años',
+    'gallery.plov.monuments': '140 edificios arquitectónicos',
+    'gallery.plov.unesco': 'Patrimonio Mundial (1993)',
+    'gallery.plov.info': '"Bukhara Sharif" - uno de los centros más importantes del mundo islámico. Patria del Imam al-Bukhari.',
+    
+    'gallery.chorsu.title': 'Madrasas de Bukhara',
+    'gallery.chorsu.desc': 'Los mejores ejemplos del arte islámico',
+    'gallery.chorsu.famous': 'Mir-i Arab, Kukaldosh',
+    'gallery.chorsu.built': 'Siglos XVI-XVII',
+    'gallery.chorsu.function': 'Centros educativos',
+    'gallery.chorsu.architecture': 'Ejemplos del arte islámico',
+    'gallery.chorsu.info': 'Las madrasas de Bukhara se consideran los edificios educativos más hermosos de Asia Central.',
+    
+    'gallery.ferghana.title': 'Samarkand Nocturno',
+    'gallery.ferghana.desc': 'Vista mágica nocturna de la Plaza del Registan',
+    'gallery.ferghana.time': 'Atardecer (puesta de sol)',
+    'gallery.ferghana.lighting': 'Sistema LED especial',
+    'gallery.ferghana.show': 'Espectáculo de luz y música',
+    'gallery.ferghana.best_time': '19:00-21:00',
+    'gallery.ferghana.info': 'Por la noche se enciende un sistema de iluminación especial en la Plaza del Registan y se realiza un hermoso espectáculo.',
+    
+    'gallery.testimonials.title': 'Opiniones de Viajeros',
+    'gallery.share.title': 'Comparte tu Experiencia',
+    'gallery.share.desc': '¿Has viajado a Uzbekistán? Nos encantaría agregar tus historias y fotos a nuestra galería.',
+    'gallery.share.photos': 'Enviar fotos y opinión',
+    'gallery.share.review': 'Escribir reseña',
   },
   uz: {
     'site.title': 'O\'zbekiston - To\'liq Madaniy Qo\'llanma',
@@ -271,6 +376,111 @@ export const ui = {
     'contact.form.submit': 'So\'rov yuborish',
     'contact.services.title': 'Sizga qanday yordam bera olamiz?',
     'contact.faq.title': 'Tez-tez so\'raladigan savollar'
+    
+    // Hero section
+    'hero.title': 'Uzbekistonni kashf eting',
+    'hero.subtitle': 'Ipak yo\'lining gavhari',
+    'hero.description': 'Afsonaviy shaharlar, islom me\'morchiligi va Markaziy Osiyoning qalbidagi noyob mehmondo\'stlik orqali ajoyib sayohat.',
+    'hero.plan': 'Sayohat rejalashtirish',
+    'hero.explore': 'Madaniyatni o\'rganish',
+    
+    // Home page
+    'home.why_visit': 'Nima uchun Uzbekistonni ziyorat qilish kerak?',
+    'home.unesco.title': 'UNESCO Merosi',
+    'home.unesco.desc': 'Samarqand, Buxoro va Xiva kabi shaharlar UNESCO tomonidan e\'tirof etilgan me\'moriy durdonalardir.',
+    'home.gastronomy.title': 'Noyob Oshxona',
+    'home.gastronomy.desc': 'Plov, somsa va choy marosimi kabi haqiqiy ta\'mlarni tengsiz mehmondo\'stlik muhitida kashf eting.',
+    'home.easy.title': 'Ispanlar uchun Oson',
+    'home.easy.desc': 'Qisqa muddatli tashrif uchun viza talab qilinmaydi, Ispaniyadan to\'g\'ridan-to\'g\'ri parvozlar va Yevropa sayohatchilari uchun qulay valyuta.',
+    'home.cta.title': 'Uzbek sarguzashtingizni boshlang!',
+    'home.cta.desc': 'Ipak yo\'li bo\'ylab mukammal sayohatni rejalashtirish uchun bizning bo\'limlarimizni o\'rganing.',
+    'home.cta.destinations': 'Manzillarni ko\'rish',
+    'home.cta.tips': 'Foydali maslahatlar',
+    
+    // Slider section
+    'home.slider.title': 'Uzbekistonning Go\'zalliklari',
+    'home.slider.desc': 'Haqiqiy suratlar orqali mamlakatimizning ajoyib joylarini kashf eting',
+    
+    // Slider images
+    'slider.registan.title': 'Registan Maydoni',
+    'slider.registan.desc': 'Samarqandning eng mashhur maydoni - uchta go\'zal madrasa bilan bezatilgan',
+    'slider.registan.location': 'Samarqand, Uzbekiston',
+    
+    'slider.khiva.title': 'Ichan-qala',
+    'slider.khiva.desc': 'Xivaning qadimiy qal\'asi - to\'liq saqlanib qolgan o\'rta asr shahri',
+    'slider.khiva.location': 'Xiva, Xorazm',
+    
+    'slider.crafts.title': 'Xiva Hunarmandchiligi',
+    'slider.crafts.desc': 'An\'anaviy to\'qimachilik va qo\'l san\'ati - ming yillik madaniyat',
+    'slider.crafts.location': 'Xiva Bozori',
+    
+    'slider.bukhara.title': 'Buxoro Tarixi',
+    'slider.bukhara.desc': '2500 yillik tarixga ega muqaddas shahar - 140 ta me\'moriy yodgorlik',
+    'slider.bukhara.location': 'Buxoro, Uzbekiston',
+    
+    'slider.madrasas.title': 'Buxoro Madrasalari',
+    'slider.madrasas.desc': 'Islom me\'morchiligining eng go\'zal namunalari - ilm va ma\'rifat markazlari',
+    'slider.madrasas.location': 'Buxoro Markazi',
+    
+    'slider.evening.title': 'Samarqand Kechqurun',
+    'slider.evening.desc': 'Registon maydonining sehrli kechki manzarasi - yorug\'lik spektakli',
+    'slider.evening.location': 'Registon Maydoni',
+    
+    // Gallery
+    'gallery.title': 'Galereya va Fikrlar',
+    'gallery.subtitle': 'Haqiqiy sayohatchilar ko\'zi bilan Uzbekistonni kashf eting',
+    'gallery.moments.title': 'Haqiqiy Lahzalar',
+    
+    'gallery.registan.title': 'Registan Maydoni',
+    'gallery.registan.desc': 'Samarqand shahrining markaziy maydoni',
+    'gallery.registan.built': 'XV-XVII asrlar',
+    'gallery.registan.architect': 'Ulug\'bek, Yalangtosh Bahodur',
+    'gallery.registan.unesco': 'Jahon merosi ro\'yxatida (2001-yil)',
+    'gallery.registan.info': 'Uchta madrasa - Ulug\'bek (1420), Sher-Dor (1636), Tillakori (1660). Sharqning eng go\'zal maydonlaridan biri.',
+    
+    'gallery.bukhara.title': 'Xiva Ichan-qala',
+    'gallery.bukhara.desc': 'To\'liq saqlanib qolgan qadimiy shahar',
+    'gallery.bukhara.built': 'X asr (hozirgi ko\'rinishi XVII-XIX asr)',
+    'gallery.bukhara.area': '26 gektar',
+    'gallery.bukhara.unesco': 'Jahon merosi (1990-yil)',
+    'gallery.bukhara.info': '2.2 km devor, 4 ta darvoza, 51 ta yodgorlik. "Ochiq osmon ostidagi muzey" deb ataladi.',
+    
+    'gallery.khiva.title': 'Xiva Hunarmandchiligi',
+    'gallery.khiva.desc': '1000 yillik an\'anaviy san\'at',
+    'gallery.khiva.field': 'An\'anaviy to\'qimachilik',
+    'gallery.khiva.products': 'Gilam, suzani, atlas, adras',
+    'gallery.khiva.technique': 'Qo\'l to\'quvi, tabiiy bo\'yoqlar',
+    'gallery.khiva.history': '1000 yillik an\'ana',
+    'gallery.khiva.info': 'Xiva hunarmandlari dunyoga mashhur atlas va adras to\'qiydilar. Har bir naqsh o\'z ma\'nosiga ega.',
+    
+    'gallery.plov.title': 'Buxoro Tarixi',
+    'gallery.plov.desc': '2500 yillik tarixga ega shahar',
+    'gallery.plov.history': '2500 yillik',
+    'gallery.plov.monuments': '140 ta me\'moriy obida',
+    'gallery.plov.unesco': 'Jahon merosi (1993-yil)',
+    'gallery.plov.info': '"Sharif Buxoro" - Islom dunyosining eng muhim markazlaridan biri. Imom al-Buxoriy vatani.',
+    
+    'gallery.chorsu.title': 'Buxoro Madrasalari',
+    'gallery.chorsu.desc': 'Islom san\'atining eng yaxshi namunalari',
+    'gallery.chorsu.famous': 'Mir-i Arab, Kukaldosh',
+    'gallery.chorsu.built': 'XVI-XVII asrlar',
+    'gallery.chorsu.function': 'Ta\'lim markazlari',
+    'gallery.chorsu.architecture': 'Islom san\'ati namunalari',
+    'gallery.chorsu.info': 'Buxoro madrasalari Markaziy Osiyodagi eng go\'zal ta\'lim binolari hisoblanadi.',
+    
+    'gallery.ferghana.title': 'Samarqand Kechqurun',
+    'gallery.ferghana.desc': 'Registon maydonining sehrli manzarasi',
+    'gallery.ferghana.time': 'Kechqurun (quyosh botishi)',
+    'gallery.ferghana.lighting': 'Maxsus LED tizimi',
+    'gallery.ferghana.show': 'Yorug\'lik va musiqa shousi',
+    'gallery.ferghana.best_time': '19:00-21:00',
+    'gallery.ferghana.info': 'Kechqurun Registon maydonida maxsus yoritish tizimi yoqiladi va go\'zal spektakl bo\'lib o\'tadi.',
+    
+    'gallery.testimonials.title': 'Sayohatchilar Fikrlari',
+    'gallery.share.title': 'Tajribangizni Baham Ko\'ring',
+    'gallery.share.desc': 'Uzbekistonga sayohat qildingizmi? Sizning hikoyangiz va suratlaringizni galereya bo\'limiga qo\'shishdan mamnun bo\'lamiz.',
+    'gallery.share.photos': 'Surat va fikr yuborish',
+    'gallery.share.review': 'Sharh yozish',
   },
   en: {
     'site.title': 'Uzbekistan - Complete Cultural Guide',
@@ -508,6 +718,111 @@ export const ui = {
     'contact.form.submit': 'Send inquiry',
     'contact.services.title': 'How can we help you?',
     'contact.faq.title': 'Frequently Asked Questions'
+    
+    // Hero section
+    'hero.title': 'Discover Uzbekistan',
+    'hero.subtitle': 'Pearl of the Silk Road',
+    'hero.description': 'A fascinating journey through legendary cities, Islamic architecture and unique hospitality in the heart of Central Asia.',
+    'hero.plan': 'Plan trip',
+    'hero.explore': 'Explore culture',
+    
+    // Home page
+    'home.why_visit': 'Why visit Uzbekistan?',
+    'home.unesco.title': 'UNESCO Heritage',
+    'home.unesco.desc': 'Cities like Samarkand, Bukhara and Khiva are architectural gems recognized by UNESCO.',
+    'home.gastronomy.title': 'Unique Cuisine',
+    'home.gastronomy.desc': 'Discover authentic flavors like plov, somsa and tea ceremony in an atmosphere of incomparable hospitality.',
+    'home.easy.title': 'Easy for Europeans',
+    'home.easy.desc': 'No visa required for short stays, direct flights from Europe and favorable currency for European travelers.',
+    'home.cta.title': 'Start your Uzbek adventure!',
+    'home.cta.desc': 'Explore our sections to plan the perfect journey along the Silk Road.',
+    'home.cta.destinations': 'View destinations',
+    'home.cta.tips': 'Useful tips',
+    
+    // Slider section
+    'home.slider.title': 'Beauties of Uzbekistan',
+    'home.slider.desc': 'Discover the most impressive places in the country through authentic photographs',
+    
+    // Slider images
+    'slider.registan.title': 'Registan Square',
+    'slider.registan.desc': 'The most famous square in Samarkand - decorated with three beautiful madrasas',
+    'slider.registan.location': 'Samarkand, Uzbekistan',
+    
+    'slider.khiva.title': 'Ichan-Kala',
+    'slider.khiva.desc': 'The ancient fortress of Khiva - a completely preserved medieval city',
+    'slider.khiva.location': 'Khiva, Khorezm',
+    
+    'slider.crafts.title': 'Khiva Crafts',
+    'slider.crafts.desc': 'Traditional textiles and handicrafts - thousand-year-old culture',
+    'slider.crafts.location': 'Khiva Bazaar',
+    
+    'slider.bukhara.title': 'Bukhara History',
+    'slider.bukhara.desc': 'Sacred city with 2500 years of history - 140 architectural monuments',
+    'slider.bukhara.location': 'Bukhara, Uzbekistan',
+    
+    'slider.madrasas.title': 'Bukhara Madrasas',
+    'slider.madrasas.desc': 'The finest examples of Islamic architecture - centers of science and education',
+    'slider.madrasas.location': 'Bukhara Center',
+    
+    'slider.evening.title': 'Samarkand Evening',
+    'slider.evening.desc': 'Magical evening view of Registan Square - light show',
+    'slider.evening.location': 'Registan Square',
+    
+    // Gallery
+    'gallery.title': 'Gallery and Reviews',
+    'gallery.subtitle': 'Discover Uzbekistan through the eyes of real travelers',
+    'gallery.moments.title': 'Authentic Moments',
+    
+    'gallery.registan.title': 'Registan Square',
+    'gallery.registan.desc': 'The central square of Samarkand city',
+    'gallery.registan.built': '15th-17th centuries',
+    'gallery.registan.architect': 'Ulugh Beg, Yalangtosh Bahadur',
+    'gallery.registan.unesco': 'World Heritage List (2001)',
+    'gallery.registan.info': 'Three madrasas - Ulugh Beg (1420), Sher-Dor (1636), Tillakori (1660). One of the most beautiful squares in the East.',
+    
+    'gallery.bukhara.title': 'Khiva Ichan-Kala',
+    'gallery.bukhara.desc': 'Completely preserved ancient city',
+    'gallery.bukhara.built': '10th century (current appearance 17th-19th centuries)',
+    'gallery.bukhara.area': '26 hectares',
+    'gallery.bukhara.unesco': 'World Heritage (1990)',
+    'gallery.bukhara.info': '2.2 km wall, 4 gates, 51 monuments. Called "open-air museum".',
+    
+    'gallery.khiva.title': 'Khiva Crafts',
+    'gallery.khiva.desc': '1000-year-old traditional art',
+    'gallery.khiva.field': 'Traditional textiles',
+    'gallery.khiva.products': 'Carpets, suzani, atlas, adras',
+    'gallery.khiva.technique': 'Hand weaving, natural dyes',
+    'gallery.khiva.history': '1000-year tradition',
+    'gallery.khiva.info': 'Khiva craftsmen weave world-famous atlas and adras. Each pattern has its own meaning.',
+    
+    'gallery.plov.title': 'Bukhara History',
+    'gallery.plov.desc': 'City with 2500 years of history',
+    'gallery.plov.history': '2500 years',
+    'gallery.plov.monuments': '140 architectural buildings',
+    'gallery.plov.unesco': 'World Heritage (1993)',
+    'gallery.plov.info': '"Bukhara Sharif" - one of the most important centers of the Islamic world. Homeland of Imam al-Bukhari.',
+    
+    'gallery.chorsu.title': 'Bukhara Madrasas',
+    'gallery.chorsu.desc': 'The best examples of Islamic art',
+    'gallery.chorsu.famous': 'Mir-i Arab, Kukaldosh',
+    'gallery.chorsu.built': '16th-17th centuries',
+    'gallery.chorsu.function': 'Educational centers',
+    'gallery.chorsu.architecture': 'Examples of Islamic art',
+    'gallery.chorsu.info': 'Bukhara madrasas are considered the most beautiful educational buildings in Central Asia.',
+    
+    'gallery.ferghana.title': 'Samarkand Evening',
+    'gallery.ferghana.desc': 'Magical view of Registan Square',
+    'gallery.ferghana.time': 'Evening (sunset)',
+    'gallery.ferghana.lighting': 'Special LED system',
+    'gallery.ferghana.show': 'Light and music show',
+    'gallery.ferghana.best_time': '19:00-21:00',
+    'gallery.ferghana.info': 'In the evening, a special lighting system is turned on in Registan Square and a beautiful show takes place.',
+    
+    'gallery.testimonials.title': 'Traveler Reviews',
+    'gallery.share.title': 'Share Your Experience',
+    'gallery.share.desc': 'Have you traveled to Uzbekistan? We would be happy to add your stories and photos to our gallery.',
+    'gallery.share.photos': 'Send photos and feedback',
+    'gallery.share.review': 'Write review',
   },
   ru: {
     'site.title': 'Узбекистан - Полный культурный гид',
@@ -745,5 +1060,110 @@ export const ui = {
     'contact.form.submit': 'Отправить запрос',
     'contact.services.title': 'Как мы можем вам помочь?',
     'contact.faq.title': 'Часто задаваемые вопросы'
+    
+    // Hero section
+    'hero.title': 'Откройте для себя Узбекистан',
+    'hero.subtitle': 'Жемчужина Шелкового пути',
+    'hero.description': 'Увлекательное путешествие по легендарным городам, исламской архитектуре и уникальному гостеприимству в сердце Центральной Азии.',
+    'hero.plan': 'Планировать поездку',
+    'hero.explore': 'Изучить культуру',
+    
+    // Home page
+    'home.why_visit': 'Почему стоит посетить Узбекистан?',
+    'home.unesco.title': 'Наследие ЮНЕСКО',
+    'home.unesco.desc': 'Такие города, как Самарканд, Бухара и Хива, являются архитектурными жемчужинами, признанными ЮНЕСКО.',
+    'home.gastronomy.title': 'Уникальная кухня',
+    'home.gastronomy.desc': 'Откройте для себя аутентичные вкусы, такие как плов, самса и чайная церемония в атмосфере несравненного гостеприимства.',
+    'home.easy.title': 'Легко для европейцев',
+    'home.easy.desc': 'Виза не требуется для коротких поездок, прямые рейсы из Европы и выгодная валюта для европейских путешественников.',
+    'home.cta.title': 'Начните свое узбекское приключение!',
+    'home.cta.desc': 'Изучите наши разделы, чтобы спланировать идеальное путешествие по Шелковому пути.',
+    'home.cta.destinations': 'Посмотреть направления',
+    'home.cta.tips': 'Полезные советы',
+    
+    // Slider section
+    'home.slider.title': 'Красоты Узбекистана',
+    'home.slider.desc': 'Откройте для себя самые впечатляющие места страны через подлинные фотографии',
+    
+    // Slider images
+    'slider.registan.title': 'Площадь Регистан',
+    'slider.registan.desc': 'Самая знаменитая площадь Самарканда - украшенная тремя красивыми медресе',
+    'slider.registan.location': 'Самарканд, Узбекистан',
+    
+    'slider.khiva.title': 'Ичан-Кала',
+    'slider.khiva.desc': 'Древняя крепость Хивы - полностью сохранившийся средневековый город',
+    'slider.khiva.location': 'Хива, Хорезм',
+    
+    'slider.crafts.title': 'Ремесла Хивы',
+    'slider.crafts.desc': 'Традиционные текстиль и ремесла - тысячелетняя культура',
+    'slider.crafts.location': 'Базар Хивы',
+    
+    'slider.bukhara.title': 'История Бухары',
+    'slider.bukhara.desc': 'Священный город с 2500-летней историей - 140 архитектурных памятников',
+    'slider.bukhara.location': 'Бухара, Узбекистан',
+    
+    'slider.madrasas.title': 'Медресе Бухары',
+    'slider.madrasas.desc': 'Лучшие образцы исламской архитектуры - центры науки и образования',
+    'slider.madrasas.location': 'Центр Бухары',
+    
+    'slider.evening.title': 'Самарканд вечером',
+    'slider.evening.desc': 'Волшебный вечерний вид площади Регистан - световое шоу',
+    'slider.evening.location': 'Площадь Регистан',
+    
+    // Gallery
+    'gallery.title': 'Галерея и отзывы',
+    'gallery.subtitle': 'Откройте для себя Узбекистан глазами настоящих путешественников',
+    'gallery.moments.title': 'Подлинные моменты',
+    
+    'gallery.registan.title': 'Площадь Регистан',
+    'gallery.registan.desc': 'Центральная площадь города Самарканд',
+    'gallery.registan.built': 'XV-XVII века',
+    'gallery.registan.architect': 'Улугбек, Ялангтош Бахадур',
+    'gallery.registan.unesco': 'Список всемирного наследия (2001)',
+    'gallery.registan.info': 'Три медресе - Улугбека (1420), Шер-Дор (1636), Тилля-Кари (1660). Одна из самых красивых площадей Востока.',
+    
+    'gallery.bukhara.title': 'Ичан-Кала Хивы',
+    'gallery.bukhara.desc': 'Полностью сохранившийся древний город',
+    'gallery.bukhara.built': 'X век (современный вид XVII-XIX века)',
+    'gallery.bukhara.area': '26 гектаров',
+    'gallery.bukhara.unesco': 'Всемирное наследие (1990)',
+    'gallery.bukhara.info': 'Стена 2,2 км, 4 ворот, 51 памятник. Называется "музей под открытым небом".',
+    
+    'gallery.khiva.title': 'Ремесла Хивы',
+    'gallery.khiva.desc': '1000-летнее традиционное искусство',
+    'gallery.khiva.field': 'Традиционный текстиль',
+    'gallery.khiva.products': 'Ковры, сюзане, атлас, адрас',
+    'gallery.khiva.technique': 'Ручное ткачество, натуральные красители',
+    'gallery.khiva.history': '1000-летняя традиция',
+    'gallery.khiva.info': 'Мастера Хивы ткут всемирно известные атлас и адрас. Каждый узор имеет свое значение.',
+    
+    'gallery.plov.title': 'История Бухары',
+    'gallery.plov.desc': 'Город с 2500-летней историей',
+    'gallery.plov.history': '2500 лет',
+    'gallery.plov.monuments': '140 архитектурных зданий',
+    'gallery.plov.unesco': 'Всемирное наследие (1993)',
+    'gallery.plov.info': '"Бухара Шариф" - один из важнейших центров исламского мира. Родина имама аль-Бухари.',
+    
+    'gallery.chorsu.title': 'Медресе Бухары',
+    'gallery.chorsu.desc': 'Лучшие образцы исламского искусства',
+    'gallery.chorsu.famous': 'Мир-и Араб, Кукалдош',
+    'gallery.chorsu.built': 'XVI-XVII века',
+    'gallery.chorsu.function': 'Образовательные центры',
+    'gallery.chorsu.architecture': 'Образцы исламского искусства',
+    'gallery.chorsu.info': 'Медресе Бухары считаются самыми красивыми образовательными зданиями в Центральной Азии.',
+    
+    'gallery.ferghana.title': 'Самарканд вечером',
+    'gallery.ferghana.desc': 'Волшебный вид площади Регистан',
+    'gallery.ferghana.time': 'Вечер (закат)',
+    'gallery.ferghana.lighting': 'Специальная LED система',
+    'gallery.ferghana.show': 'Световое и музыкальное шоу',
+    'gallery.ferghana.best_time': '19:00-21:00',
+    'gallery.ferghana.info': 'Вечером на площади Регистан включается специальная система освещения и проходит красивое шоу.',
+    
+    'gallery.testimonials.title': 'Отзывы путешественников',
+    'gallery.share.title': 'Поделитесь своим опытом',
+    'gallery.share.desc': 'Путешествовали в Узбекистан? Мы будем рады добавить ваши истории и фотографии в нашу галерею.',
+    'gallery.share.photos': 'Отправить фото и отзыв',
+    'gallery.share.review': 'Написать отзыв',
   }
 } as const;
