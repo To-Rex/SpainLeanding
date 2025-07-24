@@ -526,47 +526,99 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	const menuToggle = document.getElementById('menuToggle');
 	const navMenu = document.getElementById('navMenu');
 	const navbar = document.querySelector('.navbar');
+	let isNavigating = false;
 
-	// Page transition animation
-	function createPageTransition(targetUrl) {
-		// Add transition out class to body
-		document.body.classList.add('page-transition-out');
-		
-		// Wait for animation to complete, then navigate
-		setTimeout(() => {
-			window.location.href = targetUrl;
-		}, 500);
+	// SPA Navigation System
+	async function navigateToPage(url) {
+		if (isNavigating) return;
+		isNavigating = true;
+
+		try {
+			// Fetch new page content
+			const response = await fetch(url);
+			const html = await response.text();
+			const parser = new DOMParser();
+			const newDoc = parser.parseFromString(html, 'text/html');
+			
+			// Get main content (everything except nav)
+			const currentMain = document.querySelector('main') || document.body;
+			const newMain = newDoc.querySelector('main') || newDoc.body;
+			
+			// Animate content out
+			currentMain.style.opacity = '0';
+			currentMain.style.transform = 'translateX(-30px)';
+			
+			setTimeout(() => {
+				// Replace content
+				if (document.querySelector('main')) {
+					document.querySelector('main').innerHTML = newMain.innerHTML;
+				} else {
+					// Replace everything except nav
+					const nav = document.querySelector('nav');
+					document.body.innerHTML = newDoc.body.innerHTML;
+					if (nav && !document.querySelector('nav')) {
+						document.body.insertBefore(nav, document.body.firstChild);
+					}
+				}
+				
+				// Update page title
+				document.title = newDoc.title;
+				
+				// Update URL without page reload
+				history.pushState({}, '', url);
+				
+				// Animate new content in
+				const updatedMain = document.querySelector('main') || document.body;
+				updatedMain.style.opacity = '0';
+				updatedMain.style.transform = 'translateX(30px)';
+				
+				setTimeout(() => {
+					updatedMain.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+					updatedMain.style.opacity = '1';
+					updatedMain.style.transform = 'translateX(0)';
+					
+					// Update active nav link
+					updateActiveNavLink(url);
+					
+					isNavigating = false;
+				}, 50);
+			}, 300);
+			
+		} catch (error) {
+			console.error('Navigation error:', error);
+			// Fallback to normal navigation
+			window.location.href = url;
+			isNavigating = false;
+		}
 	}
 
-	// Add click animation and page transition to nav links
+	// Update active nav link
+	function updateActiveNavLink(url) {
+		document.querySelectorAll('.nav-link').forEach(link => {
+			link.classList.remove('active');
+			if (link.getAttribute('href') === url) {
+				link.classList.add('active');
+			}
+		});
+	}
+
+	// Handle nav link clicks
 	document.querySelectorAll('.nav-link').forEach(link => {
 		link.addEventListener('click', function(e) {
-			// Don't prevent default for external links or same page
 			const href = this.getAttribute('href');
 			const currentPath = window.location.pathname;
 			
-			// Only animate for internal navigation to different pages
+			// Only handle internal links
 			if (href && href !== currentPath && !href.startsWith('http') && !href.startsWith('#')) {
 				e.preventDefault();
-				
-				// Add ripple effect
-				this.classList.add('clicked');
-				setTimeout(() => {
-					this.classList.remove('clicked');
-				}, 600);
-				
-				// Start page transition
-				createPageTransition(href);
+				navigateToPage(href);
 			}
 		});
 	});
 
-	// Add transition in class when page loads
-	window.addEventListener('load', () => {
-		document.body.classList.add('page-transition-in');
-		setTimeout(() => {
-			document.body.classList.remove('page-transition-in');
-		}, 600);
+	// Handle browser back/forward buttons
+	window.addEventListener('popstate', (e) => {
+		navigateToPage(window.location.pathname);
 	});
 
 	// Menu toggle functionality

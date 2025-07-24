@@ -47,45 +47,17 @@ const { title, description } = Astro.props;
 		color: #2C3E50;
 		background: #FEFEFE;
 		overflow-x: hidden;
-		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	/* Page transition styles */
-	body.page-transition-out {
-		opacity: 0;
-		transform: translateY(-30px);
+	/* Main content container */
+	main {
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	body.page-transition-in {
-		animation: pageSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	@keyframes pageSlideIn {
-		from {
-			opacity: 0;
-			transform: translateX(50px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
-
-	/* Smooth content reveal */
+	/* Content sections */
 	.section {
-		animation: contentFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-		animation-fill-mode: both;
-	}
-
-	@keyframes contentFadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	h1, h2, h3, h4, h5, h6 {
