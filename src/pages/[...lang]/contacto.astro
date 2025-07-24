@@ -21,8 +21,8 @@ const t = useTranslations(lang);
 	<section class="section hero-contact">
 		<div class="container">
 			<div class="section-content">
-				<h1>Contacto</h1>
-				<p class="lead">¿Listo para tu aventura uzbeka? Te ayudamos a planificar el viaje perfecto adaptado a tus intereses y presupuesto.</p>
+				<h1>{t('contact.title')}</h1>
+				<p class="lead">{t('contact.subtitle')}</p>
 			</div>
 		</div>
 	</section>
@@ -33,26 +33,26 @@ const t = useTranslations(lang);
 				<div class="contact-grid">
 					<div class="contact-card">
 						<div class="contact-icon">📧</div>
-						<h3>Email</h3>
-						<p>Para consultas detalladas y planificación personalizada</p>
+						<h3>{t('contact.email.title')}</h3>
+						<p>{t('contact.email.desc')}</p>
 						<a href="mailto:torex.amaki@gmail.com" class="contact-link">torex.amaki@gmail.com</a>
-						<small>Respuesta en 24 horas</small>
+						<small>{t('contact.email.response')}</small>
 					</div>
 					
 					<div class="contact-card">
 						<div class="contact-icon">📱</div>
-						<h3>WhatsApp</h3>
-						<p>Consultas rápidas y asesoramiento inmediato</p>
+						<h3>{t('contact.whatsapp.title')}</h3>
+						<p>{t('contact.whatsapp.desc')}</p>
 						<a href="https://wa.me/998995340313" class="contact-link" target="_blank">+998 99 534 03 13</a>
-						<small>Lunes a Viernes 9:00-18:00</small>
+						<small>{t('contact.whatsapp.hours')}</small>
 					</div>
 					
 					<div class="contact-card">
 						<div class="contact-icon">✈️</div>
-						<h3>Telegram</h3>
-						<p>Canal directo para viajeros frecuentes</p>
+						<h3>{t('contact.telegram.title')}</h3>
+						<p>{t('contact.telegram.desc')}</p>
 						<a href="https://t.me/+998995340313" class="contact-link" target="_blank">+998 99 534 03 13</a>
-						<small>Soporte en español</small>
+						<small>{t('contact.telegram.support')}</small>
 					</div>
 				</div>
 			</div>
@@ -64,37 +64,37 @@ const t = useTranslations(lang);
 			<div class="section-content">
 				<div class="form-container">
 					<div class="form-header">
-						<h2>Consulta Personalizada</h2>
-						<p>Cuéntanos sobre tu viaje ideal y te ayudaremos a hacerlo realidad</p>
+						<h2>{t('contact.form.title')}</h2>
+						<p>{t('contact.form.desc')}</p>
 					</div>
 					
 					<form class="contact-form-element" id="contactForm">
 						<div class="form-row">
 							<div class="form-group">
-								<label for="name">Nombre completo *</label>
+								<label for="name">{t('contact.form.name')}</label>
 								<input type="text" id="name" name="name" required>
 							</div>
 							
 							<div class="form-group">
-								<label for="email">Email *</label>
+								<label for="email">{t('contact.form.email')}</label>
 								<input type="email" id="email" name="email" required>
 							</div>
 						</div>
 						
 						<div class="form-row">
 							<div class="form-group">
-								<label for="phone">Teléfono (opcional)</label>
+								<label for="phone">{t('contact.form.phone')}</label>
 								<input type="tel" id="phone" name="phone">
 							</div>
 							
 							<div class="form-group">
-								<label for="city">Ciudad de origen</label>
+								<label for="city">{t('contact.form.city')}</label>
 								<input type="text" id="city" name="city" placeholder="ej. Madrid, Barcelona...">
 							</div>
 						</div>
 						
 						<div class="form-group">
-							<label for="duration">Duración del viaje</label>
+							<label for="duration">{t('contact.form.duration')}</label>
 							<select id="duration" name="duration">
 								<option value="">Selecciona duración</option>
 								<option value="3-5">3-5 días</option>
@@ -106,7 +106,7 @@ const t = useTranslations(lang);
 						
 						<div class="form-row">
 							<div class="form-group">
-								<label for="travelers">Número de viajeros</label>
+								<label for="travelers">{t('contact.form.travelers')}</label>
 								<select id="travelers" name="travelers">
 									<option value="1">1 persona</option>
 									<option value="2">2 personas</option>
@@ -116,7 +116,7 @@ const t = useTranslations(lang);
 							</div>
 							
 							<div class="form-group">
-								<label for="budget">Presupuesto aproximado</label>
+								<label for="budget">{t('contact.form.budget')}</label>
 								<select id="budget" name="budget">
 									<option value="">Selecciona presupuesto</option>
 									<option value="500-1000">500-1000 EUR</option>
@@ -128,7 +128,7 @@ const t = useTranslations(lang);
 						</div>
 						
 						<div class="form-group">
-							<label for="interests">Intereses principales</label>
+							<label for="interests">{t('contact.form.interests')}</label>
 							<div class="checkbox-group">
 								<label class="checkbox-label">
 									<input type="checkbox" name="interests" value="cultura">
@@ -158,11 +158,11 @@ const t = useTranslations(lang);
 						</div>
 						
 						<div class="form-group">
-							<label for="message">Mensaje adicional</label>
+							<label for="message">{t('contact.form.message')}</label>
 							<textarea id="message" name="message" rows="5" placeholder="Cuéntanos más sobre tu viaje ideal, fechas preferidas, necesidades especiales..."></textarea>
 						</div>
 						
-						<button type="submit" class="btn btn-primary">Enviar consulta</button>
+						<button type="submit" class="btn btn-primary">{t('contact.form.submit')}</button>
 					</form>
 				</div>
 			</div>
@@ -172,7 +172,7 @@ const t = useTranslations(lang);
 	<section class="section services">
 		<div class="container">
 			<div class="section-content">
-				<h2>¿Cómo te podemos ayudar?</h2>
+				<h2>{t('contact.services.title')}</h2>
 				<div class="services-grid">
 					<div class="service-card">
 						<div class="service-icon">🗺️</div>
@@ -217,7 +217,7 @@ const t = useTranslations(lang);
 	<section class="section faq">
 		<div class="container">
 			<div class="section-content">
-				<h2>Preguntas Frecuentes</h2>
+				<h2>{t('contact.faq.title')}</h2>
 				<div class="faq-grid">
 					<div class="faq-item">
 						<h3>¿Cuánto cuesta viajar a Uzbekistán?</h3>

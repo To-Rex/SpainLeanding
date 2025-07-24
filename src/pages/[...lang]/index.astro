@@ -27,29 +27,29 @@ const t = useTranslations(lang);
 				<div class="highlights-grid">
 					<div class="highlight-card">
 						<div class="highlight-icon">🏛️</div>
-						<h3>Patrimonio UNESCO</h3>
-						<p>Ciudades como Samarkand, Bukhara y Khiva son joyas arquitectónicas declaradas Patrimonio de la Humanidad.</p>
+						<h3>{t('home.unesco.title')}</h3>
+						<p>{t('home.unesco.desc')}</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">🍽️</div>
-						<h3>Gastronomía Única</h3>
-						<p>Descubre sabores auténticos como el plov, somsa y el ritual del té en un ambiente de hospitalidad incomparable.</p>
+						<h3>{t('home.gastronomy.title')}</h3>
+						<p>{t('home.gastronomy.desc')}</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">🚗</div>
-						<h3>Fácil para Españoles</h3>
-						<p>Sin visa para estancias cortas, vuelos directos desde España y una moneda accesible para viajeros europeos.</p>
+						<h3>{t('home.easy.title')}</h3>
+						<p>{t('home.easy.desc')}</p>
 					</div>
 				</div>
 				
 				<div class="cta-section">
-					<h3>¡Comienza tu aventura uzbeque!</h3>
-					<p>Explora nuestras secciones para planificar el viaje perfecto por la Ruta de la Seda.</p>
+					<h3>{t('home.cta.title')}</h3>
+					<p>{t('home.cta.desc')}</p>
 					<div class="cta-buttons">
-						<a href={getLocalizedPath('/destinos', lang)} class="btn">Ver destinos</a>
-						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">Consejos útiles</a>
+						<a href={getLocalizedPath('/destinos', lang)} class="btn">{t('home.cta.destinations')}</a>
+						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">{t('home.cta.tips')}</a>
 					</div>
 				</div>
 			</div>
