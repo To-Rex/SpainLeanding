@@ -399,6 +399,85 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		}
 	}
 
+	/* Page Transition Animations */
+	@keyframes slideOutUp {
+		from {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		to {
+			opacity: 0;
+			transform: translateY(-50px);
+		}
+	}
+
+	@keyframes slideInFromRight {
+		from {
+			opacity: 0;
+			transform: translateX(100px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	@keyframes fadeInScale {
+		from {
+			opacity: 0;
+			transform: scale(0.8);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes rippleEffect {
+		0% {
+			transform: scale(0);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(4);
+			opacity: 0;
+		}
+	}
+
+	/* Page transition states */
+	.page-transition-out {
+		animation: slideOutUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+	}
+
+	.page-transition-in {
+		animation: slideInFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	/* Link click ripple effect */
+	.nav-link {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.nav-link::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	.nav-link.clicked::after {
+		animation: rippleEffect 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
 	.navbar {
 		animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 	}
@@ -447,6 +526,48 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	const menuToggle = document.getElementById('menuToggle');
 	const navMenu = document.getElementById('navMenu');
 	const navbar = document.querySelector('.navbar');
+
+	// Page transition animation
+	function createPageTransition(targetUrl) {
+		// Add transition out class to body
+		document.body.classList.add('page-transition-out');
+		
+		// Wait for animation to complete, then navigate
+		setTimeout(() => {
+			window.location.href = targetUrl;
+		}, 500);
+	}
+
+	// Add click animation and page transition to nav links
+	document.querySelectorAll('.nav-link').forEach(link => {
+		link.addEventListener('click', function(e) {
+			// Don't prevent default for external links or same page
+			const href = this.getAttribute('href');
+			const currentPath = window.location.pathname;
+			
+			// Only animate for internal navigation to different pages
+			if (href && href !== currentPath && !href.startsWith('http') && !href.startsWith('#')) {
+				e.preventDefault();
+				
+				// Add ripple effect
+				this.classList.add('clicked');
+				setTimeout(() => {
+					this.classList.remove('clicked');
+				}, 600);
+				
+				// Start page transition
+				createPageTransition(href);
+			}
+		});
+	});
+
+	// Add transition in class when page loads
+	window.addEventListener('load', () => {
+		document.body.classList.add('page-transition-in');
+		setTimeout(() => {
+			document.body.classList.remove('page-transition-in');
+		}, 600);
+	});
 
 	// Menu toggle functionality
 	menuToggle?.addEventListener('click', () => {
