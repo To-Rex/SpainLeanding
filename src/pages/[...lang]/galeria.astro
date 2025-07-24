@@ -21,8 +21,8 @@ const t = useTranslations(lang);
 	<section class="section hero-gallery">
 		<div class="container">
 			<div class="section-content">
-				<h1>Galería y Opiniones</h1>
-				<p class="lead">Descubre Uzbekistán a través de los ojos de viajeros reales que han vivido esta experiencia única.</p>
+				<h1>{t('gallery.title')}</h1>
+				<p class="lead">{t('gallery.subtitle')}</p>
 			</div>
 		</div>
 	</section>
@@ -30,69 +30,69 @@ const t = useTranslations(lang);
 	<section class="section photo-gallery">
 		<div class="container">
 			<div class="section-content">
-				<h2>📸 Momentos Auténticos</h2>
+				<h2>{t('gallery.moments.title')}</h2>
 				<div class="gallery-grid">
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/13811843/pexels-photo-13811843.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Registan de Samarkand" />
 						<div class="gallery-overlay">
-							<h3>Registan al Amanecer</h3>
-							<p>El momento mágico cuando los primeros rayos iluminan las madrasas</p>
+							<h3>{t('gallery.registan.title')}</h3>
+							<p>{t('gallery.registan.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/12461619/pexels-photo-12461619.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Calles de Bukhara" />
 						<div class="gallery-overlay">
-							<h3>Calles de Bukhara</h3>
-							<p>Paseando por las calles empedradas de la ciudad sagrada</p>
+							<h3>{t('gallery.bukhara.title')}</h3>
+							<p>{t('gallery.bukhara.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/16439978/pexels-photo-16439978.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ichan-Kala Khiva" />
 						<div class="gallery-overlay">
-							<h3>Ichan-Kala, Khiva</h3>
-							<p>La ciudad amurallada que parece detenida en el tiempo</p>
+							<h3>{t('gallery.khiva.title')}</h3>
+							<p>{t('gallery.khiva.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/5853815/pexels-photo-5853815.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Plov tradicional" />
 						<div class="gallery-overlay">
-							<h3>Plov Auténtico</h3>
-							<p>El plato nacional preparado en grandes calderos tradicionales</p>
+							<h3>{t('gallery.plov.title')}</h3>
+							<p>{t('gallery.plov.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/14583006/pexels-photo-14583006.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bazar Tashkent" />
 						<div class="gallery-overlay">
-							<h3>Bazar Chorsu</h3>
-							<p>El corazón comercial de Tashkent lleno de colores y aromas</p>
+							<h3>{t('gallery.chorsu.title')}</h3>
+							<p>{t('gallery.chorsu.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/6898266/pexels-photo-6898266.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Paisaje Valle Ferghana" />
 						<div class="gallery-overlay">
-							<h3>Valle de Ferghana</h3>
-							<p>Montañas y valles verdes donde nacen las mejores sedas</p>
+							<h3>{t('gallery.ferghana.title')}</h3>
+							<p>{t('gallery.ferghana.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/18134988/pexels-photo-18134988.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Artesanía local" />
 						<div class="gallery-overlay">
-							<h3>Artesanía Local</h3>
-							<p>Maestros artesanos trabajando técnicas milenarias</p>
+							<h3>{t('gallery.crafts.title')}</h3>
+							<p>{t('gallery.crafts.desc')}</p>
 						</div>
 					</div>
 					
 					<div class="gallery-item">
 						<img src="https://images.pexels.com/photos/1793035/pexels-photo-1793035.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ceremonia del té" />
 						<div class="gallery-overlay">
-							<h3>Ceremonia del Té</h3>
-							<p>Hospitalidad uzbeka en su máxima expresión</p>
+							<h3>{t('gallery.tea.title')}</h3>
+							<p>{t('gallery.tea.desc')}</p>
 						</div>
 					</div>
 				</div>
@@ -103,7 +103,7 @@ const t = useTranslations(lang);
 	<section class="section testimonials">
 		<div class="container">
 			<div class="section-content">
-				<h2>💬 Lo que dicen los viajeros</h2>
+				<h2>{t('gallery.testimonials.title')}</h2>
 				<div class="testimonials-grid">
 					<div class="testimonial-card">
 						<div class="testimonial-content">
@@ -202,42 +202,42 @@ const t = useTranslations(lang);
 	<section class="section travel-tips-gallery">
 		<div class="container">
 			<div class="section-content">
-				<h2>📝 Consejos de Viajeros Reales</h2>
+				<h2>{t('gallery.tips_gallery.title')}</h2>
 				<div class="tips-gallery">
 					<div class="tip-card">
 						<div class="tip-icon">💡</div>
-						<h3>Mejor Momento para Fotos</h3>
-						<p><strong>Consejo de María (Sevilla):</strong> "Visita el Registan al amanecer y al atardecer. La luz dorada sobre los mosaicos es mágica, y hay menos turistas."</p>
+						<h3>{t('gallery.photo_tip.title')}</h3>
+						<p>{t('gallery.photo_tip.desc')}</p>
 					</div>
 					
 					<div class="tip-card">
 						<div class="tip-icon">🍽️</div>
-						<h3>Gastronomía Local</h3>
-						<p><strong>Consejo de Javier (Madrid):</strong> "Prueba el plov en Central Asian Plov Center en Tashkent. Es el mejor que encontrarás, y los locales también van allí."</p>
+						<h3>{t('gallery.food_tip.title')}</h3>
+						<p>{t('gallery.food_tip.desc')}</p>
 					</div>
 					
 					<div class="tip-card">
 						<div class="tip-icon">🏨</div>
-						<h3>Alojamiento Auténtico</h3>
-						<p><strong>Consejo de Ana (Barcelona):</strong> "Alójate en una madrasa convertida en hotel en Bukhara. La experiencia de dormir en un sitio histórico es única."</p>
+						<h3>{t('gallery.accommodation_tip.title')}</h3>
+						<p>{t('gallery.accommodation_tip.desc')}</p>
 					</div>
 					
 					<div class="tip-card">
 						<div class="tip-icon">🎨</div>
-						<h3>Compras Inteligentes</h3>
-						<p><strong>Consejo de Carlos (Valencia):</strong> "Compra sedas en Margilan directamente del taller. La calidad es superior y los precios son justos."</p>
+						<h3>{t('gallery.shopping_tip.title')}</h3>
+						<p>{t('gallery.shopping_tip.desc')}</p>
 					</div>
 					
 					<div class="tip-card">
 						<div class="tip-icon">🚗</div>
-						<h3>Transporte Eficiente</h3>
-						<p><strong>Consejo de Luis (Bilbao):</strong> "Usa Yandex Taxi en las ciudades. Es económico, seguro y los conductores son muy amables."</p>
+						<h3>{t('gallery.transport_tip.title')}</h3>
+						<p>{t('gallery.transport_tip.desc')}</p>
 					</div>
 					
 					<div class="tip-card">
 						<div class="tip-icon">📱</div>
-						<h3>Comunicación</h3>
-						<p><strong>Consejo de Pilar (Zaragoza):</strong> "Descarga Google Translate con uzbeko offline. Aunque muchos hablan algo de inglés, es muy útil."</p>
+						<h3>{t('gallery.communication_tip.title')}</h3>
+						<p>{t('gallery.communication_tip.desc')}</p>
 					</div>
 				</div>
 			</div>
@@ -248,11 +248,11 @@ const t = useTranslations(lang);
 		<div class="container">
 			<div class="section-content">
 				<div class="share-card">
-					<h2>📤 Comparte tu experiencia</h2>
-					<p>¿Has viajado a Uzbekistán? Nos encantaría conocer tu historia y añadir tus fotos a nuestra galería.</p>
+					<h2>{t('gallery.share.title')}</h2>
+					<p>{t('gallery.share.desc')}</p>
 					<div class="share-options">
-						<a href={getLocalizedPath('/contacto', lang)} class="btn">Enviar fotos y testimonio</a>
-						<a href="mailto:torex.amaki@gmail.com" class="btn btn-outline">Escribir reseña</a>
+						<a href={getLocalizedPath('/contacto', lang)} class="btn">{t('gallery.share.photos')}</a>
+						<a href="mailto:torex.amaki@gmail.com" class="btn btn-outline">{t('gallery.share.review')}</a>
 					</div>
 				</div>
 				

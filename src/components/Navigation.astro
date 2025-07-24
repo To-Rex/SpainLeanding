@@ -1,9 +1,11 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
+import { removeLocaleFromPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const currentPath = removeLocaleFromPath(Astro.url.pathname);
 ---
 
 <nav class="navbar">
@@ -23,13 +25,13 @@ const t = useTranslations(lang);
 			</button>
 			
 			<ul class="nav-menu" id="navMenu">
-				<li><a href={getLocalizedPath('/', lang)}>{t('nav.home')}</a></li>
-				<li><a href={getLocalizedPath('/cultura', lang)}>{t('nav.culture')}</a></li>
-				<li><a href={getLocalizedPath('/destinos', lang)}>{t('nav.destinations')}</a></li>
-				<li><a href={getLocalizedPath('/consejos', lang)}>{t('nav.tips')}</a></li>
-				<li><a href={getLocalizedPath('/itinerarios', lang)}>{t('nav.itineraries')}</a></li>
-				<li><a href={getLocalizedPath('/galeria', lang)}>{t('nav.gallery')}</a></li>
-				<li><a href={getLocalizedPath('/contacto', lang)}>{t('nav.contact')}</a></li>
+				<li><a href={getLocalizedPath('/', lang)} class={currentPath === '/' ? 'active' : ''}>{t('nav.home')}</a></li>
+				<li><a href={getLocalizedPath('/cultura', lang)} class={currentPath === '/cultura' ? 'active' : ''}>{t('nav.culture')}</a></li>
+				<li><a href={getLocalizedPath('/destinos', lang)} class={currentPath === '/destinos' ? 'active' : ''}>{t('nav.destinations')}</a></li>
+				<li><a href={getLocalizedPath('/consejos', lang)} class={currentPath === '/consejos' ? 'active' : ''}>{t('nav.tips')}</a></li>
+				<li><a href={getLocalizedPath('/itinerarios', lang)} class={currentPath === '/itinerarios' ? 'active' : ''}>{t('nav.itineraries')}</a></li>
+				<li><a href={getLocalizedPath('/galeria', lang)} class={currentPath === '/galeria' ? 'active' : ''}>{t('nav.gallery')}</a></li>
+				<li><a href={getLocalizedPath('/contacto', lang)} class={currentPath === '/contacto' ? 'active' : ''}>{t('nav.contact')}</a></li>
 			</ul>
 		</div>
 	</div>
@@ -97,6 +99,23 @@ const t = useTranslations(lang);
 
 	.nav-menu a:hover {
 		color: #D4AF37;
+	}
+
+	.nav-menu a.active {
+		color: #D4AF37;
+		font-weight: 500;
+		position: relative;
+	}
+
+	.nav-menu a.active::after {
+		content: '';
+		position: absolute;
+		bottom: -0.5rem;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: #D4AF37;
+		border-radius: 1px;
 	}
 
 	.menu-toggle {

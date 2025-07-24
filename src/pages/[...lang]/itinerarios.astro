@@ -21,8 +21,8 @@ const t = useTranslations(lang);
 	<section class="section hero-itineraries">
 		<div class="container">
 			<div class="section-content">
-				<h1>Itinerarios de Viaje</h1>
-				<p class="lead">Rutas cuidadosamente diseñadas para que vivas la mejor experiencia en Uzbekistán, adaptadas a diferentes duraciones y presupuestos.</p>
+				<h1>{t('itineraries.title')}</h1>
+				<p class="lead">{t('itineraries.subtitle')}</p>
 			</div>
 		</div>
 	</section>
@@ -31,37 +31,37 @@ const t = useTranslations(lang);
 		<div class="container">
 			<div class="section-content">
 				<div class="itinerary-header">
-					<h2>🚀 Ruta Clásica - 5 Días</h2>
-					<p class="itinerary-subtitle">Perfecta para una primera visita · Las ciudades imprescindibles</p>
+					<h2>{t('itineraries.classic.title')}</h2>
+					<p class="itinerary-subtitle">{t('itineraries.classic.subtitle')}</p>
 				</div>
 				
 				<div class="itinerary-overview">
 					<div class="overview-item">
 						<div class="overview-icon">✈️</div>
 						<div class="overview-content">
-							<h3>Ciudades</h3>
-							<p>Tashkent, Samarkand, Bukhara</p>
+							<h3>{t('itineraries.cities')}</h3>
+							<p>{t('itineraries.classic.cities')}</p>
 						</div>
 					</div>
 					<div class="overview-item">
 						<div class="overview-icon">💰</div>
 						<div class="overview-content">
-							<h3>Presupuesto</h3>
-							<p>800-1200 EUR por persona</p>
+							<h3>{t('itineraries.budget')}</h3>
+							<p>{t('itineraries.classic.budget')}</p>
 						</div>
 					</div>
 					<div class="overview-item">
 						<div class="overview-icon">🏨</div>
 						<div class="overview-content">
-							<h3>Alojamiento</h3>
-							<p>Hoteles 3-4 estrellas</p>
+							<h3>{t('itineraries.accommodation')}</h3>
+							<p>{t('itineraries.classic.accommodation')}</p>
 						</div>
 					</div>
 					<div class="overview-item">
 						<div class="overview-icon">🚄</div>
 						<div class="overview-content">
-							<h3>Transporte</h3>
-							<p>Tren alta velocidad + taxi</p>
+							<h3>{t('itineraries.transport')}</h3>
+							<p>{t('itineraries.classic.transport')}</p>
 						</div>
 					</div>
 				</div>
@@ -69,34 +69,34 @@ const t = useTranslations(lang);
 				<div class="itinerary-days">
 					<div class="day-card">
 						<div class="day-header">
-							<h3>Día 1 - Llegada a Tashkent</h3>
-							<span class="day-badge">Exploración</span>
+							<h3>{t('itineraries.day1.title')}</h3>
+							<span class="day-badge">{t('itineraries.day1.badge')}</span>
 						</div>
 						<div class="day-content">
 							<div class="day-activities">
-								<h4>🌅 Mañana</h4>
+								<h4>{t('itineraries.morning')}</h4>
 								<ul>
-									<li>Llegada al aeropuerto internacional</li>
-									<li>Traslado y check-in al hotel</li>
-									<li>Descanso y almuerzo ligero</li>
+									<li>{t('itineraries.day1.arrival')}</li>
+									<li>{t('itineraries.day1.checkin')}</li>
+									<li>{t('itineraries.day1.rest')}</li>
 								</ul>
 								
-								<h4>🌞 Tarde</h4>
+								<h4>{t('itineraries.afternoon')}</h4>
 								<ul>
-									<li>Visita al Bazar Chorsu</li>
-									<li>Casco antiguo y Madrasa Kukeldash</li>
-									<li>Paseo por el centro moderno</li>
+									<li>{t('itineraries.day1.chorsu')}</li>
+									<li>{t('itineraries.day1.old_town')}</li>
+									<li>{t('itineraries.day1.center')}</li>
 								</ul>
 								
-								<h4>🌆 Noche</h4>
+								<h4>{t('itineraries.evening')}</h4>
 								<ul>
-									<li>Cena en restaurante local</li>
-									<li>Descanso para superar el jet lag</li>
+									<li>{t('itineraries.day1.dinner')}</li>
+									<li>{t('itineraries.day1.jetlag')}</li>
 								</ul>
 							</div>
 							<div class="day-tips">
-								<h4>💡 Consejos del día</h4>
-								<p>Compra una tarjeta SIM en el aeropuerto y descansa bien para estar preparado para los próximos días intensos.</p>
+								<h4>{t('itineraries.tips')}</h4>
+								<p>{t('itineraries.day1.tip')}</p>
 							</div>
 						</div>
 					</div>
