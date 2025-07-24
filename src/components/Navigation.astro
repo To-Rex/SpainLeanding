@@ -12,55 +12,45 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	<div class="container">
 		<div class="nav-content">
 			<a href={getLocalizedPath('/', lang)} class="logo">
-				<div class="logo-icon">🏛️</div>
-				<div class="logo-text-container">
-					<span class="logo-text">Uzbekistán</span>
-					<span class="logo-subtitle">Guía Cultural</span>
-				</div>
+				<span class="logo-text">Uzbekistán</span>
+				<span class="logo-subtitle">Cultural Guide</span>
 			</a>
 			
 			<div class="nav-center">
 				<ul class="nav-menu" id="navMenu">
 					<li class="nav-item">
 						<a href={getLocalizedPath('/', lang)} class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>
-							<span class="nav-icon">🏠</span>
-							<span class="nav-text">{t('nav.home')}</span>
+							{t('nav.home')}
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href={getLocalizedPath('/cultura', lang)} class={`nav-link ${currentPath === '/cultura' ? 'active' : ''}`}>
-							<span class="nav-icon">🎭</span>
-							<span class="nav-text">{t('nav.culture')}</span>
+							{t('nav.culture')}
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href={getLocalizedPath('/destinos', lang)} class={`nav-link ${currentPath === '/destinos' ? 'active' : ''}`}>
-							<span class="nav-icon">🏛️</span>
-							<span class="nav-text">{t('nav.destinations')}</span>
+							{t('nav.destinations')}
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href={getLocalizedPath('/consejos', lang)} class={`nav-link ${currentPath === '/consejos' ? 'active' : ''}`}>
-							<span class="nav-icon">💡</span>
-							<span class="nav-text">{t('nav.tips')}</span>
+							{t('nav.tips')}
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href={getLocalizedPath('/itinerarios', lang)} class={`nav-link ${currentPath === '/itinerarios' ? 'active' : ''}`}>
-							<span class="nav-icon">🗺️</span>
-							<span class="nav-text">{t('nav.itineraries')}</span>
+							{t('nav.itineraries')}
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href={getLocalizedPath('/galeria', lang)} class={`nav-link ${currentPath === '/galeria' ? 'active' : ''}`}>
-							<span class="nav-icon">📸</span>
-							<span class="nav-text">{t('nav.gallery')}</span>
+							{t('nav.gallery')}
 						</a>
 					</li>
 					<li class="nav-item">
 						<a href={getLocalizedPath('/contacto', lang)} class={`nav-link ${currentPath === '/contacto' ? 'active' : ''}`}>
-							<span class="nav-icon">📞</span>
-							<span class="nav-text">{t('nav.contact')}</span>
+							{t('nav.contact')}
 						</a>
 					</li>
 				</ul>
@@ -83,14 +73,13 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		position: fixed;
 		top: 0;
 		width: 100%;
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+		background: rgba(255, 255, 255, 0.85);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 		z-index: 1000;
-		padding: 1rem 0;
-		border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-		transition: all 0.3s ease;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.navbar::before {
@@ -101,9 +90,9 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		right: 0;
 		bottom: 0;
 		background: linear-gradient(90deg, 
-			rgba(212, 175, 55, 0.05) 0%, 
-			rgba(247, 220, 111, 0.05) 50%, 
-			rgba(212, 175, 55, 0.05) 100%);
+			rgba(212, 175, 55, 0.02) 0%, 
+			rgba(247, 220, 111, 0.02) 50%, 
+			rgba(212, 175, 55, 0.02) 100%);
 		pointer-events: none;
 	}
 
@@ -114,74 +103,73 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		position: relative;
 		max-width: 1400px;
 		margin: 0 auto;
-		padding: 0 2rem;
+		padding: 0 3rem;
 	}
 
-	/* Logo Styles */
+	/* Minimalist Logo */
 	.logo {
 		text-decoration: none;
 		display: flex;
-		align-items: center;
-		gap: 1rem;
-		padding: 0.5rem 1rem;
-		border-radius: 16px;
-		background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(247, 220, 111, 0.1) 100%);
-		border: 1px solid rgba(212, 175, 55, 0.2);
-		transition: all 0.3s ease;
-		backdrop-filter: blur(10px);
-	}
-
-	.logo:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
-		background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(247, 220, 111, 0.15) 100%);
-	}
-
-	.logo-icon {
-		font-size: 2rem;
-		filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
-	}
-
-	.logo-text-container {
-		display: flex;
 		flex-direction: column;
 		line-height: 1;
+		transition: all 0.3s ease;
+		position: relative;
+	}
+
+	.logo::after {
+		content: '';
+		position: absolute;
+		bottom: -4px;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #D4AF37, #F7DC6F);
+		transition: width 0.4s ease;
+	}
+
+	.logo:hover::after {
+		width: 100%;
 	}
 
 	.logo-text {
 		font-family: 'Crimson Text', serif;
-		font-size: 1.5rem;
+		font-size: 1.8rem;
 		font-weight: 600;
 		color: #1A365D;
-		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		letter-spacing: -0.5px;
+		transition: all 0.3s ease;
 	}
 
 	.logo-subtitle {
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 		color: #D4AF37;
-		font-weight: 500;
-		opacity: 0.9;
+		font-weight: 400;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		opacity: 0.8;
+		margin-top: 2px;
 	}
 
-	/* Navigation Center */
+	.logo:hover .logo-text {
+		color: #D4AF37;
+		transform: translateY(-1px);
+	}
+
+	/* Minimalist Navigation */
 	.nav-center {
 		flex: 1;
 		display: flex;
 		justify-content: center;
-		margin: 0 2rem;
+		margin: 0 3rem;
 	}
 
 	.nav-menu {
 		display: flex;
 		list-style: none;
-		gap: 0.5rem;
+		gap: 3rem;
 		margin: 0;
-		padding: 0.5rem;
-		background: rgba(255, 255, 255, 0.6);
-		backdrop-filter: blur(15px);
-		border-radius: 20px;
-		border: 1px solid rgba(212, 175, 55, 0.15);
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		padding: 0;
+		align-items: center;
 	}
 
 	.nav-item {
@@ -189,103 +177,82 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	}
 
 	.nav-link {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
 		text-decoration: none;
 		color: #2C3E50;
-		font-weight: 500;
-		font-size: 0.9rem;
-		padding: 0.8rem 1.2rem;
-		border-radius: 14px;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		font-weight: 400;
+		font-size: 0.95rem;
+		letter-spacing: 0.3px;
+		padding: 0.8rem 0;
 		position: relative;
-		overflow: hidden;
-		white-space: nowrap;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		text-transform: capitalize;
 	}
 
 	.nav-link::before {
 		content: '';
 		position: absolute;
-		top: 0;
-		left: -100%;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-		transition: left 0.5s ease;
-	}
-
-	.nav-link:hover::before {
-		left: 100%;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 2px;
+		background: linear-gradient(90deg, #D4AF37, #F7DC6F);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		transform: translateX(-50%);
 	}
 
 	.nav-link:hover {
 		color: #D4AF37;
-		background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(247, 220, 111, 0.15) 100%);
 		transform: translateY(-2px);
-		box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
-		border: 1px solid rgba(212, 175, 55, 0.3);
+	}
+
+	.nav-link:hover::before {
+		width: 100%;
 	}
 
 	.nav-link.active {
 		color: #1A365D;
-		background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
-		box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
-		transform: translateY(-1px);
-		font-weight: 600;
+		font-weight: 500;
 	}
 
-	.nav-link.active .nav-icon {
-		transform: scale(1.1);
-		filter: drop-shadow(0 2px 4px rgba(26, 54, 93, 0.3));
-	}
-
-	.nav-icon {
-		font-size: 1.1rem;
-		transition: all 0.3s ease;
-	}
-
-	.nav-text {
-		transition: all 0.3s ease;
+	.nav-link.active::before {
+		width: 100%;
+		background: linear-gradient(90deg, #1A365D, #2C5282);
 	}
 
 	/* Right Side */
 	.nav-right {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
+		gap: 1.5rem;
 	}
 
-	/* Menu Toggle */
+	/* Minimalist Menu Toggle */
 	.menu-toggle {
 		display: none;
 		flex-direction: column;
-		background: rgba(255, 255, 255, 0.8);
-		border: 1px solid rgba(212, 175, 55, 0.2);
+		background: none;
+		border: none;
 		cursor: pointer;
-		padding: 0.8rem;
-		border-radius: 12px;
+		padding: 0.5rem;
 		transition: all 0.3s ease;
-		backdrop-filter: blur(10px);
-	}
-
-	.menu-toggle:hover {
-		background: rgba(212, 175, 55, 0.1);
-		transform: translateY(-1px);
-		box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
 	}
 
 	.hamburger-line {
 		width: 24px;
-		height: 3px;
-		background: linear-gradient(90deg, #2C3E50 0%, #D4AF37 100%);
-		margin: 2px 0;
-		transition: all 0.3s ease;
+		height: 2px;
+		background: #2C3E50;
+		margin: 3px 0;
+		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		border-radius: 2px;
+	}
+
+	.menu-toggle:hover .hamburger-line {
+		background: #D4AF37;
 	}
 
 	.menu-toggle.active .hamburger-line:nth-child(1) {
 		transform: rotate(45deg) translate(6px, 6px);
+		background: #D4AF37;
 	}
 
 	.menu-toggle.active .hamburger-line:nth-child(2) {
@@ -294,43 +261,31 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 
 	.menu-toggle.active .hamburger-line:nth-child(3) {
 		transform: rotate(-45deg) translate(6px, -6px);
+		background: #D4AF37;
 	}
 
 	/* Responsive Design */
 	@media (max-width: 1200px) {
 		.nav-content {
-			padding: 0 1.5rem;
+			padding: 0 2rem;
 		}
 
 		.nav-center {
-			margin: 0 1rem;
+			margin: 0 2rem;
 		}
 
-		.nav-link {
-			padding: 0.7rem 1rem;
-			font-size: 0.85rem;
-		}
-
-		.nav-icon {
-			font-size: 1rem;
+		.nav-menu {
+			gap: 2rem;
 		}
 	}
 
 	@media (max-width: 1024px) {
 		.nav-menu {
-			gap: 0.3rem;
+			gap: 1.5rem;
 		}
 
 		.nav-link {
-			padding: 0.6rem 0.8rem;
-		}
-
-		.nav-text {
-			display: none;
-		}
-
-		.nav-icon {
-			font-size: 1.2rem;
+			font-size: 0.9rem;
 		}
 	}
 
@@ -345,17 +300,17 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 
 		.nav-menu {
 			position: absolute;
-			top: calc(100% + 1rem);
-			left: 1rem;
-			right: 1rem;
+			top: calc(100% + 2rem);
+			left: 2rem;
+			right: 2rem;
 			flex-direction: column;
-			background: rgba(255, 255, 255, 0.98);
+			background: rgba(255, 255, 255, 0.95);
 			backdrop-filter: blur(20px);
-			padding: 2rem;
-			gap: 1rem;
+			padding: 2.5rem;
+			gap: 0;
 			border-radius: 20px;
-			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-			border: 1px solid rgba(212, 175, 55, 0.2);
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+			border: 1px solid rgba(0, 0, 0, 0.05);
 			transform: translateY(-20px);
 			opacity: 0;
 			visibility: hidden;
@@ -370,50 +325,43 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 
 		.nav-item {
 			width: 100%;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		}
+
+		.nav-item:last-child {
+			border-bottom: none;
 		}
 
 		.nav-link {
 			width: 100%;
-			justify-content: flex-start;
-			padding: 1.2rem 1.5rem;
+			padding: 1.5rem 0;
 			font-size: 1.1rem;
-			border-radius: 16px;
-			background: rgba(255, 255, 255, 0.7);
-			border: 1px solid rgba(212, 175, 55, 0.1);
+			text-align: center;
+			border-bottom: none;
 		}
 
-		.nav-text {
-			display: block;
+		.nav-link::before {
+			display: none;
 		}
 
 		.nav-link:hover {
+			color: #D4AF37;
 			transform: translateX(8px);
-			background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(247, 220, 111, 0.2) 100%);
 		}
 
 		.nav-link.active {
-			background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
-			color: #1A365D;
-			transform: translateX(4px);
+			color: #D4AF37;
+			font-weight: 500;
 		}
 	}
 
 	@media (max-width: 480px) {
 		.nav-content {
-			padding: 0 1rem;
-		}
-
-		.logo {
-			padding: 0.4rem 0.8rem;
-			gap: 0.8rem;
-		}
-
-		.logo-icon {
-			font-size: 1.8rem;
+			padding: 0 1.5rem;
 		}
 
 		.logo-text {
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 		}
 
 		.logo-subtitle {
@@ -421,62 +369,77 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		}
 
 		.nav-menu {
-			left: 0.5rem;
-			right: 0.5rem;
-			padding: 1.5rem;
+			left: 1rem;
+			right: 1rem;
+			padding: 2rem;
 		}
 
 		.nav-link {
-			padding: 1rem 1.2rem;
+			padding: 1.2rem 0;
 			font-size: 1rem;
-		}
-
-		.menu-toggle {
-			padding: 0.6rem;
-		}
-
-		.hamburger-line {
-			width: 20px;
 		}
 	}
 
 	/* Scroll Effect */
 	.navbar.scrolled {
-		padding: 0.5rem 0;
-		background: rgba(255, 255, 255, 0.98);
-		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+		padding: 1rem 0;
+		background: rgba(255, 255, 255, 0.95);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 	}
 
-	/* Animation for page load */
-	@keyframes slideDown {
+	/* Stunning Animation on Load */
+	@keyframes fadeInDown {
 		from {
-			transform: translateY(-100%);
 			opacity: 0;
+			transform: translateY(-30px);
 		}
 		to {
-			transform: translateY(0);
 			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 
 	.navbar {
-		animation: slideDown 0.6s ease-out;
+		animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	/* Hover effects for nav items */
-	.nav-item:hover .nav-link:not(.active) {
-		background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(247, 220, 111, 0.1) 100%);
+	.nav-item {
+		animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+		animation-fill-mode: both;
 	}
+
+	.nav-item:nth-child(1) { animation-delay: 0.1s; }
+	.nav-item:nth-child(2) { animation-delay: 0.2s; }
+	.nav-item:nth-child(3) { animation-delay: 0.3s; }
+	.nav-item:nth-child(4) { animation-delay: 0.4s; }
+	.nav-item:nth-child(5) { animation-delay: 0.5s; }
+	.nav-item:nth-child(6) { animation-delay: 0.6s; }
+	.nav-item:nth-child(7) { animation-delay: 0.7s; }
 
 	/* Focus states for accessibility */
 	.nav-link:focus {
 		outline: 2px solid #D4AF37;
-		outline-offset: 2px;
+		outline-offset: 4px;
+		border-radius: 4px;
 	}
 
 	.menu-toggle:focus {
 		outline: 2px solid #D4AF37;
-		outline-offset: 2px;
+		outline-offset: 4px;
+		border-radius: 4px;
+	}
+
+	/* Subtle hover effects */
+	.nav-item:hover {
+		transform: translateY(-1px);
+	}
+
+	/* Beautiful typography */
+	.nav-link {
+		font-family: 'Inter', sans-serif;
+		font-optical-sizing: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 </style>
 
@@ -507,7 +470,7 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		}
 	});
 
-	// Scroll effect
+	// Smooth scroll effect
 	let lastScrollY = window.scrollY;
 	
 	window.addEventListener('scroll', () => {
