@@ -5,7 +5,20 @@ import { removeLocaleFromPath } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const currentPath = removeLocaleFromPath(Astro.url.pathname);
+
+// Get current path and normalize it
+let currentPath = removeLocaleFromPath(Astro.url.pathname);
+// Remove trailing slash except for root
+if (currentPath !== '/' && currentPath.endsWith('/')) {
+	currentPath = currentPath.slice(0, -1);
+}
+
+// Helper function to check if path is active
+function isActive(path: string) {
+	if (path === '/' && currentPath === '/') return true;
+	if (path !== '/' && currentPath === path) return true;
+	return false;
+}
 ---
 
 <nav class="navbar">
@@ -19,37 +32,37 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 			<div class="nav-center">
 				<ul class="nav-menu" id="navMenu">
 					<li class="nav-item">
-						<a href={getLocalizedPath('/', lang)} class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/', lang)} class={`nav-link ${isActive('/') ? 'active' : ''}`}>
 							{t('nav.home')}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href={getLocalizedPath('/cultura', lang)} class={`nav-link ${currentPath === '/cultura' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/cultura', lang)} class={`nav-link ${isActive('/cultura') ? 'active' : ''}`}>
 							{t('nav.culture')}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href={getLocalizedPath('/destinos', lang)} class={`nav-link ${currentPath === '/destinos' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/destinos', lang)} class={`nav-link ${isActive('/destinos') ? 'active' : ''}`}>
 							{t('nav.destinations')}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href={getLocalizedPath('/consejos', lang)} class={`nav-link ${currentPath === '/consejos' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/consejos', lang)} class={`nav-link ${isActive('/consejos') ? 'active' : ''}`}>
 							{t('nav.tips')}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href={getLocalizedPath('/itinerarios', lang)} class={`nav-link ${currentPath === '/itinerarios' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/itinerarios', lang)} class={`nav-link ${isActive('/itinerarios') ? 'active' : ''}`}>
 							{t('nav.itineraries')}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href={getLocalizedPath('/galeria', lang)} class={`nav-link ${currentPath === '/galeria' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/galeria', lang)} class={`nav-link ${isActive('/galeria') ? 'active' : ''}`}>
 							{t('nav.gallery')}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href={getLocalizedPath('/contacto', lang)} class={`nav-link ${currentPath === '/contacto' ? 'active' : ''}`}>
+						<a href={getLocalizedPath('/contacto', lang)} class={`nav-link ${isActive('/contacto') ? 'active' : ''}`}>
 							{t('nav.contact')}
 						</a>
 					</li>
@@ -212,11 +225,13 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	.nav-link.active {
 		color: #1A365D;
 		font-weight: 500;
+		position: relative;
 	}
 
 	.nav-link.active::before {
 		width: 100%;
 		background: linear-gradient(90deg, #1A365D, #2C5282);
+		opacity: 1;
 	}
 
 	/* Right Side */
