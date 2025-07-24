@@ -73,12 +73,12 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		position: fixed;
 		top: 0;
 		width: 100%;
-		background: rgba(255, 255, 255, 0.85);
+		background: rgba(255, 255, 255, 0.95);
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 		z-index: 1000;
 		padding: 1.5rem 0;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
@@ -90,9 +90,9 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		right: 0;
 		bottom: 0;
 		background: linear-gradient(90deg, 
-			rgba(212, 175, 55, 0.02) 0%, 
-			rgba(247, 220, 111, 0.02) 50%, 
-			rgba(212, 175, 55, 0.02) 100%);
+			rgba(212, 175, 55, 0.03) 0%, 
+			rgba(247, 220, 111, 0.03) 50%, 
+			rgba(212, 175, 55, 0.03) 100%);
 		pointer-events: none;
 	}
 
@@ -383,11 +383,11 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	/* Scroll Effect */
 	.navbar.scrolled {
 		padding: 1rem 0;
-		background: rgba(255, 255, 255, 0.95);
+		background: rgba(255, 255, 255, 0.98);
 		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 	}
 
-	/* Stunning Animation on Load */
+	/* Load Animation */
 	@keyframes fadeInDown {
 		from {
 			opacity: 0;
@@ -397,85 +397,6 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 			opacity: 1;
 			transform: translateY(0);
 		}
-	}
-
-	/* Page Transition Animations */
-	@keyframes slideOutUp {
-		from {
-			opacity: 1;
-			transform: translateY(0);
-		}
-		to {
-			opacity: 0;
-			transform: translateY(-50px);
-		}
-	}
-
-	@keyframes slideInFromRight {
-		from {
-			opacity: 0;
-			transform: translateX(100px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
-
-	@keyframes fadeInScale {
-		from {
-			opacity: 0;
-			transform: scale(0.8);
-		}
-		to {
-			opacity: 1;
-			transform: scale(1);
-		}
-	}
-
-	@keyframes rippleEffect {
-		0% {
-			transform: scale(0);
-			opacity: 1;
-		}
-		100% {
-			transform: scale(4);
-			opacity: 0;
-		}
-	}
-
-	/* Page transition states */
-	.page-transition-out {
-		animation: slideOutUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-	}
-
-	.page-transition-in {
-		animation: slideInFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	/* Link click ripple effect */
-	.nav-link {
-		position: relative;
-		overflow: hidden;
-	}
-
-	.nav-link::after {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 0;
-		height: 0;
-		background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
-		border-radius: 50%;
-		transform: translate(-50%, -50%);
-		transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-		pointer-events: none;
-		z-index: -1;
-	}
-
-	.nav-link.clicked::after {
-		animation: rippleEffect 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.navbar {
@@ -508,11 +429,6 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 		border-radius: 4px;
 	}
 
-	/* Subtle hover effects */
-	.nav-item:hover {
-		transform: translateY(-1px);
-	}
-
 	/* Beautiful typography */
 	.nav-link {
 		font-family: 'Inter', sans-serif;
@@ -526,100 +442,6 @@ const currentPath = removeLocaleFromPath(Astro.url.pathname);
 	const menuToggle = document.getElementById('menuToggle');
 	const navMenu = document.getElementById('navMenu');
 	const navbar = document.querySelector('.navbar');
-	let isNavigating = false;
-
-	// SPA Navigation System
-	async function navigateToPage(url) {
-		if (isNavigating) return;
-		isNavigating = true;
-
-		try {
-			// Fetch new page content
-			const response = await fetch(url);
-			const html = await response.text();
-			const parser = new DOMParser();
-			const newDoc = parser.parseFromString(html, 'text/html');
-			
-			// Get main content (everything except nav)
-			const currentMain = document.querySelector('main') || document.body;
-			const newMain = newDoc.querySelector('main') || newDoc.body;
-			
-			// Animate content out
-			currentMain.style.opacity = '0';
-			currentMain.style.transform = 'translateX(-30px)';
-			
-			setTimeout(() => {
-				// Replace content
-				if (document.querySelector('main')) {
-					document.querySelector('main').innerHTML = newMain.innerHTML;
-				} else {
-					// Replace everything except nav
-					const nav = document.querySelector('nav');
-					document.body.innerHTML = newDoc.body.innerHTML;
-					if (nav && !document.querySelector('nav')) {
-						document.body.insertBefore(nav, document.body.firstChild);
-					}
-				}
-				
-				// Update page title
-				document.title = newDoc.title;
-				
-				// Update URL without page reload
-				history.pushState({}, '', url);
-				
-				// Animate new content in
-				const updatedMain = document.querySelector('main') || document.body;
-				updatedMain.style.opacity = '0';
-				updatedMain.style.transform = 'translateX(30px)';
-				
-				setTimeout(() => {
-					updatedMain.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-					updatedMain.style.opacity = '1';
-					updatedMain.style.transform = 'translateX(0)';
-					
-					// Update active nav link
-					updateActiveNavLink(url);
-					
-					isNavigating = false;
-				}, 50);
-			}, 300);
-			
-		} catch (error) {
-			console.error('Navigation error:', error);
-			// Fallback to normal navigation
-			window.location.href = url;
-			isNavigating = false;
-		}
-	}
-
-	// Update active nav link
-	function updateActiveNavLink(url) {
-		document.querySelectorAll('.nav-link').forEach(link => {
-			link.classList.remove('active');
-			if (link.getAttribute('href') === url) {
-				link.classList.add('active');
-			}
-		});
-	}
-
-	// Handle nav link clicks
-	document.querySelectorAll('.nav-link').forEach(link => {
-		link.addEventListener('click', function(e) {
-			const href = this.getAttribute('href');
-			const currentPath = window.location.pathname;
-			
-			// Only handle internal links
-			if (href && href !== currentPath && !href.startsWith('http') && !href.startsWith('#')) {
-				e.preventDefault();
-				navigateToPage(href);
-			}
-		});
-	});
-
-	// Handle browser back/forward buttons
-	window.addEventListener('popstate', (e) => {
-		navigateToPage(window.location.pathname);
-	});
 
 	// Menu toggle functionality
 	menuToggle?.addEventListener('click', () => {
