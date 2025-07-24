@@ -326,6 +326,61 @@ export const ui = {
       }
     'contact.faq.title': 'Preguntas Frecuentes'
   },
+    services: {
+      title: '¿Cómo te podemos ayudar?',
+      itineraries: {
+        title: 'Planificación de Itinerarios',
+        desc: 'Diseñamos rutas personalizadas según tus intereses, duración y presupuesto'
+      },
+      accommodation: {
+        title: 'Reservas de Alojamiento',
+        desc: 'Hoteles boutique, casas tradicionales y experiencias auténticas'
+      },
+      transport: {
+        title: 'Transporte',
+        desc: 'Trenes de alta velocidad, vuelos domésticos y transfers privados'
+      },
+      cultural: {
+        title: 'Experiencias Culturales',
+        desc: 'Talleres de cocina, visitas a artesanos y encuentros con locales'
+      },
+      visa: {
+        title: 'Gestión de Visados',
+        desc: 'Te ayudamos con toda la documentación necesaria para tu viaje'
+      },
+      consulting: {
+        title: 'Asesoramiento Especializado',
+        desc: 'Consejos de expertos que conocen el país en profundidad'
+      }
+    },
+    faq: {
+      title: 'Preguntas Frecuentes',
+      cost: {
+        q: '¿Cuánto cuesta viajar a Uzbekistán?',
+        a: 'Un viaje de 7 días puede costar entre 800-2000 EUR por persona, incluyendo vuelos, alojamiento, comidas y actividades.'
+      },
+      season: {
+        q: '¿Cuál es la mejor época para viajar?',
+        a: 'Primavera (marzo-mayo) y otoño (septiembre-noviembre) son ideales. El clima es agradable y hay menos turistas.'
+      },
+      visa_faq: {
+        q: '¿Necesito visa para viajar desde España?',
+        a: 'No necesitas visa para estancias turísticas de hasta 30 días. Solo necesitas pasaporte válido por 6 meses.'
+      },
+      safety: {
+        q: '¿Es seguro viajar a Uzbekistán?',
+        a: 'Sí, Uzbekistán es uno de los países más seguros de Asia Central con baja criminalidad.'
+      },
+      language: {
+        q: '¿Qué idiomas se hablan?',
+        a: 'El idioma oficial es el uzbeko, pero el ruso es ampliamente hablado. En zonas turísticas muchos hablan inglés básico.'
+      },
+      duration: {
+        q: '¿Cuántos días necesito para ver lo principal?',
+        a: 'Mínimo 5 días para las ciudades principales. Para una experiencia completa, recomendamos 7-10 días.'
+      }
+    }
+  },
   uz: {
     'site.title': 'O\'zbekiston - Madaniy va Sayohat Qo\'llanmasi',
     'site.description': 'O\'zbekistonning sehrini kashf eting: Ipak yo\'li shaharlari, islom me\'morchiligi, an\'anaviy oshxona va noyob mehmondo\'stlik.',
