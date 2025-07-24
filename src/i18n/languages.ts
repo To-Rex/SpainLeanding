@@ -353,6 +353,884 @@ export const ui = {
         desc: 'Consejos de expertos que conocen el país en profundidad'
       }
     },
+  },
+
+  en: {
+    site: {
+      title: 'Uzbekistan Cultural Guide',
+      description: 'Discover the wonders of Uzbekistan: ancient cities, rich culture, and unforgettable experiences along the Silk Road.'
+    },
+    nav: {
+      home: 'Home',
+      culture: 'Culture',
+      destinations: 'Destinations',
+      tips: 'Tips',
+      itineraries: 'Itineraries',
+      gallery: 'Gallery',
+      contact: 'Contact'
+    },
+    hero: {
+      title: 'Discover Uzbekistan',
+      subtitle: 'The Pearl of Central Asia',
+      description: 'Journey through ancient Silk Road cities, experience authentic culture, and create unforgettable memories in the heart of Central Asia.',
+      plan: 'Plan Your Trip',
+      explore: 'Explore Culture'
+    },
+    home: {
+      why_visit: 'Why Visit Uzbekistan?',
+      unesco: {
+        title: 'UNESCO World Heritage',
+        desc: 'Four UNESCO sites including the magnificent Registan Square and the ancient city of Khiva.'
+      },
+      gastronomy: {
+        title: 'Authentic Gastronomy',
+        desc: 'Taste the famous plov, fresh bread from tandoor ovens, and traditional sweets.'
+      },
+      easy: {
+        title: 'Easy to Travel',
+        desc: 'No visa required for 30 days, modern high-speed trains, and excellent tourist infrastructure.'
+      },
+      cta: {
+        title: 'Ready for Your Adventure?',
+        desc: 'Discover why Uzbekistan is becoming the most popular destination in Central Asia.',
+        destinations: 'Explore Destinations',
+        tips: 'Travel Tips'
+      }
+    },
+    slider: {
+      registan: {
+        title: 'Registan Square',
+        desc: 'The heart of ancient Samarkand',
+        location: 'Samarkand'
+      },
+      khiva: {
+        title: 'Ichan-Kala',
+        desc: 'Living museum city',
+        location: 'Khiva'
+      },
+      crafts: {
+        title: 'Traditional Crafts',
+        desc: '1000-year-old traditions',
+        location: 'Khiva'
+      },
+      bukhara: {
+        title: 'Historic Bukhara',
+        desc: '2500 years of history',
+        location: 'Bukhara'
+      },
+      madrasas: {
+        title: 'Bukhara Madrasas',
+        desc: 'Best examples of Islamic art',
+        location: 'Bukhara'
+      },
+      evening: {
+        title: 'Evening Samarkand',
+        desc: 'Magical view of Registan Square',
+        location: 'Samarkand'
+      }
+    },
+    culture: {
+      title: 'Uzbek Culture',
+      subtitle: 'A fascinating mosaic of traditions that have endured for centuries in the heart of Central Asia.',
+      gastronomy: {
+        title: 'Traditional Gastronomy'
+      },
+      plov: {
+        title: '🍚 Plov - The National Dish',
+        desc: 'More than just rice, plov is a culinary ceremony. Traditionally prepared by men in large cauldrons, it combines rice, lamb, carrots and unique spices like cumin and turmeric.'
+      },
+      somsa: {
+        title: '🥟 Somsa - Flavor in Every Bite',
+        desc: 'These delicious pastries baked in traditional clay ovens (tandir) are filled with meat, onions and spices. Their triangular shape and crispy dough make them the perfect appetizer.'
+      },
+      tea: {
+        title: '🍵 Tea Ceremony',
+        desc: 'Green tea is sacred in Uzbekistan. It is served in small bowls called "piala" and represents hospitality. The first cup is poured, emptied and refilled three times before serving.'
+      },
+      traditions: {
+        title: 'Traditions and Customs'
+      },
+      dance: {
+        title: 'Traditional Dances',
+        desc: 'Uzbek dances like "Lazgi" and "Khorezm" tell stories of love, nature and daily life with elegant movements and colorful costumes.'
+      },
+      clothing: {
+        title: 'Traditional Clothing',
+        desc: 'Chapans (silk tunics) and doppi (traditional hats) reflect Uzbek textile mastery. Women wear atlas (iridescent silk) in vibrant colors.'
+      },
+      architecture: {
+        title: 'Islamic Architecture',
+        desc: 'Madrasas, mosques and mausoleums show Islamic geometric perfection with turquoise tiles, golden domes and elegant minarets.'
+      },
+      crafts: {
+        title: 'Handicrafts',
+        desc: 'From silk carpets to Rishtan ceramics, through wood carving and goldsmithing, each region has its artisanal specialty.'
+      },
+      etiquette: {
+        title: 'Cultural Etiquette'
+      },
+      home: {
+        title: '🏠 In Homes',
+        tip1: 'Always remove shoes when entering',
+        tip2: 'Bring a small gift for hosts',
+        tip3: 'Always accept tea offered',
+        tip4: 'Respect elders and let them speak first'
+      },
+      mosque: {
+        title: '🕌 In Sacred Places',
+        tip1: 'Dress conservatively',
+        tip2: 'Women should cover their heads',
+        tip3: 'Speak quietly and show respect',
+        tip4: 'Ask before taking photographs'
+      },
+      bazaar: {
+        title: '🛍️ In the Bazaar',
+        tip1: 'Bargaining is part of the culture',
+        tip2: 'Show genuine interest in products',
+        tip3: 'Be patient and enjoy the conversation',
+        tip4: 'A handshake seals the deal'
+      }
+    },
+    destinations: {
+      title: 'Main Destinations',
+      subtitle: 'Legendary cities that have witnessed the glory of the Silk Road for over a thousand years.',
+      samarkand: {
+        title: '🏛️ Samarkand - The Pearl of the Orient',
+        desc: 'Capital of Tamerlane\'s empire, Samarkand is a city that dazzles with its monumental architecture. The Registan complex, with its three madrasas decorated with turquoise mosaics, is one of the most photogenic sites in the world.',
+        places: 'Must-see places:',
+        registan: 'Registan Square: The architectural heart of the city',
+        gur: 'Gur-e-Amir Mausoleum: Tamerlane\'s tomb',
+        observatory: 'Ulugh Beg Observatory: Medieval astronomy',
+        bibi: 'Bibi-Khanym Mosque: One of the largest in the Islamic world',
+        tips: 'Local tips:',
+        advice: 'Visit the Registan at sunrise to avoid crowds and get the best light. At night, enjoy the light show that illuminates the facades of the madrasas.'
+      },
+      bukhara: {
+        title: '🕌 Bukhara - The Sacred City',
+        desc: 'With more than 140 architectural monuments, Bukhara is a living museum. Its historic center, perfectly preserved, transports you to the golden age of the Silk Road.',
+        places: 'Must-see places:',
+        poi: 'Poi-Kalyan Complex: Iconic minaret and mosque',
+        ark: 'Ark Citadel: Royal fortress with 2000 years of history',
+        samanid: 'Samanid Mausoleum: Jewel of Islamic architecture',
+        domes: 'Dome Markets: Traditional covered bazaars',
+        tips: 'Local tips:',
+        advice: 'Stay in a traditional house (B&B) to experience authentic Uzbek hospitality. Don\'t miss dinner in the courtyard of a madrasa converted into a restaurant.'
+      },
+      khiva: {
+        title: '🏰 Khiva - The Museum City',
+        desc: 'Ichan-Kala, the walled city of Khiva, is like walking inside a tale from One Thousand and One Nights. Its cobbled streets and adobe buildings keep the medieval spirit intact.',
+        places: 'Must-see places:',
+        ichan: 'Ichan-Kala: UNESCO World Heritage walled city',
+        kalta: 'Kalta Minor Minaret: The most famous unfinished minaret',
+        tash: 'Tash Khauli Palace: Residence of the Khans of Khiva',
+        islam: 'Islam Khoja Madrasa: The tallest minaret in Khiva',
+        tips: 'Local tips:',
+        advice: 'Climb the Islam Khoja minaret at sunset for the best panoramic views. Khiva is perfect to explore on foot in an afternoon.'
+      },
+      tashkent: {
+        title: '🏙️ Tashkent - The Cosmopolitan Capital',
+        desc: 'The modern capital of Uzbekistan combines Soviet architecture with new developments. It is the ideal entry point and offers a different perspective of the country.',
+        places: 'Must-see places:',
+        old: 'Old Town: Historic mosques and madrasas',
+        chorsu: 'Chorsu Bazaar: The largest and most authentic market',
+        metro: 'Tashkent Metro: Stations decorated like palaces',
+        museum: 'Applied Arts Museum: Traditional crafts',
+        tips: 'Local tips:',
+        advice: 'Use the metro to get around - it\'s efficient and each station is a work of art. Try plov at the Central Asian Plov Center restaurant.'
+      },
+      ferghana: {
+        title: '🏔️ Ferghana Valley - Artisanal Tradition',
+        desc: 'This fertile valley surrounded by mountains is the artisanal heart of Uzbekistan. Here the best silk and ceramics are produced and the most authentic traditions are kept alive.',
+        places: 'Must-see places:',
+        margilan: 'Margilan: Capital of Uzbek silk',
+        rishtan: 'Rishtan: Traditional blue ceramics',
+        kokand: 'Kokand: Khudoyar Khan Palace',
+        kuva: 'Kuva: Archaeological site and observatory',
+        tips: 'Local tips:',
+        advice: 'Visit the artisan workshops to see the production process. It is the best region to buy authentic ikat silks and traditional ceramics.'
+      }
+    },
+    tips: {
+      title: 'Useful Tips',
+      subtitle: 'Everything you need to know to plan your trip to Uzbekistan from Spain successfully.',
+      visa: {
+        title: '📋 Visa and Documentation',
+        spanish: '🇪🇸 For Spanish Citizens',
+        no_visa: 'No Visa (up to 30 days)',
+        free_entry: 'Free entry for tourism',
+        passport: 'Passport valid for 6 months',
+        ticket: 'Round-trip ticket',
+        registration: 'Mandatory registration in hotels',
+        e_visa: 'E-Visa (more than 30 days)',
+        online: 'Online application: e-visa.gov.uz',
+        process: 'Process: 3-5 business days',
+        cost: 'Cost: 20-40 USD',
+        valid: 'Valid up to 90 days'
+      },
+      documents: {
+        title: '📄 Required Documents',
+        passport: 'Passport with minimum 6 months validity',
+        insurance: 'International travel insurance',
+        accommodation: 'Proof of accommodation (hotel reservation)',
+        flight: 'Round-trip flight ticket',
+        migration: 'Migration form (on the plane)'
+      },
+      money: {
+        title: '💰 Money and Transport',
+        currency: '💵 Currency and Exchange',
+        som: 'Currency: Uzbek Som (UZS)',
+        rate: 'Approximate rate: 1 EUR = 12,000-13,000 UZS',
+        tips_title: 'Financial tips:',
+        cash: 'Bring euros or dollars in cash',
+        exchange: 'Exchange at official banks or exchange houses',
+        cards: 'Cards accepted in hotels and main restaurants',
+        atm: 'ATM withdrawals available in cities',
+        negotiate: 'Negotiate prices in som, not euros'
+      },
+      transport: {
+        title: '🚗 Internal Transport',
+        train: '🚄 High-Speed Trains',
+        afrosiyob: 'Afrosiyob connects Tashkent-Samarkand-Bukhara (3-4 hours)',
+        train_price: 'Price: 15-30 EUR',
+        bus: '🚌 Buses',
+        bus_desc: 'Economical between main cities',
+        bus_price: 'Price: 5-10 EUR',
+        taxi: '🚗 Taxi/Uber',
+        yandex: 'Yandex Taxi works in main cities',
+        taxi_price: 'Price: 2-5 EUR urban trips'
+      }
+    },
+    itineraries: {
+      title: 'Travel Itineraries',
+      subtitle: 'Carefully designed routes for you to have the best experience in Uzbekistan, adapted to different durations and budgets.',
+      classic: {
+        title: '🚀 Classic Route - 5 Days',
+        subtitle: 'Perfect for a first visit · Essential cities',
+        cities: 'Tashkent, Samarkand, Bukhara',
+        budget: '800-1200 EUR per person',
+        accommodation: '3-4 star hotels',
+        transport: 'High-speed train + taxi'
+      },
+      cities: 'Cities',
+      budget: 'Budget',
+      accommodation: 'Accommodation',
+      transport: 'Transport',
+      day1: {
+        title: 'Day 1 - Arrival in Tashkent',
+        badge: 'Exploration',
+        arrival: 'Arrival at international airport',
+        checkin: 'Transfer and check-in at hotel',
+        rest: 'Rest and light lunch'
+      },
+      morning: '🌅 Morning',
+      afternoon: '🌞 Afternoon',
+      evening: '🌆 Evening',
+      tips: '💡 Day tips'
+    },
+    gallery: {
+      title: 'Gallery',
+      subtitle: 'Discover Uzbekistan through the eyes of real travelers. Authentic photos and testimonials from Spaniards who have visited the country.',
+      moments: {
+        title: '📸 Unforgettable Moments'
+      },
+      registan: {
+        title: 'Registan Square, Samarkand',
+        desc: 'The architectural heart of the ancient Silk Road'
+      },
+      bukhara: {
+        title: 'Historic Bukhara',
+        desc: '2500 years of preserved history'
+      },
+      khiva: {
+        title: 'Khiva Craftsmanship',
+        desc: '1000-year-old traditional art'
+      },
+      plov: {
+        title: 'Traditional Plov',
+        desc: 'The authentic national dish'
+      },
+      chorsu: {
+        title: 'Chorsu Bazaar',
+        desc: 'Colors and flavors of Uzbekistan'
+      },
+      ferghana: {
+        title: 'Ferghana Valley',
+        desc: 'Heart of silk and ceramics'
+      },
+      crafts: {
+        title: 'Traditional Crafts',
+        desc: 'Ancestral techniques still alive'
+      },
+      tea: {
+        title: 'Tea Ceremony',
+        desc: 'Hospitality in every cup'
+      },
+      testimonials: {
+        title: '💬 Traveler Opinions'
+      },
+      tips_gallery: {
+        title: '💡 Travel Tips from Experience'
+      },
+      photo_tip: {
+        title: 'Photography',
+        desc: 'Best light at sunrise and sunset. Respect when photographing people.'
+      },
+      food_tip: {
+        title: 'Gastronomy',
+        desc: 'Try plov on Thursdays, it\'s tradition. Don\'t miss somsa and green tea.'
+      },
+      accommodation_tip: {
+        title: 'Accommodation',
+        desc: 'Stay in traditional houses for an authentic experience.'
+      },
+      shopping_tip: {
+        title: 'Shopping',
+        desc: 'Best silk in Margilan, ceramics in Rishtan. Bargain with respect.'
+      },
+      transport_tip: {
+        title: 'Transport',
+        desc: 'Book Afrosiyob train in advance. Yandex Taxi is reliable in cities.'
+      },
+      communication_tip: {
+        title: 'Communication',
+        desc: 'Learn basic phrases in Uzbek. Smiles are universal.'
+      },
+      share: {
+        title: '📤 Share Your Experience',
+        desc: 'Have you traveled to Uzbekistan? We would be happy to add your stories and photos to the gallery section.',
+        photos: 'Send photos and opinion',
+        review: 'Write review'
+      }
+    },
+    contact: {
+      title: 'Contact',
+      subtitle: 'Ready for your Uzbek adventure? We help you plan the perfect trip adapted to your interests and budget.',
+      email: {
+        title: 'Email',
+        desc: 'For detailed consultations and personalized planning',
+        response: 'Response in 24 hours'
+      },
+      whatsapp: {
+        title: 'WhatsApp',
+        desc: 'Quick consultations and immediate advice',
+        hours: 'Monday to Friday 9:00-18:00'
+      },
+      telegram: {
+        title: 'Telegram',
+        desc: 'Direct channel for frequent travelers',
+        support: 'Support in Spanish'
+      },
+      form: {
+        title: 'Personalized Consultation',
+        desc: 'Tell us about your ideal trip and we will help you make it a reality',
+        name: 'Full name *',
+        email: 'Email *',
+        phone: 'Phone (optional)',
+        city: 'City of origin',
+        duration: 'Trip duration',
+        travelers: 'Number of travelers',
+        budget: 'Approximate budget',
+        interests: 'Main interests',
+        message: 'Additional message',
+        submit: 'Send consultation'
+      },
+      services: {
+        title: 'How can we help you?',
+        itineraries: {
+          title: 'Itinerary Planning',
+          desc: 'We design personalized routes according to your interests, duration and budget'
+        },
+        accommodation: {
+          title: 'Accommodation Reservations',
+          desc: 'Boutique hotels, traditional houses and authentic experiences'
+        },
+        transport: {
+          title: 'Transport',
+          desc: 'High-speed trains, domestic flights and private transfers'
+        },
+        cultural: {
+          title: 'Cultural Experiences',
+          desc: 'Cooking workshops, visits to artisans and meetings with locals'
+        },
+        visa: {
+          title: 'Visa Management',
+          desc: 'We help you with all the necessary documentation for your trip'
+        },
+        consulting: {
+          title: 'Specialized Consulting',
+          desc: 'Expert advice from those who know the country in depth'
+        }
+      },
+      faq: {
+        title: 'Frequently Asked Questions',
+        cost: {
+          q: 'How much does it cost to travel to Uzbekistan?',
+          a: 'A 7-day trip can cost between 800-2000 EUR per person, including flights, accommodation, meals and activities. The budget varies according to the level of comfort and experiences chosen.'
+        },
+        season: {
+          q: 'What is the best time to travel?',
+          a: 'Spring (March-May) and autumn (September-November) are ideal. The weather is pleasant, there are fewer tourists and prices are more accessible.'
+        },
+        visa_faq: {
+          q: 'Do I need a visa to travel from Spain?',
+          a: 'You do not need a visa for tourist stays of up to 30 days. You only need a passport valid for 6 months and a return ticket.'
+        },
+        safety: {
+          q: 'Is it safe to travel to Uzbekistan?',
+          a: 'Yes, Uzbekistan is one of the safest countries in Central Asia. It has low crime and authorities are very focused on protecting tourists.'
+        },
+        language: {
+          q: 'What languages are spoken?',
+          a: 'The official language is Uzbek, but Russian is widely spoken. In tourist areas, many speak basic English.'
+        },
+        duration: {
+          q: 'How many days do I need to see the main sites?',
+          a: 'Minimum 5 days for the main cities (Tashkent, Samarkand, Bukhara). For a complete experience, we recommend 7-10 days.'
+        }
+      }
+    },
+    back: {
+      home: '← Back to home'
+    }
+  },
+
+  ru: {
+    site: {
+      title: 'Культурный гид по Узбекистану',
+      description: 'Откройте для себя чудеса Узбекистана: древние города, богатую культуру и незабываемые впечатления на Великом шелковом пути.'
+    },
+    nav: {
+      home: 'Главная',
+      culture: 'Культура',
+      destinations: 'Направления',
+      tips: 'Советы',
+      itineraries: 'Маршруты',
+      gallery: 'Галерея',
+      contact: 'Контакты'
+    },
+    hero: {
+      title: 'Откройте Узбекистан',
+      subtitle: 'Жемчужина Центральной Азии',
+      description: 'Путешествие по древним городам Шелкового пути, знакомство с аутентичной культурой и создание незабываемых воспоминаний в сердце Центральной Азии.',
+      plan: 'Планировать поездку',
+      explore: 'Изучить культуру'
+    },
+    home: {
+      why_visit: 'Почему стоит посетить Узбекистан?',
+      unesco: {
+        title: 'Всемирное наследие ЮНЕСКО',
+        desc: 'Четыре объекта ЮНЕСКО, включая великолепную площадь Регистан и древний город Хива.'
+      },
+      gastronomy: {
+        title: 'Аутентичная гастрономия',
+        desc: 'Попробуйте знаменитый плов, свежий хлеб из тандырных печей и традиционные сладости.'
+      },
+      easy: {
+        title: 'Легко путешествовать',
+        desc: 'Виза не требуется на 30 дней, современные скоростные поезда и отличная туристическая инфраструктура.'
+      },
+      cta: {
+        title: 'Готовы к приключению?',
+        desc: 'Узнайте, почему Узбекистан становится самым популярным направлением в Центральной Азии.',
+        destinations: 'Изучить направления',
+        tips: 'Советы путешественникам'
+      }
+    },
+    slider: {
+      registan: {
+        title: 'Площадь Регистан',
+        desc: 'Сердце древнего Самарканда',
+        location: 'Самарканд'
+      },
+      khiva: {
+        title: 'Ичан-Кала',
+        desc: 'Город-музей под открытым небом',
+        location: 'Хива'
+      },
+      crafts: {
+        title: 'Традиционные ремесла',
+        desc: '1000-летние традиции',
+        location: 'Хива'
+      },
+      bukhara: {
+        title: 'Историческая Бухара',
+        desc: '2500 лет истории',
+        location: 'Бухара'
+      },
+      madrasas: {
+        title: 'Медресе Бухары',
+        desc: 'Лучшие образцы исламского искусства',
+        location: 'Бухара'
+      },
+      evening: {
+        title: 'Вечерний Самарканд',
+        desc: 'Волшебный вид на площадь Регистан',
+        location: 'Самарканд'
+      }
+    },
+    culture: {
+      title: 'Узбекская культура',
+      subtitle: 'Увлекательная мозаика традиций, которые сохранились на протяжении веков в сердце Центральной Азии.',
+      gastronomy: {
+        title: 'Традиционная гастрономия'
+      },
+      plov: {
+        title: '🍚 Плов - национальное блюдо',
+        desc: 'Больше чем просто рис, плов - это кулинарная церемония. Традиционно готовится мужчинами в больших котлах, сочетает рис, баранину, морковь и уникальные специи, такие как зира и куркума.'
+      },
+      somsa: {
+        title: '🥟 Самса - вкус в каждом кусочке',
+        desc: 'Эти вкусные пирожки, запеченные в традиционных глиняных печах (тандыр), начинены мясом, луком и специями. Их треугольная форма и хрустящее тесто делают их идеальной закуской.'
+      },
+      tea: {
+        title: '🍵 Чайная церемония',
+        desc: 'Зеленый чай священен в Узбекистане. Его подают в маленьких пиалах и он символизирует гостеприимство. Первую чашку наливают, выливают и снова наполняют три раза перед подачей.'
+      },
+      traditions: {
+        title: 'Традиции и обычаи'
+      },
+      dance: {
+        title: 'Традиционные танцы',
+        desc: 'Узбекские танцы, такие как "Лазги" и "Хорезм", рассказывают истории любви, природы и повседневной жизни элегантными движениями и красочными костюмами.'
+      },
+      clothing: {
+        title: 'Традиционная одежда',
+        desc: 'Чапаны (шелковые туники) и тюбетейки отражают мастерство узбекского текстиля. Женщины носят атлас (переливающийся шелк) ярких цветов.'
+      },
+      architecture: {
+        title: 'Исламская архитектура',
+        desc: 'Медресе, мечети и мавзолеи демонстрируют исламское геометрическое совершенство с бирюзовыми плитками, золотыми куполами и элегантными минаретами.'
+      },
+      crafts: {
+        title: 'Ремесла',
+        desc: 'От шелковых ковров до керамики Риштана, через резьбу по дереву и ювелирное дело, каждый регион имеет свою ремесленную специальность.'
+      },
+      etiquette: {
+        title: 'Культурный этикет'
+      },
+      home: {
+        title: '🏠 В домах',
+        tip1: 'Всегда снимайте обувь при входе',
+        tip2: 'Принесите небольшой подарок хозяевам',
+        tip3: 'Всегда принимайте предложенный чай',
+        tip4: 'Уважайте старших и позвольте им говорить первыми'
+      },
+      mosque: {
+        title: '🕌 В священных местах',
+        tip1: 'Одевайтесь консервативно',
+        tip2: 'Женщины должны покрывать голову',
+        tip3: 'Говорите тихо и проявляйте уважение',
+        tip4: 'Спрашивайте разрешения перед фотографированием'
+      },
+      bazaar: {
+        title: '🛍️ На базаре',
+        tip1: 'Торг - часть культуры',
+        tip2: 'Проявляйте искренний интерес к товарам',
+        tip3: 'Будьте терпеливы и наслаждайтесь разговором',
+        tip4: 'Рукопожатие скрепляет сделку'
+      }
+    },
+    destinations: {
+      title: 'Основные направления',
+      subtitle: 'Легендарные города, которые были свидетелями славы Шелкового пути более тысячи лет.',
+      samarkand: {
+        title: '🏛️ Самарканд - Жемчужина Востока',
+        desc: 'Столица империи Тамерлана, Самарканд - город, который ослепляет своей монументальной архитектурой. Комплекс Регистан с тремя медресе, украшенными бирюзовой мозаикой, является одним из самых фотогеничных мест в мире.',
+        places: 'Обязательные места:',
+        registan: 'Площадь Регистан: Архитектурное сердце города',
+        gur: 'Мавзолей Гур-э-Амир: Гробница Тамерлана',
+        observatory: 'Обсерватория Улугбека: Средневековая астрономия',
+        bibi: 'Мечеть Биби-Ханым: Одна из крупнейших в исламском мире',
+        tips: 'Местные советы:',
+        advice: 'Посетите Регистан на рассвете, чтобы избежать толп и получить лучший свет. Вечером насладитесь световым шоу, которое освещает фасады медресе.'
+      },
+      bukhara: {
+        title: '🕌 Бухара - Священный город',
+        desc: 'С более чем 140 архитектурными памятниками, Бухара - это живой музей. Ее исторический центр, прекрасно сохранившийся, переносит вас в золотой век Шелкового пути.',
+        places: 'Обязательные места:',
+        poi: 'Комплекс Пои-Калян: Знаковый минарет и мечеть',
+        ark: 'Цитадель Арк: Королевская крепость с 2000-летней историей',
+        samanid: 'Мавзолей Саманидов: Жемчужина исламской архитектуры',
+        domes: 'Купольные рынки: Традиционные крытые базары',
+        tips: 'Местные советы:',
+        advice: 'Остановитесь в традиционном доме (B&B), чтобы испытать подлинное узбекское гостеприимство. Не пропустите ужин во дворе медресе, превращенной в ресторан.'
+      },
+      khiva: {
+        title: '🏰 Хива - Город-музей',
+        desc: 'Ичан-Кала, обнесенный стеной город Хива, словно прогулка внутри сказки из "Тысячи и одной ночи". Его мощеные улицы и глинобитные здания сохраняют средневековый дух нетронутым.',
+        places: 'Обязательные места:',
+        ichan: 'Ичан-Кала: Обнесенный стеной город всемирного наследия ЮНЕСКО',
+        kalta: 'Минарет Калта-Минор: Самый известный недостроенный минарет',
+        tash: 'Дворец Таш-Хаули: Резиденция ханов Хивы',
+        islam: 'Медресе Ислам-Ходжа: Самый высокий минарет в Хиве',
+        tips: 'Местные советы:',
+        advice: 'Поднимитесь на минарет Ислам-Ходжа на закате для лучших панорамных видов. Хива идеально подходит для изучения пешком за один день.'
+      },
+      tashkent: {
+        title: '🏙️ Ташкент - Космополитичная столица',
+        desc: 'Современная столица Узбекистана сочетает советскую архитектуру с новыми разработками. Это идеальная отправная точка и предлагает другую перспективу страны.',
+        places: 'Обязательные места:',
+        old: 'Старый город: Исторические мечети и медресе',
+        chorsu: 'Базар Чорсу: Самый большой и аутентичный рынок',
+        metro: 'Ташкентское метро: Станции, украшенные как дворцы',
+        museum: 'Музей прикладного искусства: Традиционные ремесла',
+        tips: 'Местные советы:',
+        advice: 'Используйте метро для передвижения - оно эффективно, и каждая станция - произведение искусства. Попробуйте плов в ресторане Central Asian Plov Center.'
+      },
+      ferghana: {
+        title: '🏔️ Ферганская долина - Ремесленная традиция',
+        desc: 'Эта плодородная долина, окруженная горами, является ремесленным сердцем Узбекистана. Здесь производят лучший шелк и керамику и сохраняют самые аутентичные традиции.',
+        places: 'Обязательные места:',
+        margilan: 'Маргилан: Столица узбекского шелка',
+        rishtan: 'Риштан: Традиционная синяя керамика',
+        kokand: 'Коканд: Дворец Худояр-хана',
+        kuva: 'Кува: Археологический памятник и обсерватория',
+        tips: 'Местные советы:',
+        advice: 'Посетите ремесленные мастерские, чтобы увидеть процесс производства. Это лучший регион для покупки аутентичного икатного шелка и традиционной керамики.'
+      }
+    },
+    tips: {
+      title: 'Полезные советы',
+      subtitle: 'Все, что вам нужно знать для успешного планирования поездки в Узбекистан из России.',
+      visa: {
+        title: '📋 Виза и документация',
+        spanish: '🇷🇺 Для российских граждан',
+        no_visa: 'Без визы (до 30 дней)',
+        free_entry: 'Свободный въезд для туризма',
+        passport: 'Паспорт, действительный 6 месяцев',
+        ticket: 'Билет туда-обратно',
+        registration: 'Обязательная регистрация в отелях',
+        e_visa: 'Электронная виза (более 30 дней)',
+        online: 'Онлайн-заявка: e-visa.gov.uz',
+        process: 'Процесс: 3-5 рабочих дней',
+        cost: 'Стоимость: 20-40 долларов США',
+        valid: 'Действительна до 90 дней'
+      },
+      documents: {
+        title: '📄 Необходимые документы',
+        passport: 'Паспорт с минимальным сроком действия 6 месяцев',
+        insurance: 'Международная туристическая страховка',
+        accommodation: 'Подтверждение размещения (бронь отеля)',
+        flight: 'Билет на самолет туда-обратно',
+        migration: 'Миграционная карта (в самолете)'
+      },
+      money: {
+        title: '💰 Деньги и транспорт',
+        currency: '💵 Валюта и обмен',
+        som: 'Валюта: Узбекский сум (UZS)',
+        rate: 'Примерный курс: 1 EUR = 12,000-13,000 UZS',
+        tips_title: 'Финансовые советы:',
+        cash: 'Привозите евро или доллары наличными',
+        exchange: 'Обменивайте в официальных банках или обменных пунктах',
+        cards: 'Карты принимаются в отелях и основных ресторанах',
+        atm: 'Снятие в банкоматах доступно в городах',
+        negotiate: 'Торгуйтесь в сумах, а не в евро'
+      },
+      transport: {
+        title: '🚗 Внутренний транспорт',
+        train: '🚄 Скоростные поезда',
+        afrosiyob: 'Афросиаб соединяет Ташкент-Самарканд-Бухару (3-4 часа)',
+        train_price: 'Цена: 15-30 евро',
+        bus: '🚌 Автобусы',
+        bus_desc: 'Экономично между основными городами',
+        bus_price: 'Цена: 5-10 евро',
+        taxi: '🚗 Такси/Убер',
+        yandex: 'Яндекс.Такси работает в основных городах',
+        taxi_price: 'Цена: 2-5 евро городские поездки'
+      }
+    },
+    itineraries: {
+      title: 'Туристические маршруты',
+      subtitle: 'Тщательно разработанные маршруты для лучшего опыта в Узбекистане, адаптированные к различной продолжительности и бюджетам.',
+      classic: {
+        title: '🚀 Классический маршрут - 5 дней',
+        subtitle: 'Идеально для первого визита · Основные города',
+        cities: 'Ташкент, Самарканд, Бухара',
+        budget: '800-1200 евро на человека',
+        accommodation: 'Отели 3-4 звезды',
+        transport: 'Скоростной поезд + такси'
+      },
+      cities: 'Города',
+      budget: 'Бюджет',
+      accommodation: 'Размещение',
+      transport: 'Транспорт',
+      day1: {
+        title: 'День 1 - Прибытие в Ташкент',
+        badge: 'Исследование',
+        arrival: 'Прибытие в международный аэропорт',
+        checkin: 'Трансфер и заселение в отель',
+        rest: 'Отдых и легкий обед'
+      },
+      morning: '🌅 Утром',
+      afternoon: '🌞 Днем',
+      evening: '🌆 Вечером',
+      tips: '💡 Советы дня'
+    },
+    gallery: {
+      title: 'Галерея',
+      subtitle: 'Откройте для себя Узбекистан глазами настоящих путешественников. Подлинные фотографии и отзывы россиян, посетивших страну.',
+      moments: {
+        title: '📸 Незабываемые моменты'
+      },
+      registan: {
+        title: 'Площадь Регистан, Самарканд',
+        desc: 'Архитектурное сердце древнего Шелкового пути'
+      },
+      bukhara: {
+        title: 'Историческая Бухара',
+        desc: '2500 лет сохранившейся истории'
+      },
+      khiva: {
+        title: 'Ремесла Хивы',
+        desc: '1000-летнее традиционное искусство'
+      },
+      plov: {
+        title: 'Традиционный плов',
+        desc: 'Подлинное национальное блюдо'
+      },
+      chorsu: {
+        title: 'Базар Чорсу',
+        desc: 'Краски и вкусы Узбекистана'
+      },
+      ferghana: {
+        title: 'Ферганская долина',
+        desc: 'Сердце шелка и керамики'
+      },
+      crafts: {
+        title: 'Традиционные ремесла',
+        desc: 'Древние техники все еще живы'
+      },
+      tea: {
+        title: 'Чайная церемония',
+        desc: 'Гостеприимство в каждой чашке'
+      },
+      testimonials: {
+        title: '💬 Мнения путешественников'
+      },
+      tips_gallery: {
+        title: '💡 Советы путешественникам из опыта'
+      },
+      photo_tip: {
+        title: 'Фотография',
+        desc: 'Лучший свет на рассвете и закате. Уважайте при фотографировании людей.'
+      },
+      food_tip: {
+        title: 'Гастрономия',
+        desc: 'Попробуйте плов по четвергам, это традиция. Не пропустите самсу и зеленый чай.'
+      },
+      accommodation_tip: {
+        title: 'Размещение',
+        desc: 'Останавливайтесь в традиционных домах для аутентичного опыта.'
+      },
+      shopping_tip: {
+        title: 'Покупки',
+        desc: 'Лучший шелк в Маргилане, керамика в Риштане. Торгуйтесь с уважением.'
+      },
+      transport_tip: {
+        title: 'Транспорт',
+        desc: 'Бронируйте поезд Афросиаб заранее. Яндекс.Такси надежно в городах.'
+      },
+      communication_tip: {
+        title: 'Общение',
+        desc: 'Выучите основные фразы на узбекском. Улыбки универсальны.'
+      },
+      share: {
+        title: '📤 Поделитесь своим опытом',
+        desc: 'Путешествовали в Узбекистан? Мы будем рады добавить ваши истории и фотографии в раздел галереи.',
+        photos: 'Отправить фото и мнение',
+        review: 'Написать отзыв'
+      }
+    },
+    contact: {
+      title: 'Контакты',
+      subtitle: 'Готовы к узбекскому приключению? Мы поможем вам спланировать идеальную поездку, адаптированную к вашим интересам и бюджету.',
+      email: {
+        title: 'Электронная почта',
+        desc: 'Для подробных консультаций и персонализированного планирования',
+        response: 'Ответ в течение 24 часов'
+      },
+      whatsapp: {
+        title: 'WhatsApp',
+        desc: 'Быстрые консультации и немедленные советы',
+        hours: 'Понедельник-пятница 9:00-18:00'
+      },
+      telegram: {
+        title: 'Telegram',
+        desc: 'Прямой канал для частых путешественников',
+        support: 'Поддержка на русском языке'
+      },
+      form: {
+        title: 'Персональная консультация',
+        desc: 'Расскажите нам о вашей идеальной поездке, и мы поможем воплотить ее в реальность',
+        name: 'Полное имя *',
+        email: 'Электронная почта *',
+        phone: 'Телефон (необязательно)',
+        city: 'Город отправления',
+        duration: 'Продолжительность поездки',
+        travelers: 'Количество путешественников',
+        budget: 'Примерный бюджет',
+        interests: 'Основные интересы',
+        message: 'Дополнительное сообщение',
+        submit: 'Отправить консультацию'
+      },
+      services: {
+        title: 'Как мы можем помочь?',
+        itineraries: {
+          title: 'Планирование маршрутов',
+          desc: 'Мы разрабатываем персонализированные маршруты в соответствии с вашими интересами, продолжительностью и бюджетом'
+        },
+        accommodation: {
+          title: 'Бронирование жилья',
+          desc: 'Бутик-отели, традиционные дома и аутентичные впечатления'
+        },
+        transport: {
+          title: 'Транспорт',
+          desc: 'Скоростные поезда, внутренние рейсы и частные трансферы'
+        },
+        cultural: {
+          title: 'Культурные впечатления',
+          desc: 'Кулинарные мастер-классы, посещения ремесленников и встречи с местными жителями'
+        },
+        visa: {
+          title: 'Оформление виз',
+          desc: 'Мы поможем вам со всей необходимой документацией для поездки'
+        },
+        consulting: {
+          title: 'Специализированные консультации',
+          desc: 'Экспертные советы от тех, кто глубоко знает страну'
+        }
+      },
+      faq: {
+        title: 'Часто задаваемые вопросы',
+        cost: {
+          q: 'Сколько стоит поездка в Узбекистан?',
+          a: '7-дневная поездка может стоить от 800 до 2000 евро на человека, включая перелеты, проживание, питание и мероприятия. Бюджет варьируется в зависимости от уровня комфорта и выбранных впечатлений.'
+        },
+        season: {
+          q: 'Какое лучшее время для путешествия?',
+          a: 'Весна (март-май) и осень (сентябрь-ноябрь) идеальны. Погода приятная, меньше туристов и цены более доступные.'
+        },
+        visa_faq: {
+          q: 'Нужна ли виза для поездки из России?',
+          a: 'Виза не нужна для туристических поездок до 30 дней. Нужен только паспорт, действительный 6 месяцев, и обратный билет.'
+        },
+        safety: {
+          q: 'Безопасно ли путешествовать в Узбекистан?',
+          a: 'Да, Узбекистан - одна из самых безопасных стран Центральной Азии. Низкий уровень преступности, и власти очень сосредоточены на защите туристов.'
+        },
+        language: {
+          q: 'На каких языках говорят?',
+          a: 'Официальный язык - узбекский, но русский широко распространен. В туристических районах многие говорят на базовом английском.'
+        },
+        duration: {
+          q: 'Сколько дней нужно, чтобы увидеть основные достопримечательности?',
+          a: 'Минимум 5 дней для основных городов (Ташкент, Самарканд, Бухара). Для полного опыта рекомендуем 7-10 дней.'
+        }
+      }
+    },
+    back: {
+      home: '← Назад на главную'
+    }
     faq: {
       title: 'Preguntas Frecuentes',
       cost: {
