@@ -230,16 +230,29 @@ function isActive(path: string) {
 	.nav-link.active {
 		color: #D4AF37;
 		font-weight: 600;
-		background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(247, 220, 111, 0.1) 100%);
-		border-radius: 8px;
-		padding: 0.8rem 1.2rem;
-		margin: 0 -1.2rem;
+		position: relative;
+		background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(247, 220, 111, 0.08) 100%);
+		border-radius: 25px;
+		padding: 0.7rem 1.5rem;
+		margin: 0 -1.5rem;
+		box-shadow: 
+			0 4px 15px rgba(212, 175, 55, 0.2),
+			inset 0 1px 0 rgba(255, 255, 255, 0.3);
+		border: 1px solid rgba(212, 175, 55, 0.3);
+		transform: translateY(-1px);
 	}
 
-	.nav-link.active::before {
-		width: 100%;
-		background: linear-gradient(90deg, #D4AF37, #F7DC6F);
-		height: 3px;
+	.nav-link.active::after {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 6px;
+		height: 6px;
+		background: linear-gradient(45deg, #D4AF37, #F7DC6F);
+		border-radius: 50%;
+		box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
 	}
 
 	/* Right Side */
@@ -375,9 +388,22 @@ function isActive(path: string) {
 		.nav-link.active {
 			color: #D4AF37;
 			font-weight: 600;
-			background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(247, 220, 111, 0.15) 100%);
+			background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(247, 220, 111, 0.1) 100%);
 			border-radius: 12px;
 			margin: 0.5rem 0;
+			box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+			border: 1px solid rgba(212, 175, 55, 0.4);
+			position: relative;
+		}
+
+		.nav-link.active::after {
+			content: '●';
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #D4AF37;
+			font-size: 0.8rem;
 		}
 	}
 
