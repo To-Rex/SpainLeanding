@@ -5,6 +5,7 @@ import { getLangFromUrl, useTranslations, getLocalizedPath } from '../../i18n/ut
 
 export function getStaticPaths() {
   return [
+    {params: {lang: undefined}},
     {params: {lang: 'uz'}},
     {params: {lang: 'en'}},
     {params: {lang: 'ru'}}
