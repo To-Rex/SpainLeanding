@@ -125,6 +125,100 @@ const t = useTranslations(lang);
 			</div>
 		</div>
 	</section>
+
+	<section class="section contact-cta">
+		<div class="container">
+			<div class="section-content">
+				<div class="contact-hero">
+					<div class="contact-content">
+						<div class="contact-icon-wrapper">
+							<div class="contact-icon">✈️</div>
+							<div class="contact-sparkles">
+								<span class="sparkle">✨</span>
+								<span class="sparkle">⭐</span>
+								<span class="sparkle">💫</span>
+							</div>
+						</div>
+						
+						<h2 class="contact-title">{t('home.contact.title')}</h2>
+						<p class="contact-subtitle">{t('home.contact.subtitle')}</p>
+						
+						<div class="contact-features">
+							<div class="feature-item">
+								<div class="feature-icon">🎯</div>
+								<span>{t('home.contact.personalized')}</span>
+							</div>
+							<div class="feature-item">
+								<div class="feature-icon">💬</div>
+								<span>{t('home.contact.consultation')}</span>
+							</div>
+							<div class="feature-item">
+								<div class="feature-icon">🚀</div>
+								<span>{t('home.contact.planning')}</span>
+							</div>
+						</div>
+						
+						<div class="contact-buttons">
+							<a href={getLocalizedPath('/contacto', lang)} class="btn-contact primary">
+								<span class="btn-text">{t('home.contact.start')}</span>
+								<div class="btn-arrow">→</div>
+							</a>
+							<a href="https://wa.me/998910216001" class="btn-contact secondary" target="_blank">
+								<span class="btn-icon">📱</span>
+								<span class="btn-text">{t('home.contact.whatsapp')}</span>
+							</a>
+						</div>
+					</div>
+					
+					<div class="contact-visual">
+						<div class="visual-card">
+							<div class="card-header">
+								<div class="card-dots">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="card-title">{t('home.contact.dream_trip')}</div>
+							</div>
+							<div class="card-content">
+								<div class="trip-item">
+									<div class="trip-icon">🏛️</div>
+									<div class="trip-text">
+										<div class="trip-name">Samarqand</div>
+										<div class="trip-duration">3 kun</div>
+									</div>
+									<div class="trip-status">✓</div>
+								</div>
+								<div class="trip-item">
+									<div class="trip-icon">🕌</div>
+									<div class="trip-text">
+										<div class="trip-name">Buxoro</div>
+										<div class="trip-duration">2 kun</div>
+									</div>
+									<div class="trip-status">✓</div>
+								</div>
+								<div class="trip-item">
+									<div class="trip-icon">🏰</div>
+									<div class="trip-text">
+										<div class="trip-name">Xiva</div>
+										<div class="trip-duration">2 kun</div>
+									</div>
+									<div class="trip-status">⏳</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="floating-elements">
+							<div class="floating-item item-1">🎨</div>
+							<div class="floating-item item-2">🍽️</div>
+							<div class="floating-item item-3">📸</div>
+							<div class="floating-item item-4">🎭</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>
 
 <style>
@@ -505,6 +599,454 @@ const t = useTranslations(lang);
 
 		.cta-section h2 {
 			font-size: 1.4rem;
+		}
+	}
+
+	/* Contact CTA Section */
+	.contact-cta {
+		background: linear-gradient(135deg, 
+			#667EEA 0%, 
+			#764BA2 25%, 
+			#F093FB 50%, 
+			#F5576C 75%, 
+			#4FACFE 100%);
+		background-size: 400% 400%;
+		animation: gradientShift 15s ease infinite;
+		padding: 8rem 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.contact-cta::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(1px);
+	}
+
+	.contact-hero {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.contact-content {
+		color: white;
+		text-align: left;
+	}
+
+	.contact-icon-wrapper {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 2rem;
+	}
+
+	.contact-icon {
+		font-size: 4rem;
+		display: inline-block;
+		animation: bounce 3s ease-in-out infinite;
+		filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.3));
+	}
+
+	.contact-sparkles {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+	}
+
+	.sparkle {
+		position: absolute;
+		font-size: 1.5rem;
+		animation: sparkle 2s ease-in-out infinite;
+	}
+
+	.sparkle:nth-child(1) {
+		top: -10px;
+		right: -10px;
+		animation-delay: 0s;
+	}
+
+	.sparkle:nth-child(2) {
+		bottom: -5px;
+		left: -15px;
+		animation-delay: 0.7s;
+	}
+
+	.sparkle:nth-child(3) {
+		top: 50%;
+		right: -20px;
+		animation-delay: 1.4s;
+	}
+
+	.contact-title {
+		font-size: 3.5rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		color: white;
+		text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+		line-height: 1.1;
+		background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.contact-subtitle {
+		font-size: 1.3rem;
+		margin-bottom: 3rem;
+		color: rgba(255, 255, 255, 0.9);
+		text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+		line-height: 1.6;
+		max-width: 500px;
+	}
+
+	.contact-features {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-bottom: 3rem;
+	}
+
+	.feature-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+		background: rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		backdrop-filter: blur(10px);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: all 0.3s ease;
+	}
+
+	.feature-item:hover {
+		background: rgba(255, 255, 255, 0.2);
+		transform: translateX(10px);
+	}
+
+	.feature-icon {
+		font-size: 1.5rem;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+	}
+
+	.feature-item span {
+		color: white;
+		font-weight: 500;
+		font-size: 1.1rem;
+	}
+
+	.contact-buttons {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.btn-contact {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		padding: 1.2rem 2rem;
+		border-radius: 16px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.1rem;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+		min-width: 180px;
+		justify-content: center;
+	}
+
+	.btn-contact.primary {
+		background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
+		color: #1A365D;
+		box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+	}
+
+	.btn-contact.primary:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
+	}
+
+	.btn-contact.secondary {
+		background: rgba(255, 255, 255, 0.15);
+		color: white;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(10px);
+	}
+
+	.btn-contact.secondary:hover {
+		background: rgba(255, 255, 255, 0.25);
+		border-color: rgba(255, 255, 255, 0.5);
+		transform: translateY(-4px);
+	}
+
+	.btn-arrow {
+		font-size: 1.2rem;
+		transition: transform 0.3s ease;
+	}
+
+	.btn-contact:hover .btn-arrow {
+		transform: translateX(5px);
+	}
+
+	.btn-icon {
+		font-size: 1.3rem;
+	}
+
+	.contact-visual {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.visual-card {
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20px;
+		padding: 2rem;
+		box-shadow: 
+			0 20px 60px rgba(0, 0, 0, 0.2),
+			0 0 0 1px rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(20px);
+		width: 100%;
+		max-width: 350px;
+		transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+		transition: transform 0.3s ease;
+	}
+
+	.visual-card:hover {
+		transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+	}
+
+	.card-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 1.5rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+
+	.card-dots {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.card-dots span {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb);
+	}
+
+	.card-dots span:nth-child(1) { background: #ff6b6b; }
+	.card-dots span:nth-child(2) { background: #feca57; }
+	.card-dots span:nth-child(3) { background: #48dbfb; }
+
+	.card-title {
+		color: #2C3E50;
+		font-weight: 600;
+		font-size: 1.1rem;
+	}
+
+	.card-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.trip-item {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+		background: rgba(103, 126, 234, 0.1);
+		border-radius: 12px;
+		transition: all 0.3s ease;
+	}
+
+	.trip-item:hover {
+		background: rgba(103, 126, 234, 0.2);
+		transform: translateX(5px);
+	}
+
+	.trip-icon {
+		font-size: 1.5rem;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, #667EEA, #764BA2);
+		border-radius: 50%;
+		color: white;
+	}
+
+	.trip-text {
+		flex: 1;
+	}
+
+	.trip-name {
+		font-weight: 600;
+		color: #2C3E50;
+		font-size: 1rem;
+	}
+
+	.trip-duration {
+		color: #718096;
+		font-size: 0.9rem;
+	}
+
+	.trip-status {
+		font-size: 1.2rem;
+		color: #38A169;
+	}
+
+	.floating-elements {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+	}
+
+	.floating-item {
+		position: absolute;
+		font-size: 2rem;
+		animation: float 6s ease-in-out infinite;
+		opacity: 0.7;
+	}
+
+	.floating-item.item-1 {
+		top: 10%;
+		left: -10%;
+		animation-delay: 0s;
+	}
+
+	.floating-item.item-2 {
+		top: 70%;
+		left: -15%;
+		animation-delay: 1.5s;
+	}
+
+	.floating-item.item-3 {
+		top: 20%;
+		right: -10%;
+		animation-delay: 3s;
+	}
+
+	.floating-item.item-4 {
+		bottom: 10%;
+		right: -15%;
+		animation-delay: 4.5s;
+	}
+
+	/* Animations */
+	@keyframes gradientShift {
+		0% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+		100% { background-position: 0% 50%; }
+	}
+
+	@keyframes bounce {
+		0%, 100% { transform: translateY(0px); }
+		50% { transform: translateY(-10px); }
+	}
+
+	@keyframes sparkle {
+		0%, 100% { opacity: 0; transform: scale(0.5); }
+		50% { opacity: 1; transform: scale(1.2); }
+	}
+
+	@keyframes float {
+		0%, 100% { transform: translateY(0px) rotate(0deg); }
+		33% { transform: translateY(-20px) rotate(5deg); }
+		66% { transform: translateY(10px) rotate(-5deg); }
+	}
+
+	/* Responsive Design */
+	@media (max-width: 1024px) {
+		.contact-hero {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+			text-align: center;
+		}
+
+		.contact-content {
+			text-align: center;
+		}
+
+		.contact-title {
+			font-size: 3rem;
+		}
+
+		.visual-card {
+			transform: none;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.contact-cta {
+			padding: 5rem 0;
+		}
+
+		.contact-title {
+			font-size: 2.5rem;
+		}
+
+		.contact-subtitle {
+			font-size: 1.1rem;
+		}
+
+		.contact-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.btn-contact {
+			width: 100%;
+			max-width: 300px;
+		}
+
+		.floating-item {
+			display: none;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.contact-title {
+			font-size: 2rem;
+		}
+
+		.visual-card {
+			padding: 1.5rem;
+		}
+
+		.feature-item {
+			padding: 0.8rem;
+		}
+
+		.btn-contact {
+			padding: 1rem 1.5rem;
+			font-size: 1rem;
 		}
 	}
 </style>
