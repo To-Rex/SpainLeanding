@@ -1,0 +1,613 @@
+---
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+
+// Translation function (simplified for this component)
+const translations = {
+  es: {
+    'contact.form.name': 'Nombre completo',
+    'contact.form.email': 'Correo electrónico',
+    'contact.form.phone': 'Teléfono',
+    'contact.form.city': 'Ciudad de origen',
+    'contact.form.duration': 'Duración del viaje',
+    'contact.form.travelers': 'Número de viajeros',
+    'contact.form.budget': 'Presupuesto aproximado',
+    'contact.form.interests': 'Intereses principales',
+    'contact.form.message': 'Mensaje adicional',
+    'contact.form.submit': 'Enviar consulta',
+    'contact.form.loading': 'Enviando...',
+    'contact.form.success': '¡Consulta enviada exitosamente! Te contactaremos pronto.',
+    'contact.form.error': 'Error al enviar la consulta. Por favor, intenta nuevamente.',
+    'contact.form.required': 'Este campo es obligatorio',
+    'contact.form.invalid_email': 'Por favor, ingresa un email válido',
+    'contact.form.interests.culture': 'Cultura e historia',
+    'contact.form.interests.gastronomy': 'Gastronomía',
+    'contact.form.interests.architecture': 'Arquitectura',
+    'contact.form.interests.crafts': 'Artesanías',
+    'contact.form.interests.nature': 'Naturaleza',
+    'contact.form.interests.photography': 'Fotografía'
+  },
+  uz: {
+    'contact.form.name': 'To\'liq ism',
+    'contact.form.email': 'Email manzil',
+    'contact.form.phone': 'Telefon raqam',
+    'contact.form.city': 'Kelib chiqish shahri',
+    'contact.form.duration': 'Sayohat davomiyligi',
+    'contact.form.travelers': 'Sayohatchilar soni',
+    'contact.form.budget': 'Taxminiy byudjet',
+    'contact.form.interests': 'Asosiy qiziqishlar',
+    'contact.form.message': 'Qo\'shimcha xabar',
+    'contact.form.submit': 'Maslahat so\'rash',
+    'contact.form.loading': 'Yuborilmoqda...',
+    'contact.form.success': 'Maslahat muvaffaqiyatli yuborildi! Tez orada aloqaga chiqamiz.',
+    'contact.form.error': 'Maslahat yuborishda xatolik. Iltimos, qayta urinib ko\'ring.',
+    'contact.form.required': 'Bu maydon majburiy',
+    'contact.form.invalid_email': 'Iltimos, to\'g\'ri email kiriting',
+    'contact.form.interests.culture': 'Madaniyat va tarix',
+    'contact.form.interests.gastronomy': 'Gastronomiya',
+    'contact.form.interests.architecture': 'Me\'morchilik',
+    'contact.form.interests.crafts': 'Hunarmandchilik',
+    'contact.form.interests.nature': 'Tabiat',
+    'contact.form.interests.photography': 'Fotografiya'
+  },
+  en: {
+    'contact.form.name': 'Full name',
+    'contact.form.email': 'Email address',
+    'contact.form.phone': 'Phone number',
+    'contact.form.city': 'City of origin',
+    'contact.form.duration': 'Trip duration',
+    'contact.form.travelers': 'Number of travelers',
+    'contact.form.budget': 'Approximate budget',
+    'contact.form.interests': 'Main interests',
+    'contact.form.message': 'Additional message',
+    'contact.form.submit': 'Send consultation',
+    'contact.form.loading': 'Sending...',
+    'contact.form.success': 'Consultation sent successfully! We will contact you soon.',
+    'contact.form.error': 'Error sending consultation. Please try again.',
+    'contact.form.required': 'This field is required',
+    'contact.form.invalid_email': 'Please enter a valid email',
+    'contact.form.interests.culture': 'Culture and history',
+    'contact.form.interests.gastronomy': 'Gastronomy',
+    'contact.form.interests.architecture': 'Architecture',
+    'contact.form.interests.crafts': 'Crafts',
+    'contact.form.interests.nature': 'Nature',
+    'contact.form.interests.photography': 'Photography'
+  },
+  ru: {
+    'contact.form.name': 'Полное имя',
+    'contact.form.email': 'Email адрес',
+    'contact.form.phone': 'Номер телефона',
+    'contact.form.city': 'Город происхождения',
+    'contact.form.duration': 'Продолжительность поездки',
+    'contact.form.travelers': 'Количество путешественников',
+    'contact.form.budget': 'Примерный бюджет',
+    'contact.form.interests': 'Основные интересы',
+    'contact.form.message': 'Дополнительное сообщение',
+    'contact.form.submit': 'Отправить консультацию',
+    'contact.form.loading': 'Отправка...',
+    'contact.form.success': 'Консультация успешно отправлена! Мы свяжемся с вами в ближайшее время.',
+    'contact.form.error': 'Ошибка при отправке консультации. Пожалуйста, попробуйте еще раз.',
+    'contact.form.required': 'Это поле обязательно',
+    'contact.form.invalid_email': 'Пожалуйста, введите действительный email',
+    'contact.form.interests.culture': 'Культура и история',
+    'contact.form.interests.gastronomy': 'Гастрономия',
+    'contact.form.interests.architecture': 'Архитектура',
+    'contact.form.interests.crafts': 'Ремесла',
+    'contact.form.interests.nature': 'Природа',
+    'contact.form.interests.photography': 'Фотография'
+  }
+};
+
+function t(key: string) {
+  return translations[lang as keyof typeof translations]?.[key] || translations.es[key] || key;
+}
+---
+
+<form id="contactForm" class="consultation-form">
+  <div id="formMessage" class="form-message" style="display: none;"></div>
+  
+  <div class="form-grid">
+    <div class="form-field">
+      <label for="name">{t('contact.form.name')}</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        required 
+        placeholder="Ismingizni kiriting"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="email">{t('contact.form.email')}</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        placeholder="email@example.com"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="phone">{t('contact.form.phone')}</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        placeholder="+998 90 123 45 67"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="city">{t('contact.form.city')}</label>
+      <input 
+        type="text" 
+        id="city" 
+        name="city" 
+        placeholder="Masalan: Toshkent"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="duration">{t('contact.form.duration')}</label>
+      <select id="duration" name="duration">
+        <option value="">Tanlang</option>
+        <option value="3-5 kun">3-5 kun</option>
+        <option value="1 hafta">1 hafta</option>
+        <option value="2 hafta">2 hafta</option>
+        <option value="1 oy">1 oy</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="travelers">{t('contact.form.travelers')}</label>
+      <select id="travelers" name="travelers">
+        <option value="">Tanlang</option>
+        <option value="1 kishi">1 kishi</option>
+        <option value="2 kishi">2 kishi</option>
+        <option value="3-5 kishi">3-5 kishi</option>
+        <option value="5+ kishi">5+ kishi</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-field full-width">
+    <label for="budget">{t('contact.form.budget')}</label>
+    <select id="budget" name="budget">
+      <option value="">Tanlang</option>
+      <option value="$500-1000">$500-1000</option>
+      <option value="$1000-2000">$1000-2000</option>
+      <option value="$2000-3000">$2000-3000</option>
+      <option value="$3000+">$3000+</option>
+    </select>
+  </div>
+
+  <div class="interests-section">
+    <label class="interests-label">{t('contact.form.interests')}</label>
+    <div class="interests-grid">
+      <label class="interest-item">
+        <input type="checkbox" name="interests" value="culture">
+        <span class="checkmark"></span>
+        <span class="interest-text">{t('contact.form.interests.culture')}</span>
+      </label>
+      
+      <label class="interest-item">
+        <input type="checkbox" name="interests" value="gastronomy">
+        <span class="checkmark"></span>
+        <span class="interest-text">{t('contact.form.interests.gastronomy')}</span>
+      </label>
+      
+      <label class="interest-item">
+        <input type="checkbox" name="interests" value="architecture">
+        <span class="checkmark"></span>
+        <span class="interest-text">{t('contact.form.interests.architecture')}</span>
+      </label>
+      
+      <label class="interest-item">
+        <input type="checkbox" name="interests" value="crafts">
+        <span class="checkmark"></span>
+        <span class="interest-text">{t('contact.form.interests.crafts')}</span>
+      </label>
+      
+      <label class="interest-item">
+        <input type="checkbox" name="interests" value="nature">
+        <span class="checkmark"></span>
+        <span class="interest-text">{t('contact.form.interests.nature')}</span>
+      </label>
+      
+      <label class="interest-item">
+        <input type="checkbox" name="interests" value="photography">
+        <span class="checkmark"></span>
+        <span class="interest-text">{t('contact.form.interests.photography')}</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-field full-width">
+    <label for="message">{t('contact.form.message')}</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows="4" 
+      placeholder="Qo'shimcha ma'lumot yoki savollaringizni yozing..."
+    ></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn" id="submitBtn">
+    <span class="btn-text">{t('contact.form.submit')}</span>
+    <div class="btn-loader" style="display: none;">
+      <div class="spinner"></div>
+    </div>
+  </button>
+</form>
+
+<style>
+  .consultation-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.08),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .consultation-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  }
+
+  .form-message {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  .form-message.success {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+  }
+
+  .form-message.error {
+    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .form-message.loading {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #1e40af;
+    border: 1px solid #93c5fd;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-field {
+    position: relative;
+  }
+
+  .form-field.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-field label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.025em;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    background: #ffffff;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+  }
+
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    background: #fefefe;
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    color: #9ca3af;
+    font-size: 0.9rem;
+  }
+
+  .form-field textarea {
+    resize: vertical;
+    min-height: 100px;
+    line-height: 1.5;
+  }
+
+  .interests-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .interests-label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.025em;
+  }
+
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .interest-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+  }
+
+  .interest-item:hover {
+    border-color: #d4af37;
+    background: #fffbf0;
+    transform: translateY(-1px);
+  }
+
+  .interest-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+
+  .checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    margin-right: 0.75rem;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .interest-item input:checked ~ .checkmark {
+    background: #d4af37;
+    border-color: #d4af37;
+  }
+
+  .interest-item input:checked ~ .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .interest-text {
+    font-size: 0.9rem;
+    color: #374151;
+    font-weight: 500;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #d4af37 0%, #f7dc6f 100%);
+    color: #1a365d;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(26, 54, 93, 0.3);
+    border-top: 2px solid #1a365d;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .consultation-form {
+      padding: 2rem;
+      margin: 1rem;
+      border-radius: 20px;
+    }
+
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .interests-grid {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .interests-section {
+      padding: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .consultation-form {
+      padding: 1.5rem;
+      margin: 0.5rem;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .submit-btn {
+      padding: 0.875rem 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+</style>
+
+<script>
+  import { supabase } from '../lib/supabase';
+
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const btnText = submitBtn.querySelector('.btn-text') as HTMLElement;
+  const btnLoader = submitBtn.querySelector('.btn-loader') as HTMLElement;
+  const formMessage = document.getElementById('formMessage') as HTMLElement;
+
+  function showMessage(message: string, type: 'success' | 'error' | 'loading') {
+    formMessage.textContent = message;
+    formMessage.className = `form-message ${type}`;
+    formMessage.style.display = 'block';
+    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function hideMessage() {
+    formMessage.style.display = 'none';
+  }
+
+  function setLoading(loading: boolean) {
+    submitBtn.disabled = loading;
+    if (loading) {
+      btnText.style.opacity = '0';
+      btnLoader.style.display = 'block';
+    } else {
+      btnText.style.opacity = '1';
+      btnLoader.style.display = 'none';
+    }
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    hideMessage();
+
+    if (!supabase) {
+      showMessage('Xizmat vaqtincha mavjud emas. Iltimos, keyinroq urinib ko\'ring.', 'error');
+      return;
+    }
+
+    setLoading(true);
+    showMessage('Maslahat yuborilmoqda...', 'loading');
+
+    try {
+      const formData = new FormData(form);
+      const interests = Array.from(formData.getAll('interests')) as string[];
+      
+      const data = {
+        name: formData.get('name') as string,
+        email: formData.get('email') as string,
+        phone: formData.get('phone') as string || null,
+        city: formData.get('city') as string || null,
+        duration: formData.get('duration') as string || null,
+        travelers: formData.get('travelers') as string || null,
+        budget: formData.get('budget') as string || null,
+        interests: interests,
+        message: formData.get('message') as string || null,
+        status: 'new' as const
+      };
+
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert([data]);
+
+      if (error) {
+        console.error('Supabase error:', error);
+        throw error;
+      }
+
+      showMessage('Maslahat muvaffaqiyatli yuborildi! Tez orada aloqaga chiqamiz.', 'success');
+      form.reset();
+      
+    } catch (error) {
+      console.error('Form submission error:', error);
+      showMessage('Maslahat yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.', 'error');
+    } finally {
+      setLoading(false);
+    }
+  });
+</script>
