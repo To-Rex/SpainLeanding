@@ -314,7 +314,7 @@ export const ui = {
     'site.title': 'O\'zbekiston - Madaniy va Sayohat Qo\'llanmasi',
     'site.description': 'O\'zbekistonning sehrini kashf eting: Ipak yo\'li shaharlari, islom me\'morchiligi, asl taomlar va noyob mehmondo\'stlik.',
     
-    'nav.home': 'Bosh sahifa',
+    'nav.home': 'Uy',
     'nav.culture': 'Madaniyat',
     'nav.destinations': 'Yo\'nalishlar',
     'nav.tips': 'Maslahatlar',

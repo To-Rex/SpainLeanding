@@ -4,8 +4,13 @@ import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
 import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
 
+//const lang = getLangFromUrl(Astro.url);
+//const t = useTranslations(lang);
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+console.log('Lang:', lang);
+console.log('Title:', t('home.contact.title'));
 ---
 
 <Layout title={t('site.title')} description={t('site.description')}>
@@ -317,15 +322,20 @@ const t = useTranslations(lang);
 	}
 
 	.btn {
-		display: inline-block;
-		padding: 0.9rem 1.8rem;
-		border-radius: 8px;
-		font-weight: 500;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		font-size: 0.95rem;
+		background: linear-gradient(135deg, #FFB347, #FFCC33);
+		color: #1a202c;
+  		font-weight: 600;
+  		border: none;
+  		padding: 0.9rem 1.6rem;
+  		border-radius: 12px;
+  		box-shadow: 0 4px 20px rgba(255, 204, 51, 0.3);
+  		transition: all 0.3s ease;
+  		text-decoration: none;
+  		font-size: 1rem;
 		text-align: center;
-		min-width: 140px;
+		white-space: nowrap;
+		max-height: 60px;
+		align-content: center;
 	}
 
 	.btn:first-child {
@@ -340,14 +350,17 @@ const t = useTranslations(lang);
 		color: #D4AF37;
 	}
 
+
 	.btn:hover {
 		transform: translateY(-2px);
+		box-shadow: 0 8px 32px rgba(255, 204, 51, 0.4);
 	}
 
 	.btn-outline:hover {
 		background: #D4AF37;
 		color: #1A365D;
 	}
+	
 
 	/* Minimalistik Aloqa Tugmasi */
 	.btn-contact-minimal {
@@ -357,7 +370,7 @@ const t = useTranslations(lang);
 		padding: 0.9rem 1.8rem;
 		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
 		border: 2px solid rgba(212, 175, 55, 0.3);
-		border-radius: 50px;
+		border-radius: 12px;
 		text-decoration: none;
 		color: #2C5282;
 		font-weight: 500;
@@ -371,7 +384,9 @@ const t = useTranslations(lang);
 		position: relative;
 		overflow: hidden;
 		min-width: 140px;
+		max-height: 60px;
 		justify-content: center;
+		
 	}
 
 	.btn-contact-minimal::before {
@@ -396,6 +411,7 @@ const t = useTranslations(lang);
 			0 8px 25px rgba(212, 175, 55, 0.2),
 			inset 0 1px 0 rgba(255, 255, 255, 0.9);
 		color: #D4AF37;
+		
 	}
 
 	.btn-contact-minimal:hover::before {
@@ -407,11 +423,11 @@ const t = useTranslations(lang);
 	}
 
 	.btn-contact-minimal:hover .contact-icon {
-		animation: pulse 1.5s ease-in-out infinite;
+		font-size: 20px;
+		animation: pulse 2.5s ease-in-out infinite;
 	}
 
 	.contact-icon {
-		font-size: 1.1rem;
 		transition: all 0.3s ease;
 	}
 
@@ -704,8 +720,8 @@ const t = useTranslations(lang);
 		background: linear-gradient(135deg, 
 			#667EEA 0%, 
 			#764BA2 25%, 
-			#F093FB 50%, 
-			#F5576C 75%, 
+			#1A365D 50%, 
+			#F7DC6F 75%,
 			#4FACFE 100%);
 		background-size: 400% 400%;
 		animation: gradientShift 15s ease infinite;
@@ -746,7 +762,7 @@ const t = useTranslations(lang);
 	}
 
 	.contact-icon {
-		font-size: 4rem;
+		font-size: 2rem;
 		display: inline-block;
 		animation: bounce 3s ease-in-out infinite;
 		filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.3));
