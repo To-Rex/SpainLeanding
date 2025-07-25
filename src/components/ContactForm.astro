@@ -9,14 +9,22 @@ const { lang } = Astro.props;
 const translations = {
   es: {
     'contact.form.name': 'Nombre completo',
+    'contact.form.name.placeholder': 'Ingrese su nombre completo',
     'contact.form.email': 'Correo electrónico',
+    'contact.form.email.placeholder': 'ejemplo@correo.com',
     'contact.form.phone': 'Teléfono',
+    'contact.form.phone.placeholder': '+34 600 123 456',
     'contact.form.city': 'Ciudad de origen',
+    'contact.form.city.placeholder': 'Madrid, Barcelona, etc.',
     'contact.form.duration': 'Duración del viaje',
+    'contact.form.duration.select': 'Seleccione duración',
     'contact.form.travelers': 'Número de viajeros',
+    'contact.form.travelers.select': 'Seleccione número',
     'contact.form.budget': 'Presupuesto aproximado',
+    'contact.form.budget.select': 'Seleccione presupuesto',
     'contact.form.interests': 'Intereses principales',
     'contact.form.message': 'Mensaje adicional',
+    'contact.form.message.placeholder': 'Cuéntenos más sobre sus preferencias de viaje, fechas específicas, o cualquier pregunta que tenga...',
     'contact.form.submit': 'Enviar consulta',
     'contact.form.loading': 'Enviando...',
     'contact.form.success': '¡Consulta enviada exitosamente! Te contactaremos pronto.',
@@ -32,14 +40,22 @@ const translations = {
   },
   uz: {
     'contact.form.name': 'To\'liq ism',
+    'contact.form.name.placeholder': 'To\'liq ismingizni kiriting',
     'contact.form.email': 'Email manzil',
+    'contact.form.email.placeholder': 'misol@email.com',
     'contact.form.phone': 'Telefon raqam',
+    'contact.form.phone.placeholder': '+998 90 123 45 67',
     'contact.form.city': 'Kelib chiqish shahri',
+    'contact.form.city.placeholder': 'Toshkent, Samarqand, va boshqalar',
     'contact.form.duration': 'Sayohat davomiyligi',
+    'contact.form.duration.select': 'Davomiylikni tanlang',
     'contact.form.travelers': 'Sayohatchilar soni',
+    'contact.form.travelers.select': 'Sonini tanlang',
     'contact.form.budget': 'Taxminiy byudjet',
+    'contact.form.budget.select': 'Byudjetni tanlang',
     'contact.form.interests': 'Asosiy qiziqishlar',
     'contact.form.message': 'Qo\'shimcha xabar',
+    'contact.form.message.placeholder': 'Sayohat haqidagi qo\'shimcha ma\'lumotlar, maxsus talablar, savollar yoki izohlaringizni yozing...',
     'contact.form.submit': 'Maslahat so\'rash',
     'contact.form.loading': 'Yuborilmoqda...',
     'contact.form.success': 'Maslahat muvaffaqiyatli yuborildi! Tez orada aloqaga chiqamiz.',
@@ -55,14 +71,22 @@ const translations = {
   },
   en: {
     'contact.form.name': 'Full name',
+    'contact.form.name.placeholder': 'Enter your full name',
     'contact.form.email': 'Email address',
+    'contact.form.email.placeholder': 'example@email.com',
     'contact.form.phone': 'Phone number',
+    'contact.form.phone.placeholder': '+44 20 1234 5678',
     'contact.form.city': 'City of origin',
+    'contact.form.city.placeholder': 'London, Manchester, etc.',
     'contact.form.duration': 'Trip duration',
+    'contact.form.duration.select': 'Select duration',
     'contact.form.travelers': 'Number of travelers',
+    'contact.form.travelers.select': 'Select number',
     'contact.form.budget': 'Approximate budget',
+    'contact.form.budget.select': 'Select budget',
     'contact.form.interests': 'Main interests',
     'contact.form.message': 'Additional message',
+    'contact.form.message.placeholder': 'Tell us more about your travel preferences, specific dates, or any questions you have...',
     'contact.form.submit': 'Send consultation',
     'contact.form.loading': 'Sending...',
     'contact.form.success': 'Consultation sent successfully! We will contact you soon.',
@@ -78,14 +102,22 @@ const translations = {
   },
   ru: {
     'contact.form.name': 'Полное имя',
+    'contact.form.name.placeholder': 'Введите ваше полное имя',
     'contact.form.email': 'Email адрес',
+    'contact.form.email.placeholder': 'пример@email.com',
     'contact.form.phone': 'Номер телефона',
+    'contact.form.phone.placeholder': '+7 495 123 45 67',
     'contact.form.city': 'Город происхождения',
+    'contact.form.city.placeholder': 'Москва, Санкт-Петербург и др.',
     'contact.form.duration': 'Продолжительность поездки',
+    'contact.form.duration.select': 'Выберите продолжительность',
     'contact.form.travelers': 'Количество путешественников',
+    'contact.form.travelers.select': 'Выберите количество',
     'contact.form.budget': 'Примерный бюджет',
+    'contact.form.budget.select': 'Выберите бюджет',
     'contact.form.interests': 'Основные интересы',
     'contact.form.message': 'Дополнительное сообщение',
+    'contact.form.message.placeholder': 'Расскажите больше о ваших предпочтениях в путешествии, конкретных датах или любых вопросах...',
     'contact.form.submit': 'Отправить консультацию',
     'contact.form.loading': 'Отправка...',
     'contact.form.success': 'Консультация успешно отправлена! Мы свяжемся с вами в ближайшее время.',
@@ -117,7 +149,7 @@ function t(key: string) {
         id="name" 
         name="name" 
         required 
-        placeholder="Ismingizni kiriting"
+        placeholder={t('contact.form.name.placeholder')}
       />
     </div>
 
@@ -128,7 +160,7 @@ function t(key: string) {
         id="email" 
         name="email" 
         required 
-        placeholder="email@example.com"
+        placeholder={t('contact.form.email.placeholder')}
       />
     </div>
 
@@ -138,7 +170,7 @@ function t(key: string) {
         type="tel" 
         id="phone" 
         name="phone" 
-        placeholder="+998 90 123 45 67"
+        placeholder={t('contact.form.phone.placeholder')}
       />
     </div>
 
@@ -148,14 +180,14 @@ function t(key: string) {
         type="text" 
         id="city" 
         name="city" 
-        placeholder="Masalan: Toshkent"
+        placeholder={t('contact.form.city.placeholder')}
       />
     </div>
 
     <div class="form-field">
       <label for="duration">{t('contact.form.duration')}</label>
       <select id="duration" name="duration">
-        <option value="">Tanlang</option>
+        <option value="">{t('contact.form.duration.select')}</option>
         <option value="3-5 kun">3-5 kun</option>
         <option value="1 hafta">1 hafta</option>
         <option value="2 hafta">2 hafta</option>
@@ -166,7 +198,7 @@ function t(key: string) {
     <div class="form-field">
       <label for="travelers">{t('contact.form.travelers')}</label>
       <select id="travelers" name="travelers">
-        <option value="">Tanlang</option>
+        <option value="">{t('contact.form.travelers.select')}</option>
         <option value="1 kishi">1 kishi</option>
         <option value="2 kishi">2 kishi</option>
         <option value="3-5 kishi">3-5 kishi</option>
@@ -178,7 +210,7 @@ function t(key: string) {
   <div class="form-field full-width">
     <label for="budget">{t('contact.form.budget')}</label>
     <select id="budget" name="budget">
-      <option value="">Tanlang</option>
+      <option value="">{t('contact.form.budget.select')}</option>
       <option value="$500-1000">$500-1000</option>
       <option value="$1000-2000">$1000-2000</option>
       <option value="$2000-3000">$2000-3000</option>
@@ -233,7 +265,8 @@ function t(key: string) {
       id="message" 
       name="message" 
       rows="4" 
-      placeholder="Qo'shimcha ma'lumot yoki savollaringizni yozing..."
+      placeholder={t('contact.form.message.placeholder')}
+      class="message-textarea"
     ></textarea>
   </div>
 
@@ -351,6 +384,24 @@ function t(key: string) {
     resize: vertical;
     min-height: 100px;
     line-height: 1.5;
+  }
+
+  .message-textarea {
+    font-style: italic;
+    font-weight: 400;
+    color: #6b7280;
+  }
+
+  .message-textarea::placeholder {
+    font-style: italic;
+    font-weight: 300;
+    color: #9ca3af;
+    opacity: 0.8;
+  }
+
+  .message-textarea:focus {
+    font-style: normal;
+    color: #374151;
   }
 
   .interests-section {
@@ -567,7 +618,7 @@ function t(key: string) {
     hideMessage();
 
     if (!supabase) {
-      showMessage('Xizmat vaqtincha mavjud emas. Iltimos, keyinroq urinib ko\'ring.', 'error');
+      showMessage('Ma\'lumotlar bazasi ulanishi mavjud emas. Iltimos, administrator bilan bog\'laning.', 'error');
       return;
     }
 
@@ -591,13 +642,16 @@ function t(key: string) {
         status: 'new' as const
       };
 
+      console.log('Yuborilayotgan ma\'lumotlar:', data);
+
       const { error } = await supabase
         .from('contact_submissions')
         .insert([data]);
 
       if (error) {
         console.error('Supabase error:', error);
-        throw error;
+        showMessage(`Ma\'lumotlar bazasiga yozishda xatolik: ${error.message}`, 'error');
+        return;
       }
 
       showMessage('Maslahat muvaffaqiyatli yuborildi! Tez orada aloqaga chiqamiz.', 'success');
