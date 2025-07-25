@@ -8,6 +8,9 @@ const { lang } = Astro.props;
 // Translation function (simplified for this component)
 const translations = {
   es: {
+    'contact.form.select_duration': 'Seleccione duración',
+    'contact.form.select_travelers': 'Seleccione número',
+    'contact.form.select_budget': 'Seleccione presupuesto',
     'contact.form.name': 'Nombre completo',
     'contact.form.name.placeholder': 'Ingrese su nombre completo',
     'contact.form.email': 'Correo electrónico',
@@ -39,6 +42,9 @@ const translations = {
     'contact.form.interests.photography': 'Fotografía'
   },
   uz: {
+    'contact.form.select_duration': 'Davomiylikni tanlang',
+    'contact.form.select_travelers': 'Sonini tanlang',
+    'contact.form.select_budget': 'Byudjetni tanlang',
     'contact.form.name': 'To\'liq ism',
     'contact.form.name.placeholder': 'To\'liq ismingizni kiriting',
     'contact.form.email': 'Email manzil',
@@ -70,6 +76,9 @@ const translations = {
     'contact.form.interests.photography': 'Fotografiya'
   },
   en: {
+    'contact.form.select_duration': 'Select duration',
+    'contact.form.select_travelers': 'Select number',
+    'contact.form.select_budget': 'Select budget',
     'contact.form.name': 'Full name',
     'contact.form.name.placeholder': 'Enter your full name',
     'contact.form.email': 'Email address',
@@ -101,6 +110,9 @@ const translations = {
     'contact.form.interests.photography': 'Photography'
   },
   ru: {
+    'contact.form.select_duration': 'Выберите продолжительность',
+    'contact.form.select_travelers': 'Выберите количество',
+    'contact.form.select_budget': 'Выберите бюджет',
     'contact.form.name': 'Полное имя',
     'contact.form.name.placeholder': 'Введите ваше полное имя',
     'contact.form.email': 'Email адрес',
@@ -138,7 +150,7 @@ function t(key: string) {
 }
 ---
 
-<form id="contactForm" class="consultation-form">
+<form id="contactForm" class="contact-form-content">
   <div id="formMessage" class="form-message" style="display: none;"></div>
   
   <div class="form-grid">
@@ -187,7 +199,7 @@ function t(key: string) {
     <div class="form-field">
       <label for="duration">{t('contact.form.duration')}</label>
       <select id="duration" name="duration">
-        <option value="">{t('contact.form.duration.select')}</option>
+        <option value="">{t('contact.form.select_duration')}</option>
         <option value="3-5 kun">3-5 kun</option>
         <option value="1 hafta">1 hafta</option>
         <option value="2 hafta">2 hafta</option>
@@ -198,7 +210,7 @@ function t(key: string) {
     <div class="form-field">
       <label for="travelers">{t('contact.form.travelers')}</label>
       <select id="travelers" name="travelers">
-        <option value="">{t('contact.form.travelers.select')}</option>
+        <option value="">{t('contact.form.select_travelers')}</option>
         <option value="1 kishi">1 kishi</option>
         <option value="2 kishi">2 kishi</option>
         <option value="3-5 kishi">3-5 kishi</option>
@@ -210,7 +222,7 @@ function t(key: string) {
   <div class="form-field full-width">
     <label for="budget">{t('contact.form.budget')}</label>
     <select id="budget" name="budget">
-      <option value="">{t('contact.form.budget.select')}</option>
+      <option value="">{t('contact.form.select_budget')}</option>
       <option value="$500-1000">$500-1000</option>
       <option value="$1000-2000">$1000-2000</option>
       <option value="$2000-3000">$2000-3000</option>
@@ -279,27 +291,8 @@ function t(key: string) {
 </form>
 
 <style>
-  .consultation-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: 
-      0 25px 50px -12px rgba(0, 0, 0, 0.08),
-      0 0 0 1px rgba(255, 255, 255, 0.05);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .consultation-form::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  .contact-form-content {
+    width: 100%;
   }
 
   .form-message {
@@ -585,6 +578,12 @@ function t(key: string) {
 <script>
   import { supabase } from '../lib/supabase';
 
+  console.log('Supabase client:', supabase);
+  console.log('Environment variables:', {
+    url: import.meta.env.VITE_SUPABASE_URL,
+    key: import.meta.env.VITE_SUPABASE_ANON_KEY ? 'Present' : 'Missing'
+  });
+
   const form = document.getElementById('contactForm') as HTMLFormElement;
   const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
   const btnText = submitBtn.querySelector('.btn-text') as HTMLElement;
@@ -618,7 +617,8 @@ function t(key: string) {
     hideMessage();
 
     if (!supabase) {
-      showMessage('Ma\'lumotlar bazasi ulanishi mavjud emas. Iltimos, administrator bilan bog\'laning.', 'error');
+      console.error('Supabase client not initialized');
+      showMessage('Xizmat vaqtincha mavjud emas. Iltimos, keyinroq urinib ko\'ring.', 'error');
       return;
     }
 
@@ -650,7 +650,7 @@ function t(key: string) {
 
       if (error) {
         console.error('Supabase error:', error);
-        showMessage(`Ma\'lumotlar bazasiga yozishda xatolik: ${error.message}`, 'error');
+        showMessage('Ma\'lumotlarni saqlashda xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.', 'error');
         return;
       }
 
