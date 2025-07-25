@@ -1,0 +1,243 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div id="contactFormContainer">
+  <div id="formMessage" class="form-message" style="display: none;"></div>
+  
+  <form class="contact-form-element" id="contactForm">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">{t('contact.form.name')}</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">{t('contact.form.email')}</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">{t('contact.form.phone')}</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      
+      <div class="form-group">
+        <label for="city">{t('contact.form.city')}</label>
+        <input type="text" id="city" name="city" placeholder={lang === 'es' ? 'ej. Madrid, Barcelona...' : lang === 'en' ? 'e.g. London, Manchester...' : lang === 'ru' ? 'напр. Москва, Санкт-Петербург...' : 'mas. Toshkent, Samarqand...'}>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="duration">{t('contact.form.duration')}</label>
+      <select id="duration" name="duration">
+        <option value="">{lang === 'es' ? 'Selecciona duración' : lang === 'en' ? 'Select duration' : lang === 'ru' ? 'Выберите продолжительность' : 'Davomiylikni tanlang'}</option>
+        <option value="3-5">{lang === 'es' ? '3-5 días' : lang === 'en' ? '3-5 days' : lang === 'ru' ? '3-5 дней' : '3-5 kun'}</option>
+        <option value="5-7">{lang === 'es' ? '5-7 días' : lang === 'en' ? '5-7 days' : lang === 'ru' ? '5-7 дней' : '5-7 kun'}</option>
+        <option value="7-10">{lang === 'es' ? '7-10 días' : lang === 'en' ? '7-10 days' : lang === 'ru' ? '7-10 дней' : '7-10 kun'}</option>
+        <option value="10+">{lang === 'es' ? 'Más de 10 días' : lang === 'en' ? 'More than 10 days' : lang === 'ru' ? 'Более 10 дней' : '10 kundan ko\'p'}</option>
+      </select>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label for="travelers">{t('contact.form.travelers')}</label>
+        <select id="travelers" name="travelers">
+          <option value="1">{lang === 'es' ? '1 persona' : lang === 'en' ? '1 person' : lang === 'ru' ? '1 человек' : '1 kishi'}</option>
+          <option value="2">{lang === 'es' ? '2 personas' : lang === 'en' ? '2 people' : lang === 'ru' ? '2 человека' : '2 kishi'}</option>
+          <option value="3-4">{lang === 'es' ? '3-4 personas' : lang === 'en' ? '3-4 people' : lang === 'ru' ? '3-4 человека' : '3-4 kishi'}</option>
+          <option value="5+">{lang === 'es' ? '5+ personas' : lang === 'en' ? '5+ people' : lang === 'ru' ? '5+ человек' : '5+ kishi'}</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="budget">{t('contact.form.budget')}</label>
+        <select id="budget" name="budget">
+          <option value="">{lang === 'es' ? 'Selecciona presupuesto' : lang === 'en' ? 'Select budget' : lang === 'ru' ? 'Выберите бюджет' : 'Byudjetni tanlang'}</option>
+          <option value="500-1000">500-1000 EUR</option>
+          <option value="1000-2000">1000-2000 EUR</option>
+          <option value="2000-3000">2000-3000 EUR</option>
+          <option value="3000+">3000+ EUR</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="interests">{t('contact.form.interests')}</label>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" name="interests" value="cultura">
+          <span>{lang === 'es' ? 'Cultura e historia' : lang === 'en' ? 'Culture and history' : lang === 'ru' ? 'Культура и история' : 'Madaniyat va tarix'}</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="interests" value="gastronomia">
+          <span>{lang === 'es' ? 'Gastronomía' : lang === 'en' ? 'Gastronomy' : lang === 'ru' ? 'Гастрономия' : 'Gastronomiya'}</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="interests" value="arquitectura">
+          <span>{lang === 'es' ? 'Arquitectura' : lang === 'en' ? 'Architecture' : lang === 'ru' ? 'Архитектура' : 'Me\'morchilik'}</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="interests" value="artesania">
+          <span>{lang === 'es' ? 'Artesanías' : lang === 'en' ? 'Handicrafts' : lang === 'ru' ? 'Ремесла' : 'Hunarmandchilik'}</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="interests" value="fotografia">
+          <span>{lang === 'es' ? 'Fotografía' : lang === 'en' ? 'Photography' : lang === 'ru' ? 'Фотография' : 'Fotografiya'}</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" name="interests" value="aventura">
+          <span>{lang === 'es' ? 'Aventura' : lang === 'en' ? 'Adventure' : lang === 'ru' ? 'Приключения' : 'Sarguzasht'}</span>
+        </label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="message">{t('contact.form.message')}</label>
+      <textarea id="message" name="message" rows="5" placeholder={lang === 'es' ? 'Cuéntanos más sobre tu viaje ideal, fechas preferidas, necesidades especiales...' : lang === 'en' ? 'Tell us more about your ideal trip, preferred dates, special needs...' : lang === 'ru' ? 'Расскажите больше о вашем идеальном путешествии, предпочтительных датах, особых потребностях...' : 'Ideal sayohatingiz, afzal sanagan sanalar, maxsus ehtiyojlar haqida batafsil ma\'lumot bering...'}></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary" id="submitBtn">
+      <span class="btn-text">{t('contact.form.submit')}</span>
+      <span class="btn-loading" style="display: none;">
+        <svg class="animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" stroke-opacity="0.3"></circle>
+          <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" stroke-width="4"></path>
+        </svg>
+        {lang === 'es' ? 'Enviando...' : lang === 'en' ? 'Sending...' : lang === 'ru' ? 'Отправка...' : 'Jo\'natilmoqda...'}
+      </span>
+    </button>
+  </form>
+</div>
+
+<style>
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .btn-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+</style>
+
+<script>
+  import { supabase } from '../lib/supabase';
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm') as HTMLFormElement;
+    const messageDiv = document.getElementById('formMessage') as HTMLDivElement;
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+    const btnText = submitBtn.querySelector('.btn-text') as HTMLSpanElement;
+    const btnLoading = submitBtn.querySelector('.btn-loading') as HTMLSpanElement;
+
+    function showMessage(message: string, type: 'success' | 'error' | 'loading') {
+      messageDiv.textContent = message;
+      messageDiv.className = `form-message ${type}`;
+      messageDiv.style.display = 'block';
+      messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function hideMessage() {
+      messageDiv.style.display = 'none';
+    }
+
+    function setLoading(loading: boolean) {
+      if (loading) {
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'flex';
+      } else {
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline';
+        btnLoading.style.display = 'none';
+      }
+    }
+
+    form?.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      hideMessage();
+      setLoading(true);
+
+      try {
+        // Collect form data
+        const formData = new FormData(form);
+        const data: any = Object.fromEntries(formData.entries());
+        
+        // Get all checked interests
+        const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
+          .map((checkbox: any) => checkbox.value);
+        
+        // Prepare submission data
+        const submission = {
+          name: data.name,
+          email: data.email,
+          phone: data.phone || null,
+          city: data.city || null,
+          duration: data.duration || null,
+          travelers: data.travelers || null,
+          budget: data.budget || null,
+          interests: interests,
+          message: data.message || null,
+          status: 'new'
+        };
+
+        // Submit to Supabase
+        const { error } = await supabase
+          .from('contact_submissions')
+          .insert([submission]);
+
+        if (error) {
+          throw error;
+        }
+
+        // Success
+        const lang = document.documentElement.lang || 'es';
+        const successMessages = {
+          es: '¡Gracias por tu consulta! Te responderemos en las próximas 24 horas.',
+          en: 'Thank you for your inquiry! We will respond within 24 hours.',
+          ru: 'Спасибо за ваш запрос! Мы ответим в течение 24 часов.',
+          uz: 'So\'rovingiz uchun rahmat! Biz 24 soat ichida javob beramiz.'
+        };
+        
+        showMessage(successMessages[lang] || successMessages.es, 'success');
+        form.reset();
+
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        
+        const lang = document.documentElement.lang || 'es';
+        const errorMessages = {
+          es: 'Hubo un error al enviar tu consulta. Por favor, inténtalo de nuevo o contáctanos directamente.',
+          en: 'There was an error sending your inquiry. Please try again or contact us directly.',
+          ru: 'Произошла ошибка при отправке вашего запроса. Пожалуйста, попробуйте еще раз или свяжитесь с нами напрямую.',
+          uz: 'So\'rovni yuborishda xatolik yuz berdi. Iltimos, qayta urinib ko\'ring yoki to\'g\'ridan-to\'g\'ri bog\'laning.'
+        };
+        
+        showMessage(errorMessages[lang] || errorMessages.es, 'error');
+      } finally {
+        setLoading(false);
+      }
+    });
+  });
+</script>

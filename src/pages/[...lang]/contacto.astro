@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Navigation from '../../components/Navigation.astro';
 import { getLangFromUrl, useTranslations, getLocalizedPath } from '../../i18n/utils';
+import ContactForm from '../../components/ContactForm.astro';
 
 export function getStaticPaths() {
   return [
@@ -69,102 +70,7 @@ const t = useTranslations(lang);
 						<p>{t('contact.form.desc')}</p>
 					</div>
 					
-					<form class="contact-form-element" id="contactForm">
-						<div class="form-row">
-							<div class="form-group">
-								<label for="name">{t('contact.form.name')}</label>
-								<input type="text" id="name" name="name" required>
-							</div>
-							
-							<div class="form-group">
-								<label for="email">{t('contact.form.email')}</label>
-								<input type="email" id="email" name="email" required>
-							</div>
-						</div>
-						
-						<div class="form-row">
-							<div class="form-group">
-								<label for="phone">{t('contact.form.phone')}</label>
-								<input type="tel" id="phone" name="phone">
-							</div>
-							
-							<div class="form-group">
-								<label for="city">{t('contact.form.city')}</label>
-								<input type="text" id="city" name="city" placeholder="ej. Madrid, Barcelona...">
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label for="duration">{t('contact.form.duration')}</label>
-							<select id="duration" name="duration">
-								<option value="">Selecciona duración</option>
-								<option value="3-5">3-5 días</option>
-								<option value="5-7">5-7 días</option>
-								<option value="7-10">7-10 días</option>
-								<option value="10+">Más de 10 días</option>
-							</select>
-						</div>
-						
-						<div class="form-row">
-							<div class="form-group">
-								<label for="travelers">{t('contact.form.travelers')}</label>
-								<select id="travelers" name="travelers">
-									<option value="1">1 persona</option>
-									<option value="2">2 personas</option>
-									<option value="3-4">3-4 personas</option>
-									<option value="5+">5+ personas</option>
-								</select>
-							</div>
-							
-							<div class="form-group">
-								<label for="budget">{t('contact.form.budget')}</label>
-								<select id="budget" name="budget">
-									<option value="">Selecciona presupuesto</option>
-									<option value="500-1000">500-1000 EUR</option>
-									<option value="1000-2000">1000-2000 EUR</option>
-									<option value="2000-3000">2000-3000 EUR</option>
-									<option value="3000+">Más de 3000 EUR</option>
-								</select>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label for="interests">{t('contact.form.interests')}</label>
-							<div class="checkbox-group">
-								<label class="checkbox-label">
-									<input type="checkbox" name="interests" value="cultura">
-									<span>Cultura e historia</span>
-								</label>
-								<label class="checkbox-label">
-									<input type="checkbox" name="interests" value="gastronomia">
-									<span>Gastronomía</span>
-								</label>
-								<label class="checkbox-label">
-									<input type="checkbox" name="interests" value="arquitectura">
-									<span>Arquitectura</span>
-								</label>
-								<label class="checkbox-label">
-									<input type="checkbox" name="interests" value="artesania">
-									<span>Artesanías</span>
-								</label>
-								<label class="checkbox-label">
-									<input type="checkbox" name="interests" value="fotografia">
-									<span>Fotografía</span>
-								</label>
-								<label class="checkbox-label">
-									<input type="checkbox" name="interests" value="aventura">
-									<span>Aventura</span>
-								</label>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<label for="message">{t('contact.form.message')}</label>
-							<textarea id="message" name="message" rows="5" placeholder="Cuéntanos más sobre tu viaje ideal, fechas preferidas, necesidades especiales..."></textarea>
-						</div>
-						
-						<button type="submit" class="btn btn-primary">{t('contact.form.submit')}</button>
-					</form>
+					<ContactForm lang={lang} />
 				</div>
 			</div>
 		</div>
@@ -436,6 +342,32 @@ const t = useTranslations(lang);
 		box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
 	}
 
+	/* Success and error message styles */
+	.form-message {
+		padding: 1rem;
+		border-radius: 8px;
+		margin-bottom: 1rem;
+		font-weight: 500;
+	}
+
+	.form-message.success {
+		background: #F0FDF4;
+		color: #166534;
+		border: 1px solid #BBF7D0;
+	}
+
+	.form-message.error {
+		background: #FEF2F2;
+		color: #DC2626;
+		border: 1px solid #FECACA;
+	}
+
+	.form-message.loading {
+		background: #EFF6FF;
+		color: #1D4ED8;
+		border: 1px solid #DBEAFE;
+	}
+
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -534,27 +466,3 @@ const t = useTranslations(lang);
 		}
 	}
 </style>
-
-<script>
-	document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-		e.preventDefault();
-		
-		// Collect form data
-		const formData = new FormData(this);
-		const data = Object.fromEntries(formData.entries());
-		
-		// Get all checked interests
-		const interests = Array.from(document.querySelectorAll('input[name="interests"]:checked'))
-			.map(checkbox => checkbox.value);
-		data.interests = interests;
-		
-		// Here you would normally send the data to your server
-		console.log('Form submitted:', data);
-		
-		// Show success message
-		alert('¡Gracias por tu consulta! Te responderemos en las próximas 24 horas.');
-		
-		// Reset form
-		this.reset();
-	});
-</script>
