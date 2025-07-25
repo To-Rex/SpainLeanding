@@ -197,63 +197,154 @@ const t = useTranslations(lang);
     padding-right: 2.5rem;
   }
 
-  /* Minimalist Checkbox Group */
-  .checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 0.75rem;
-  }
-
-  .checkbox-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    color: #4A5568;
-    transition: color 0.2s ease;
+  /* Enhanced Core Interests Section */
+  .interests-section {
+    margin-top: 1rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
     position: relative;
+    overflow: hidden;
   }
 
-  .checkbox-item:hover {
-    color: #2C3E50;
+  .interests-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #D4AF37, #F7DC6F, #D4AF37);
   }
 
-  .checkbox-item input[type="checkbox"] {
-    display: none;
+  .interests-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
-  .checkmark {
-    width: 18px;
-    height: 18px;
-    border: 1px solid #CBD5E0;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    transition: all 0.2s ease;
-    flex-shrink: 0;
+  .interests-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1A365D;
+    margin-bottom: 0.5rem;
   }
 
-  .checkmark::after {
-    content: '✓';
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.2s ease;
+  .interests-subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-style: italic;
   }
 
-  .checkbox-item input[type="checkbox"]:checked + .checkmark {
-    background: #D4AF37;
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .interest-category {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+  }
+
+  .interest-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     border-color: #D4AF37;
   }
 
-  .checkbox-item input[type="checkbox"]:checked + .checkmark::after {
-    opacity: 1;
+  .category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .category-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #D4AF37, #F7DC6F);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .category-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+  }
+
+  .interest-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .interest-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .interest-item:hover {
+    background: #f8fafc;
+    transform: translateX(4px);
+  }
+
+  .interest-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.75rem;
+    accent-color: #D4AF37;
+    cursor: pointer;
+  }
+
+  .interest-label {
+    font-size: 0.9rem;
+    color: #475569;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .interest-item input[type="checkbox"]:checked + .interest-label {
+    color: #1e293b;
+    font-weight: 500;
+  }
+
+  /* Selection Counter */
+  .selection-counter {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .counter-text {
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+
+  .counter-number {
+    font-weight: 600;
+    color: #D4AF37;
   }
 
   /* Clean Submit Button */
@@ -297,9 +388,25 @@ const t = useTranslations(lang);
       gap: 1rem;
     }
 
-    .checkbox-grid {
+    .interests-grid {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.25rem;
+    }
+
+    .interests-section {
+      padding: 1.5rem;
+    }
+
+    .interest-category {
+      padding: 1.25rem;
+    }
+
+    .category-header {
+      margin-bottom: 0.75rem;
+    }
+
+    .interest-options {
+      gap: 0.5rem;
     }
 
     .form-group input,
@@ -318,8 +425,52 @@ const t = useTranslations(lang);
       margin-bottom: 1.25rem;
     }
 
-    .checkbox-grid {
+    .interests-grid {
       grid-template-columns: 1fr;
+    }
+
+    .interests-section {
+      padding: 1rem;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
+    }
+
+    .interest-category {
+      padding: 1rem;
+    }
+
+    .category-icon {
+      width: 28px;
+      height: 28px;
+      font-size: 0.9rem;
+    }
+
+    .category-title {
+      font-size: 0.9rem;
+    }
+
+    .interest-label {
+      font-size: 0.85rem;
+    }
+  }
+
+  /* Ultra-wide screens */
+  @media (min-width: 1400px) {
+    .interests-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .interests-section {
+      padding: 2.5rem;
+    }
+  }
+
+  /* Tablet landscape */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .interests-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
   }
 
@@ -346,6 +497,24 @@ const t = useTranslations(lang);
     const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
     const btnText = submitBtn.querySelector('.btn-text') as HTMLSpanElement;
     const btnLoading = submitBtn.querySelector('.btn-loading') as HTMLSpanElement;
+    
+    // Interest selection counter
+    const checkboxes = document.querySelectorAll('input[name="interests"]');
+    const counterElement = document.querySelector('.counter-number');
+    
+    function updateCounter() {
+      const checkedCount = document.querySelectorAll('input[name="interests"]:checked').length;
+      if (counterElement) {
+        counterElement.textContent = checkedCount.toString();
+      }
+    }
+    
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', updateCounter);
+    });
+    
+    // Initialize counter
+    updateCounter();
 
     function showMessage(message: string, type: 'success' | 'error' | 'loading') {
       messageDiv.textContent = message;
@@ -434,6 +603,7 @@ const t = useTranslations(lang);
         
         showMessage(successMessages[lang] || successMessages.es, 'success');
         form.reset();
+        updateCounter(); // Reset counter after form reset
 
       } catch (error) {
         console.error('Error submitting form:', error);
