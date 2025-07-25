@@ -176,6 +176,21 @@ const t = useTranslations(lang);
     form?.addEventListener('submit', async function(e) {
       e.preventDefault();
       
+      // Check if Supabase is available
+      if (!supabase) {
+        const lang = document.documentElement.lang || 'es';
+        const errorMessages = {
+          es: 'El servicio no está disponible en este momento. Por favor, contáctanos directamente por email o WhatsApp.',
+          en: 'Service is not available at the moment. Please contact us directly via email or WhatsApp.',
+          ru: 'Сервис временно недоступен. Пожалуйста, свяжитесь с нами напрямую по электронной почте или WhatsApp.',
+          uz: 'Xizmat hozirda mavjud emas. Iltimos, email yoki WhatsApp orqali to\'g\'ridan-to\'g\'ri bog\'laning.'
+        };
+        
+        showMessage(errorMessages[lang] || errorMessages.es, 'error');
+        setLoading(false);
+        return;
+      }
+      
       hideMessage();
       setLoading(true);
 
