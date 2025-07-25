@@ -11,6 +11,18 @@ const translations = {
     'contact.form.select_duration': 'Seleccione duración',
     'contact.form.select_travelers': 'Seleccione número',
     'contact.form.select_budget': 'Seleccione presupuesto',
+    'contact.form.duration.3-5': '3-5 días',
+    'contact.form.duration.1week': '1 semana',
+    'contact.form.duration.2weeks': '2 semanas',
+    'contact.form.duration.1month': '1 mes',
+    'contact.form.travelers.1': '1 persona',
+    'contact.form.travelers.2': '2 personas',
+    'contact.form.travelers.3-5': '3-5 personas',
+    'contact.form.travelers.5plus': '5+ personas',
+    'contact.form.budget.500-1000': '$500-1000',
+    'contact.form.budget.1000-2000': '$1000-2000',
+    'contact.form.budget.2000-3000': '$2000-3000',
+    'contact.form.budget.3000plus': '$3000+',
     'contact.form.name': 'Nombre completo',
     'contact.form.name.placeholder': 'Ingrese su nombre completo',
     'contact.form.email': 'Correo electrónico',
@@ -45,6 +57,18 @@ const translations = {
     'contact.form.select_duration': 'Davomiylikni tanlang',
     'contact.form.select_travelers': 'Sonini tanlang',
     'contact.form.select_budget': 'Byudjetni tanlang',
+    'contact.form.duration.3-5': '3-5 kun',
+    'contact.form.duration.1week': '1 hafta',
+    'contact.form.duration.2weeks': '2 hafta',
+    'contact.form.duration.1month': '1 oy',
+    'contact.form.travelers.1': '1 kishi',
+    'contact.form.travelers.2': '2 kishi',
+    'contact.form.travelers.3-5': '3-5 kishi',
+    'contact.form.travelers.5plus': '5+ kishi',
+    'contact.form.budget.500-1000': '$500-1000',
+    'contact.form.budget.1000-2000': '$1000-2000',
+    'contact.form.budget.2000-3000': '$2000-3000',
+    'contact.form.budget.3000plus': '$3000+',
     'contact.form.name': 'To\'liq ism',
     'contact.form.name.placeholder': 'To\'liq ismingizni kiriting',
     'contact.form.email': 'Email manzil',
@@ -79,6 +103,18 @@ const translations = {
     'contact.form.select_duration': 'Select duration',
     'contact.form.select_travelers': 'Select number',
     'contact.form.select_budget': 'Select budget',
+    'contact.form.duration.3-5': '3-5 days',
+    'contact.form.duration.1week': '1 week',
+    'contact.form.duration.2weeks': '2 weeks',
+    'contact.form.duration.1month': '1 month',
+    'contact.form.travelers.1': '1 person',
+    'contact.form.travelers.2': '2 people',
+    'contact.form.travelers.3-5': '3-5 people',
+    'contact.form.travelers.5plus': '5+ people',
+    'contact.form.budget.500-1000': '$500-1000',
+    'contact.form.budget.1000-2000': '$1000-2000',
+    'contact.form.budget.2000-3000': '$2000-3000',
+    'contact.form.budget.3000plus': '$3000+',
     'contact.form.name': 'Full name',
     'contact.form.name.placeholder': 'Enter your full name',
     'contact.form.email': 'Email address',
@@ -113,6 +149,18 @@ const translations = {
     'contact.form.select_duration': 'Выберите продолжительность',
     'contact.form.select_travelers': 'Выберите количество',
     'contact.form.select_budget': 'Выберите бюджет',
+    'contact.form.duration.3-5': '3-5 дней',
+    'contact.form.duration.1week': '1 неделя',
+    'contact.form.duration.2weeks': '2 недели',
+    'contact.form.duration.1month': '1 месяц',
+    'contact.form.travelers.1': '1 человек',
+    'contact.form.travelers.2': '2 человека',
+    'contact.form.travelers.3-5': '3-5 человек',
+    'contact.form.travelers.5plus': '5+ человек',
+    'contact.form.budget.500-1000': '$500-1000',
+    'contact.form.budget.1000-2000': '$1000-2000',
+    'contact.form.budget.2000-3000': '$2000-3000',
+    'contact.form.budget.3000plus': '$3000+',
     'contact.form.name': 'Полное имя',
     'contact.form.name.placeholder': 'Введите ваше полное имя',
     'contact.form.email': 'Email адрес',
@@ -200,10 +248,10 @@ function t(key: string) {
       <label for="duration">{t('contact.form.duration')}</label>
       <select id="duration" name="duration">
         <option value="">{t('contact.form.select_duration')}</option>
-        <option value="3-5 kun">3-5 kun</option>
-        <option value="1 hafta">1 hafta</option>
-        <option value="2 hafta">2 hafta</option>
-        <option value="1 oy">1 oy</option>
+        <option value="3-5 days">{t('contact.form.duration.3-5')}</option>
+        <option value="1 week">{t('contact.form.duration.1week')}</option>
+        <option value="2 weeks">{t('contact.form.duration.2weeks')}</option>
+        <option value="1 month">{t('contact.form.duration.1month')}</option>
       </select>
     </div>
 
@@ -211,10 +259,10 @@ function t(key: string) {
       <label for="travelers">{t('contact.form.travelers')}</label>
       <select id="travelers" name="travelers">
         <option value="">{t('contact.form.select_travelers')}</option>
-        <option value="1 kishi">1 kishi</option>
-        <option value="2 kishi">2 kishi</option>
-        <option value="3-5 kishi">3-5 kishi</option>
-        <option value="5+ kishi">5+ kishi</option>
+        <option value="1 person">{t('contact.form.travelers.1')}</option>
+        <option value="2 people">{t('contact.form.travelers.2')}</option>
+        <option value="3-5 people">{t('contact.form.travelers.3-5')}</option>
+        <option value="5+ people">{t('contact.form.travelers.5plus')}</option>
       </select>
     </div>
   </div>
@@ -223,10 +271,10 @@ function t(key: string) {
     <label for="budget">{t('contact.form.budget')}</label>
     <select id="budget" name="budget">
       <option value="">{t('contact.form.select_budget')}</option>
-      <option value="$500-1000">$500-1000</option>
-      <option value="$1000-2000">$1000-2000</option>
-      <option value="$2000-3000">$2000-3000</option>
-      <option value="$3000+">$3000+</option>
+      <option value="$500-1000">{t('contact.form.budget.500-1000')}</option>
+      <option value="$1000-2000">{t('contact.form.budget.1000-2000')}</option>
+      <option value="$2000-3000">{t('contact.form.budget.2000-3000')}</option>
+      <option value="$3000+">{t('contact.form.budget.3000plus')}</option>
     </select>
   </div>
 
