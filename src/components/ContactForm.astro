@@ -12,101 +12,214 @@ const t = useTranslations(lang);
 <div id="contactFormContainer">
   <div id="formMessage" class="form-message" style="display: none;"></div>
   
-  <form class="contact-form-element" id="contactForm">
+  <form class="professional-contact-form" id="contactForm">
     <div class="form-row">
       <div class="form-group">
-        <label for="name">{t('contact.form.name')}</label>
-        <input type="text" id="name" name="name" required>
+        <label for="name" class="form-label">
+          <span class="label-icon">👤</span>
+          <span class="label-text">{t('contact.form.name')}</span>
+          <span class="required-star">*</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="text" id="name" name="name" required class="form-input" placeholder="Ismingizni kiriting...">
+          <div class="input-border"></div>
+        </div>
       </div>
       
       <div class="form-group">
-        <label for="email">{t('contact.form.email')}</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email" class="form-label">
+          <span class="label-icon">📧</span>
+          <span class="label-text">{t('contact.form.email')}</span>
+          <span class="required-star">*</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="email" id="email" name="email" required class="form-input" placeholder="email@example.com">
+          <div class="input-border"></div>
+        </div>
       </div>
     </div>
     
     <div class="form-row">
       <div class="form-group">
-        <label for="phone">{t('contact.form.phone')}</label>
-        <input type="tel" id="phone" name="phone">
+        <label for="phone" class="form-label">
+          <span class="label-icon">📱</span>
+          <span class="label-text">{t('contact.form.phone')}</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="tel" id="phone" name="phone" class="form-input" placeholder="+998 90 123 45 67">
+          <div class="input-border"></div>
+        </div>
       </div>
       
       <div class="form-group">
-        <label for="city">{t('contact.form.city')}</label>
-        <input type="text" id="city" name="city" placeholder={lang === 'es' ? 'ej. Madrid, Barcelona...' : lang === 'en' ? 'e.g. London, Manchester...' : lang === 'ru' ? 'напр. Москва, Санкт-Петербург...' : 'mas. Toshkent, Samarqand...'}>
+        <label for="city" class="form-label">
+          <span class="label-icon">🏙️</span>
+          <span class="label-text">{t('contact.form.city')}</span>
+        </label>
+        <div class="input-wrapper">
+          <input type="text" id="city" name="city" class="form-input" placeholder={lang === 'es' ? 'ej. Madrid, Barcelona...' : lang === 'en' ? 'e.g. London, Manchester...' : lang === 'ru' ? 'напр. Москва, Санкт-Петербург...' : 'mas. Toshkent, Samarqand...'}>
+          <div class="input-border"></div>
+        </div>
       </div>
     </div>
     
     <div class="form-group">
-      <label for="duration">{t('contact.form.duration')}</label>
-      <select id="duration" name="duration">
-        <option value="">{lang === 'es' ? 'Selecciona duración' : lang === 'en' ? 'Select duration' : lang === 'ru' ? 'Выберите продолжительность' : 'Davomiylikni tanlang'}</option>
-        <option value="3-5">{lang === 'es' ? '3-5 días' : lang === 'en' ? '3-5 days' : lang === 'ru' ? '3-5 дней' : '3-5 kun'}</option>
-        <option value="5-7">{lang === 'es' ? '5-7 días' : lang === 'en' ? '5-7 days' : lang === 'ru' ? '5-7 дней' : '5-7 kun'}</option>
-        <option value="7-10">{lang === 'es' ? '7-10 días' : lang === 'en' ? '7-10 days' : lang === 'ru' ? '7-10 дней' : '7-10 kun'}</option>
-        <option value="10+">{lang === 'es' ? 'Más de 10 días' : lang === 'en' ? 'More than 10 days' : lang === 'ru' ? 'Более 10 дней' : '10 kundan ko\'p'}</option>
-      </select>
-    </div>
-    
-    <div class="form-row">
-      <div class="form-group">
-        <label for="travelers">{t('contact.form.travelers')}</label>
-        <select id="travelers" name="travelers">
-          <option value="1">{lang === 'es' ? '1 persona' : lang === 'en' ? '1 person' : lang === 'ru' ? '1 человек' : '1 kishi'}</option>
-          <option value="2">{lang === 'es' ? '2 personas' : lang === 'en' ? '2 people' : lang === 'ru' ? '2 человека' : '2 kishi'}</option>
-          <option value="3-4">{lang === 'es' ? '3-4 personas' : lang === 'en' ? '3-4 people' : lang === 'ru' ? '3-4 человека' : '3-4 kishi'}</option>
-          <option value="5+">{lang === 'es' ? '5+ personas' : lang === 'en' ? '5+ people' : lang === 'ru' ? '5+ человек' : '5+ kishi'}</option>
+      <label for="duration" class="form-label">
+        <span class="label-icon">⏰</span>
+        <span class="label-text">{t('contact.form.duration')}</span>
+      </label>
+      <div class="select-wrapper">
+        <select id="duration" name="duration" class="form-select">
+          <option value="">{lang === 'es' ? 'Selecciona duración' : lang === 'en' ? 'Select duration' : lang === 'ru' ? 'Выберите продолжительность' : 'Davomiylikni tanlang'}</option>
+          <option value="3-5">{lang === 'es' ? '3-5 días' : lang === 'en' ? '3-5 days' : lang === 'ru' ? '3-5 дней' : '3-5 kun'}</option>
+          <option value="5-7">{lang === 'es' ? '5-7 días' : lang === 'en' ? '5-7 days' : lang === 'ru' ? '5-7 дней' : '5-7 kun'}</option>
+          <option value="7-10">{lang === 'es' ? '7-10 días' : lang === 'en' ? '7-10 days' : lang === 'ru' ? '7-10 дней' : '7-10 kun'}</option>
+          <option value="10+">{lang === 'es' ? 'Más de 10 días' : lang === 'en' ? 'More than 10 days' : lang === 'ru' ? 'Более 10 дней' : '10 kundan ko\'p'}</option>
         </select>
+        <div class="select-arrow">
+          <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group">
+        <label for="travelers" class="form-label">
+          <span class="label-icon">👥</span>
+          <span class="label-text">{t('contact.form.travelers')}</span>
+        </label>
+        <div class="select-wrapper">
+          <select id="travelers" name="travelers" class="form-select">
+            <option value="1">{lang === 'es' ? '1 persona' : lang === 'en' ? '1 person' : lang === 'ru' ? '1 человек' : '1 kishi'}</option>
+            <option value="2">{lang === 'es' ? '2 personas' : lang === 'en' ? '2 people' : lang === 'ru' ? '2 человека' : '2 kishi'}</option>
+            <option value="3-4">{lang === 'es' ? '3-4 personas' : lang === 'en' ? '3-4 people' : lang === 'ru' ? '3-4 человека' : '3-4 kishi'}</option>
+            <option value="5+">{lang === 'es' ? '5+ personas' : lang === 'en' ? '5+ people' : lang === 'ru' ? '5+ человек' : '5+ kishi'}</option>
+          </select>
+          <div class="select-arrow">
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
       </div>
       
       <div class="form-group">
-        <label for="budget">{t('contact.form.budget')}</label>
-        <select id="budget" name="budget">
-          <option value="">{lang === 'es' ? 'Selecciona presupuesto' : lang === 'en' ? 'Select budget' : lang === 'ru' ? 'Выберите бюджет' : 'Byudjetni tanlang'}</option>
-          <option value="500-1000">500-1000 EUR</option>
-          <option value="1000-2000">1000-2000 EUR</option>
-          <option value="2000-3000">2000-3000 EUR</option>
-          <option value="3000+">3000+ EUR</option>
-        </select>
+        <label for="budget" class="form-label">
+          <span class="label-icon">💰</span>
+          <span class="label-text">{t('contact.form.budget')}</span>
+        </label>
+        <div class="select-wrapper">
+          <select id="budget" name="budget" class="form-select">
+            <option value="">{lang === 'es' ? 'Selecciona presupuesto' : lang === 'en' ? 'Select budget' : lang === 'ru' ? 'Выберите бюджет' : 'Byudjetni tanlang'}</option>
+            <option value="500-1000">500-1000 EUR</option>
+            <option value="1000-2000">1000-2000 EUR</option>
+            <option value="2000-3000">2000-3000 EUR</option>
+            <option value="3000+">3000+ EUR</option>
+          </select>
+          <div class="select-arrow">
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
     
     <div class="form-group">
-      <label for="interests">{t('contact.form.interests')}</label>
-      <div class="checkbox-group">
+      <label for="interests" class="form-label">
+        <span class="label-icon">🎯</span>
+        <span class="label-text">{t('contact.form.interests')}</span>
+      </label>
+      <div class="interests-grid">
         <label class="checkbox-label">
-          <input type="checkbox" name="interests" value="cultura">
-          <span>{lang === 'es' ? 'Cultura e historia' : lang === 'en' ? 'Culture and history' : lang === 'ru' ? 'Культура и история' : 'Madaniyat va tarix'}</span>
+          <input type="checkbox" name="interests" value="cultura" class="checkbox-input">
+          <div class="checkbox-custom">
+            <svg class="checkbox-icon" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M10 2L4.5 8L2 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="checkbox-text">
+            <span class="interest-icon">🏛️</span>
+            {lang === 'es' ? 'Cultura e historia' : lang === 'en' ? 'Culture and history' : lang === 'ru' ? 'Культура и история' : 'Madaniyat va tarix'}
+          </span>
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="interests" value="gastronomia">
-          <span>{lang === 'es' ? 'Gastronomía' : lang === 'en' ? 'Gastronomy' : lang === 'ru' ? 'Гастрономия' : 'Gastronomiya'}</span>
+          <input type="checkbox" name="interests" value="gastronomia" class="checkbox-input">
+          <div class="checkbox-custom">
+            <svg class="checkbox-icon" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M10 2L4.5 8L2 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="checkbox-text">
+            <span class="interest-icon">🍽️</span>
+            {lang === 'es' ? 'Gastronomía' : lang === 'en' ? 'Gastronomy' : lang === 'ru' ? 'Гастрономия' : 'Gastronomiya'}
+          </span>
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="interests" value="arquitectura">
-          <span>{lang === 'es' ? 'Arquitectura' : lang === 'en' ? 'Architecture' : lang === 'ru' ? 'Архитектура' : 'Me\'morchilik'}</span>
+          <input type="checkbox" name="interests" value="arquitectura" class="checkbox-input">
+          <div class="checkbox-custom">
+            <svg class="checkbox-icon" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M10 2L4.5 8L2 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="checkbox-text">
+            <span class="interest-icon">🕌</span>
+            {lang === 'es' ? 'Arquitectura' : lang === 'en' ? 'Architecture' : lang === 'ru' ? 'Архитектура' : 'Me\'morchilik'}
+          </span>
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="interests" value="artesania">
-          <span>{lang === 'es' ? 'Artesanías' : lang === 'en' ? 'Handicrafts' : lang === 'ru' ? 'Ремесла' : 'Hunarmandchilik'}</span>
+          <input type="checkbox" name="interests" value="artesania" class="checkbox-input">
+          <div class="checkbox-custom">
+            <svg class="checkbox-icon" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M10 2L4.5 8L2 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="checkbox-text">
+            <span class="interest-icon">🎨</span>
+            {lang === 'es' ? 'Artesanías' : lang === 'en' ? 'Handicrafts' : lang === 'ru' ? 'Ремесла' : 'Hunarmandchilik'}
+          </span>
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="interests" value="fotografia">
-          <span>{lang === 'es' ? 'Fotografía' : lang === 'en' ? 'Photography' : lang === 'ru' ? 'Фотография' : 'Fotografiya'}</span>
+          <input type="checkbox" name="interests" value="fotografia" class="checkbox-input">
+          <div class="checkbox-custom">
+            <svg class="checkbox-icon" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M10 2L4.5 8L2 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="checkbox-text">
+            <span class="interest-icon">📸</span>
+            {lang === 'es' ? 'Fotografía' : lang === 'en' ? 'Photography' : lang === 'ru' ? 'Фотография' : 'Fotografiya'}
+          </span>
         </label>
         <label class="checkbox-label">
-          <input type="checkbox" name="interests" value="aventura">
-          <span>{lang === 'es' ? 'Aventura' : lang === 'en' ? 'Adventure' : lang === 'ru' ? 'Приключения' : 'Sarguzasht'}</span>
+          <input type="checkbox" name="interests" value="aventura" class="checkbox-input">
+          <div class="checkbox-custom">
+            <svg class="checkbox-icon" width="12" height="10" viewBox="0 0 12 10" fill="none">
+              <path d="M10 2L4.5 8L2 5.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="checkbox-text">
+            <span class="interest-icon">🏔️</span>
+            {lang === 'es' ? 'Aventura' : lang === 'en' ? 'Adventure' : lang === 'ru' ? 'Приключения' : 'Sarguzasht'}
+          </span>
         </label>
       </div>
     </div>
     
     <div class="form-group">
-      <label for="message">{t('contact.form.message')}</label>
-      <textarea id="message" name="message" rows="5" placeholder={lang === 'es' ? 'Cuéntanos más sobre tu viaje ideal, fechas preferidas, necesidades especiales...' : lang === 'en' ? 'Tell us more about your ideal trip, preferred dates, special needs...' : lang === 'ru' ? 'Расскажите больше о вашем идеальном путешествии, предпочтительных датах, особых потребностях...' : 'Ideal sayohatingiz, afzal sanagan sanalar, maxsus ehtiyojlar haqida batafsil ma\'lumot bering...'}></textarea>
+      <label for="message" class="form-label">
+        <span class="label-icon">💬</span>
+        <span class="label-text">{t('contact.form.message')}</span>
+      </label>
+      <div class="textarea-wrapper">
+        <textarea id="message" name="message" rows="5" class="form-textarea" placeholder={lang === 'es' ? 'Cuéntanos más sobre tu viaje ideal, fechas preferidas, necesidades especiales...' : lang === 'en' ? 'Tell us more about your ideal trip, preferred dates, special needs...' : lang === 'ru' ? 'Расскажите больше о вашем идеальном путешествии, предпочтительных датах, особых потребностях...' : 'Ideal sayohatingiz, afzal sanagan sanalar, maxsus ehtiyojlar haqida batafsil ma\'lumot bering...'}></textarea>
+        <div class="textarea-border"></div>
+      </div>
     </div>
     
-    <button type="submit" class="btn btn-primary" id="submitBtn">
+    <button type="submit" class="submit-button" id="submitBtn">
       <span class="btn-text">{t('contact.form.submit')}</span>
       <span class="btn-loading" style="display: none;">
         <svg class="animate-spin" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,6 +233,401 @@ const t = useTranslations(lang);
 </div>
 
 <style>
+  /* Professional Form Styles */
+  .professional-contact-form {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  /* Professional Labels */
+  .form-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1A365D;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+
+  .label-icon {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+
+  .label-text {
+    flex: 1;
+  }
+
+  .required-star {
+    color: #E53E3E;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  /* Professional Input Fields */
+  .input-wrapper,
+  .textarea-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    border-radius: 16px;
+    padding: 2px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .input-wrapper:hover,
+  .textarea-wrapper:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2D3748;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    outline: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: #A0AEC0;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 
+      0 0 0 4px rgba(212, 175, 55, 0.1),
+      0 8px 32px rgba(212, 175, 55, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .input-border,
+  .textarea-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 50%, #D4AF37 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .form-input:focus + .input-border,
+  .form-textarea:focus + .textarea-border {
+    opacity: 1;
+  }
+
+  .form-textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  /* Professional Select Fields */
+  .select-wrapper {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.95) 100%);
+    border-radius: 16px;
+    padding: 2px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .select-wrapper:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .form-select {
+    width: 100%;
+    padding: 1.25rem 3rem 1.25rem 1.5rem;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2D3748;
+    cursor: pointer;
+    appearance: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: inherit;
+    outline: none;
+  }
+
+  .form-select:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(212, 175, 55, 0.6);
+    box-shadow: 
+      0 0 0 4px rgba(212, 175, 55, 0.1),
+      0 8px 32px rgba(212, 175, 55, 0.2);
+    transform: translateY(-1px);
+  }
+
+  .select-arrow {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #718096;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .form-select:focus + .select-arrow {
+    color: #D4AF37;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  /* Professional Checkbox Group */
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(237, 242, 247, 0.8) 100%);
+    border-radius: 20px;
+    border: 2px solid rgba(212, 175, 55, 0.1);
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .checkbox-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.1) 50%, transparent 100%);
+    transition: all 0.6s ease;
+  }
+
+  .checkbox-label:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .checkbox-label:hover::before {
+    left: 100%;
+  }
+
+  .checkbox-input {
+    display: none;
+  }
+
+  .checkbox-custom {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #CBD5E0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .checkbox-icon {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .checkbox-input:checked + .checkbox-custom {
+    background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 100%);
+    border-color: #D4AF37;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  }
+
+  .checkbox-input:checked + .checkbox-custom .checkbox-icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .checkbox-text {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    color: #2D3748;
+    font-size: 1rem;
+  }
+
+  .interest-icon {
+    font-size: 1.2rem;
+  }
+
+  /* Professional Submit Button */
+  .submit-button {
+    width: 100%;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #F7DC6F 50%, #D4AF37 100%);
+    border: none;
+    border-radius: 20px;
+    color: #1A365D;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      0 12px 40px rgba(212, 175, 55, 0.3),
+      inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    margin-top: 2rem;
+  }
+
+  .submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transition: all 0.8s ease;
+  }
+
+  .submit-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+      0 20px 60px rgba(212, 175, 55, 0.4),
+      inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #F7DC6F 0%, #D4AF37 50%, #F7DC6F 100%);
+  }
+
+  .submit-button:hover::before {
+    left: 100%;
+  }
+
+  .submit-button:active {
+    transform: translateY(-2px);
+  }
+
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-loading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .interests-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      padding: 1rem 1.25rem;
+      font-size: 1rem;
+    }
+
+    .submit-button {
+      padding: 1.25rem 2rem;
+      font-size: 1.1rem;
+    }
+
+    .label-icon {
+      width: 28px;
+      height: 28px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .interests-grid {
+      padding: 1rem;
+    }
+
+    .checkbox-label {
+      padding: 1rem;
+    }
+
+    .form-label {
+      font-size: 0.9rem;
+      gap: 0.5rem;
+    }
+  }
+
   .animate-spin {
     animation: spin 1s linear infinite;
   }
@@ -131,12 +639,6 @@ const t = useTranslations(lang);
     to {
       transform: rotate(360deg);
     }
-  }
-
-  .btn-loading {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
   }
 </style>
 
