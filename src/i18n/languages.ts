@@ -298,7 +298,17 @@ export const ui = {
     'contact.faq.duration.q': '¿Cuántos días necesito para ver lo principal?',
     'contact.faq.duration.a': 'Mínimo 5 días para las ciudades principales (Tashkent, Samarkand, Bukhara). Para una experiencia completa, recomendamos 7-10 días.',
     
-    'back.home': '← Volver al inicio'
+    'back.home': '← Volver al inicio',
+    
+    // Contact CTA section
+    'home.contact.title': 'Planifica tu Aventura Uzbeka',
+    'home.contact.subtitle': 'Déjanos crear el viaje perfecto para ti. Experiencias únicas, cultura auténtica y recuerdos inolvidables te esperan.',
+    'home.contact.personalized': 'Itinerarios personalizados',
+    'home.contact.consultation': 'Consulta gratuita',
+    'home.contact.planning': 'Planificación completa',
+    'home.contact.start': 'Comenzar mi viaje',
+    'home.contact.whatsapp': 'WhatsApp directo',
+    'home.contact.dream_trip': 'Tu viaje soñado'
   },
   uz: {
     'site.title': 'O\'zbekiston - Madaniy va Sayohat Qo\'llanmasi',
@@ -590,7 +600,17 @@ export const ui = {
     'contact.faq.duration.q': 'Asosiy narsalarni ko\'rish uchun necha kun kerak?',
     'contact.faq.duration.a': 'Asosiy shaharlar (Toshkent, Samarqand, Buxoro) uchun kamida 5 kun. To\'liq tajriba uchun 7-10 kunni tavsiya qilamiz.',
     
-    'back.home': '← Bosh sahifaga qaytish'
+    'back.home': '← Bosh sahifaga qaytish',
+    
+    // Contact CTA section
+    'home.contact.title': 'O\'zbekiston Sarguzashtingizni Rejalashtiring',
+    'home.contact.subtitle': 'Siz uchun mukammal sayohatni yaratishga ruxsat bering. Noyob tajribalar, haqiqiy madaniyat va unutilmas xotiralar sizni kutmoqda.',
+    'home.contact.personalized': 'Shaxsiy marshrutlar',
+    'home.contact.consultation': 'Bepul maslahat',
+    'home.contact.planning': 'To\'liq rejalashtirish',
+    'home.contact.start': 'Sayohatimni boshlash',
+    'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
+    'home.contact.dream_trip': 'Orzuingizdagi sayohat'
   },
   en: {
     'site.title': 'Uzbekistan - Cultural and Travel Guide',
@@ -882,7 +902,17 @@ export const ui = {
     'contact.faq.duration.q': 'How many days do I need to see the main things?',
     'contact.faq.duration.a': 'Minimum 5 days for the main cities (Tashkent, Samarkand, Bukhara). For a complete experience, we recommend 7-10 days.',
     
-    'back.home': '← Back to home'
+    'back.home': '← Back to home',
+    
+    // Contact CTA section
+    'home.contact.title': 'Plan Your Uzbek Adventure',
+    'home.contact.subtitle': 'Let us create the perfect journey for you. Unique experiences, authentic culture, and unforgettable memories await.',
+    'home.contact.personalized': 'Personalized itineraries',
+    'home.contact.consultation': 'Free consultation',
+    'home.contact.planning': 'Complete planning',
+    'home.contact.start': 'Start my journey',
+    'home.contact.whatsapp': 'Direct WhatsApp',
+    'home.contact.dream_trip': 'Your dream trip'
   },
   ru: {
     'site.title': 'Узбекистан - Культурный и туристический гид',
@@ -1174,6 +1204,16 @@ export const ui = {
     'contact.faq.duration.q': 'Сколько дней нужно, чтобы увидеть основное?',
     'contact.faq.duration.a': 'Минимум 5 дней для основных городов (Ташкент, Самарканд, Бухара). Для полного опыта мы рекомендуем 7-10 дней.',
     
-    'back.home': '← Вернуться домой'
+    'back.home': '← Вернуться домой',
+    
+    // Contact CTA section
+    'home.contact.title': 'Спланируйте Ваше Узбекское Приключение',
+    'home.contact.subtitle': 'Позвольте нам создать идеальное путешествие для вас. Уникальные впечатления, подлинная культура и незабываемые воспоминания ждут вас.',
+    'home.contact.personalized': 'Персональные маршруты',
+    'home.contact.consultation': 'Бесплатная консультация',
+    'home.contact.planning': 'Полное планирование',
+    'home.contact.start': 'Начать мое путешествие',
+    'home.contact.whatsapp': 'Прямой WhatsApp',
+    'home.contact.dream_trip': 'Путешествие вашей мечты'
   }
 } as const;
