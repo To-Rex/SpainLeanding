@@ -349,8 +349,7 @@ export const ui = {
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
-    'languages.ru': 'Русский'
-  },
+    'languages.ru': 'Русский',
 
     // Communication and Internet
     'tips.communication.title': 'Comunicación y Internet',
@@ -491,6 +490,7 @@ export const ui = {
     'itineraries.phase5': 'Fase 5: Valle de Ferghana (Días 9-10)',
     'itineraries.phase5_desc': 'Viaje al corazón artesanal de Uzbekistán: talleres de seda en Margilan, cerámica en Rishtan, y paisajes montañosos.',
   },
+
   uz: {
     'tips.communication.title': 'Aloqa va Internet',
     'site.description': 'O\'zbekistonning boy madaniyati, tarixi va an\'analarini kashf eting. Ispaniyalik sayyohlar uchun to\'liq qo\'llanma.',
@@ -673,7 +673,7 @@ export const ui = {
     'tips.money.negotiate': 'Bozorlarda savdolashish odatiy hol',
     'tips.transport.title': 'Transport',
     'tips.transport.train': 'Afrosiyob poyezdi',
-    'tips.transport.afrosiyob': 'Asosiy shaharlar orasidagi tezyurar poyezd',
+    'tips.transport.afrosiyob': 'Afrosiyob poyezdi Toshkent-Samarqand-Buxoroni 4 soatda bog\'laydi',
     'tips.transport.train_price': 'Narxi: yo\'nalish uchun 15-25 EUR',
     'tips.transport.bus': 'Avtobuslar',
     'tips.transport.bus_desc': 'Arzon lekin kamroq qulay',
@@ -838,8 +838,7 @@ export const ui = {
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
-    'languages.ru': 'Русский'
-  },
+    'languages.ru': 'Русский',
 
     // Communication and Internet
     'tips.communication.title': 'Aloqa va Internet',
@@ -865,20 +864,20 @@ export const ui = {
     'tips.cultural.title': 'Madaniy me\'yorlar va kiyim-kechak',
     'tips.dress.title': 'Kiyinish qoidalari',
     'tips.dress.women': 'Ayollar uchun',
-    'tips.dress.women_shoulders': 'Diniy joylarda yelka va oyoqlarni yoping',
-    'tips.dress.women_scarf': 'Masjidlarda bosh yopish uchun ro\'mol olib boring',
-    'tips.dress.women_loose': 'Keng va oddiy kiyim',
-    'tips.dress.women_neckline': 'Chuqur yoqalardan saqlaning',
+    'tips.dress.women_shoulders': 'Yelka va qo\'llarni yopish tavsiya etiladi',
+    'tips.dress.women_scarf': 'Masjidlarga kirish uchun ro\'mol kerak',
+    'tips.dress.women_loose': 'Keng va yopiq kiyim afzalroq',
+    'tips.dress.women_neckline': 'Chuqur yoqa va qisqa kiyimlardan saqlaning',
     'tips.dress.men': 'Erkaklar uchun',
     'tips.dress.men_pants': 'Muqaddas joylarda uzun shim',
     'tips.dress.men_shirt': 'Masjidlarda yengli ko\'ylak',
-    'tips.dress.men_shoes': 'Oson yechib olinadigan poyabzal',
-    'tips.dress.men_shorts': 'Diniy joylarda shorts kiyishdan saqlaning',
-    'tips.etiquette.title': 'Ijtimoiy odob',
+    'tips.dress.men_shoes': 'Masjidlarga kirish uchun oson yechib olinadigan poyabzal',
+    'tips.dress.men_shorts': 'Qisqa shim faqat mehmonxonada',
+    'tips.etiquette.title': 'Xulq-atvor qoidalari',
     'tips.etiquette.do': 'Qilish kerak',
-    'tips.etiquette.do_handshake': 'O\'ng qo\'l bilan salomlashing',
-    'tips.etiquette.do_tea': 'Choy takliflarini qabul qiling',
-    'tips.etiquette.do_shoes': 'Uylarda poyabzal yeching',
+    'tips.etiquette.do_handshake': 'Erkaklar bilan qo\'l berib salomlashing',
+    'tips.etiquette.do_tea': 'Taklif qilingan choyni qabul qiling',
+    'tips.etiquette.do_shoes': 'Uyga kirishda poyabzalni yeching',
     'tips.etiquette.do_elders': 'Kattalarni hurmat qiling',
     'tips.etiquette.do_photos': 'Odamlarni suratga olishdan oldin ruxsat so\'rang',
     'tips.etiquette.avoid': 'Qilmaslik kerak',
@@ -890,32 +889,32 @@ export const ui = {
 
     // Health and Safety
     'tips.health.title': 'Sog\'liq va xavfsizlik',
-    'tips.vaccinations.title': 'Emlash va sog\'liq',
-    'tips.vaccinations.required': 'Majburiy: O\'zbeklar uchun hech narsa',
-    'tips.vaccinations.recommended': 'Tavsiya etiladi: Gepatit A, yangilangan Tetanos',
-    'tips.vaccinations.water': 'Suv: Shishali suv iching',
-    'tips.vaccinations.food': 'Ovqat: Taniqli restoranlar xavfsiz',
-    'tips.vaccinations.insurance': 'Sug\'urta: Xalqaro tibbiy sug\'urta sotib oling',
+    'tips.vaccinations.title': 'Emlashlar',
+    'tips.vaccinations.required': 'Majburiy emlashlar yo\'q',
+    'tips.vaccinations.recommended': 'Tavsiya etiladi: Gepatit A/B, Tif',
+    'tips.vaccinations.water': 'Faqat shishali suv iching',
+    'tips.vaccinations.food': 'Taniqli restoranlarda ovqat yeyish xavfsiz',
+    'tips.vaccinations.insurance': 'Xalqaro tibbiy sug\'urta sotib oling',
     'tips.safety.title': 'Umumiy xavfsizlik',
     'tips.safety.safe': 'O\'zbekiston sayyohlar uchun juda xavfsiz',
     'tips.safety.crime': 'Sayyohlik hududlarida jinoyatchilik past',
     'tips.safety.police': 'Asosiy joylarda sayyohlik politsiyasi',
-    'tips.safety.border': 'Afg\'oniston chegarasidan saqlaning',
-    'tips.safety.documents': 'Muhim hujjatlarning nusxalarini saqlang',
+    'tips.safety.border': 'Chegara hududlarida ehtiyot bo\'ling',
+    'tips.safety.documents': 'Hujjatlarni doimo o\'zingiz bilan olib yuring',
 
     // Emergency Contacts
     'tips.emergency.title': 'Favqulodda aloqa',
-    'tips.emergency.numbers': 'Foydali raqamlar',
-    'tips.emergency.general': 'Favqulodda vaziyat: 112',
+    'tips.emergency.numbers': 'Favqulodda raqamlar',
+    'tips.emergency.general': 'Umumiy favqulodda: 112',
     'tips.emergency.police': 'Politsiya: 102',
-    'tips.emergency.fire': 'O\'t o\'chiruvchilar: 101',
+    'tips.emergency.fire': 'O\'t o\'chirish: 101',
     'tips.emergency.ambulance': 'Tez yordam: 103',
     'tips.emergency.embassy': 'Toshkentdagi Ispaniya elchixonasi: +998 71 120 8660',
     'tips.emergency.consular': 'Konsullik xizmatlari',
     'tips.emergency.embassy_name': 'O\'zbekistondagi Ispaniya elchixonasi',
-    'tips.emergency.embassy_address': 'Manzil: Afrosiyob ko\'chasi 8, Toshkent',
+    'tips.emergency.embassy_address': 'Manzil: Toshkent, Shayxontohur tumani',
     'tips.emergency.embassy_email': 'Email: emb.tashkent@maec.es',
-    'tips.emergency.embassy_hours': 'Ish vaqti: Dushanba-Juma 9:00-17:00',
+    'tips.emergency.embassy_hours': 'Ish vaqti: 9:00-17:00 (Dush-Juma)',
 
     // Itineraries - Complete Route
     'itineraries.complete.title': 'To\'liq marshrut - 10 kun',
@@ -979,6 +978,7 @@ export const ui = {
     'itineraries.phase4_desc': 'Urganchga parvoz va Ichan-qalani o\'rganish. Qal\'a ichida uxlash tajribasi va Qizilqum cho\'liga tashrif.',
     'itineraries.phase5': '5-bosqich: Farg\'ona vodiysi (9-10 kunlar)',
     'itineraries.phase5_desc': 'O\'zbekistonning hunarmandchilik markaziga sayohat: Margilonda ipak ustaxonalari, Rishtonda kulolchilik va tog\' manzaralari.',
+  },
   
   en: {
     // Site meta
@@ -1330,8 +1330,7 @@ export const ui = {
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
-    'languages.ru': 'Русский'
-  },
+    'languages.ru': 'Русский',
 
     // Communication and Internet
     'tips.communication.title': 'Communication and Internet',
@@ -1471,6 +1470,7 @@ export const ui = {
     'itineraries.phase4_desc': 'Flight to Urgench and exploration of Ichan-Kala. Experience of sleeping inside the walled city and visit to the Kyzylkum desert.',
     'itineraries.phase5': 'Phase 5: Ferghana Valley (Days 9-10)',
     'itineraries.phase5_desc': 'Journey to the artisan heart of Uzbekistan: silk workshops in Margilan, ceramics in Rishtan, and mountain landscapes.',
+  },
   
   ru: {
     // Site meta
@@ -1822,7 +1822,7 @@ export const ui = {
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
-    'languages.ru': 'Русский'
+    'languages.ru': 'Русский',
 
     // Communication and Internet
     'tips.communication.title': 'Связь и Интернет',
