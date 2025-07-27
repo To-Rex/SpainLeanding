@@ -32,6 +32,8 @@ export const ui = {
     'home.cta.title': '¿Listo para tu aventura?',
     'home.cta.desc': 'Planifica tu viaje perfecto con nuestros itinerarios personalizados.',
     'home.cta.destinations': 'Ver destinos',
+    'home.slider.title': '🏛️ Momentos Únicos',
+    'home.slider.desc': 'Descubre los tesoros arquitectónicos y culturales de Uzbekistán',
     'home.cta.tips': 'Consejos útiles',
     
     'home.slider.title': 'Momentos Únicos',
@@ -531,6 +533,8 @@ export const ui = {
     'home.cta.title': 'Sarguzashtingizga tayyormisiz?',
     'home.cta.desc': 'Shaxsiy marshrutlarimiz bilan mukammal sayohatingizni rejalashtiring.',
     'home.cta.destinations': 'Yo\'nalishlarni ko\'rish',
+    'home.slider.title': '🏛️ Noyob Lahzalar',
+    'home.slider.desc': 'O\'zbekistonning me\'moriy va madaniy xazinalarini kashf eting',
     'home.cta.tips': 'Foydali maslahatlar',
     
     'home.slider.title': 'Noyob Lahzalar',
@@ -1033,6 +1037,8 @@ export const ui = {
     'home.cta.title': 'Ready for your adventure?',
     'home.cta.desc': 'Plan your perfect trip with our personalized itineraries.',
     'home.cta.destinations': 'View destinations',
+    'home.slider.title': '🏛️ Unique Moments',
+    'home.slider.desc': 'Discover the architectural and cultural treasures of Uzbekistan',
     'home.cta.tips': 'Useful tips',
     
     'home.slider.title': 'Unique Moments',
@@ -1535,6 +1541,8 @@ export const ui = {
     'home.cta.title': 'Готовы к приключению?',
     'home.cta.desc': 'Спланируйте идеальную поездку с нашими персонализированными маршрутами.',
     'home.cta.destinations': 'Посмотреть направления',
+    'home.slider.title': '🏛️ Уникальные Моменты',
+    'home.slider.desc': 'Откройте архитектурные и культурные сокровища Узбекистана',
     'home.cta.tips': 'Полезные советы',
     
     'home.slider.title': 'Уникальные Моменты',
