@@ -123,38 +123,38 @@ const t = useTranslations(lang);
 	<section class="section communication">
 		<div class="container">
 			<div class="section-content">
-				<h2>📱 Comunicación y Internet</h2>
+				<h2>📱 {t('tips.communication.title')}</h2>
 				<div class="info-grid">
 					<div class="info-card sim-card">
-						<h3>📶 Tarjetas SIM</h3>
+						<h3>📶 {t('tips.sim.title')}</h3>
 						<div class="sim-providers">
 							<div class="provider">
-								<h4>Ucell</h4>
-								<p>Mejor cobertura nacional</p>
-								<p><strong>Precio:</strong> 5-10 EUR (5-10 GB)</p>
+								<h4>{t('tips.sim.ucell')}</h4>
+								<p>{t('tips.sim.ucell_desc')}</p>
+								<p><strong>{t('tips.sim.ucell_price')}</strong></p>
 							</div>
 							<div class="provider">
-								<h4>Beeline</h4>
-								<p>Buena velocidad 4G</p>
-								<p><strong>Precio:</strong> 3-8 EUR (3-8 GB)</p>
+								<h4>{t('tips.sim.beeline')}</h4>
+								<p>{t('tips.sim.beeline_desc')}</p>
+								<p><strong>{t('tips.sim.beeline_price')}</strong></p>
 							</div>
 							<div class="provider">
-								<h4>UMS</h4>
-								<p>Opción económica</p>
-								<p><strong>Precio:</strong> 2-5 EUR (2-5 GB)</p>
+								<h4>{t('tips.sim.ums')}</h4>
+								<p>{t('tips.sim.ums_desc')}</p>
+								<p><strong>{t('tips.sim.ums_price')}</strong></p>
 							</div>
 						</div>
-						<p class="sim-note">💡 Compra en el aeropuerto o tiendas oficiales. Necesitas pasaporte para el registro.</p>
+						<p class="sim-note">💡 {t('tips.sim.note')}</p>
 					</div>
 					
 					<div class="info-card internet-card">
-						<h3>💻 Internet y WiFi</h3>
+						<h3>💻 {t('tips.internet.title')}</h3>
 						<ul>
-							<li>WiFi gratuito en hoteles, restaurantes y cafés</li>
-							<li>Velocidad decent en ciudades principales</li>
-							<li>Algunas redes sociales pueden tener restricciones</li>
-							<li>VPN recomendado para acceso completo</li>
-							<li>Aplicaciones de traducción funcionan sin problemas</li>
+							<li>{t('tips.internet.wifi')}</li>
+							<li>{t('tips.internet.speed')}</li>
+							<li>{t('tips.internet.restrictions')}</li>
+							<li>{t('tips.internet.vpn')}</li>
+							<li>{t('tips.internet.apps')}</li>
 						</ul>
 					</div>
 				</div>
@@ -165,51 +165,51 @@ const t = useTranslations(lang);
 	<section class="section cultural-norms">
 		<div class="container">
 			<div class="section-content">
-				<h2>🎭 Normas Culturales y Vestimenta</h2>
+				<h2>🎭 {t('tips.cultural.title')}</h2>
 				<div class="cultural-grid">
 					<div class="cultural-card dress-code">
-						<h3>👔 Código de Vestimenta</h3>
+						<h3>👔 {t('tips.dress.title')}</h3>
 						<div class="dress-sections">
 							<div class="dress-section">
-								<h4>👩 Para Mujeres</h4>
+								<h4>👩 {t('tips.dress.women')}</h4>
 								<ul>
-									<li>Cubre hombros y piernas en lugares religiosos</li>
-									<li>Lleva pañuelo para cubrir la cabeza en mezquitas</li>
-									<li>Ropa holgada y modesta</li>
-									<li>Evita escotes pronunciados</li>
+									<li>{t('tips.dress.women_shoulders')}</li>
+									<li>{t('tips.dress.women_scarf')}</li>
+									<li>{t('tips.dress.women_loose')}</li>
+									<li>{t('tips.dress.women_neckline')}</li>
 								</ul>
 							</div>
 							<div class="dress-section">
-								<h4>👨 Para Hombres</h4>
+								<h4>👨 {t('tips.dress.men')}</h4>
 								<ul>
-									<li>Pantalones largos en lugares sagrados</li>
-									<li>Camisa con mangas en mezquitas</li>
-									<li>Zapatos fáciles de quitar</li>
-									<li>Evita shorts en sitios religiosos</li>
+									<li>{t('tips.dress.men_pants')}</li>
+									<li>{t('tips.dress.men_shirt')}</li>
+									<li>{t('tips.dress.men_shoes')}</li>
+									<li>{t('tips.dress.men_shorts')}</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					
 					<div class="cultural-card etiquette">
-						<h3>🤝 Etiqueta Social</h3>
+						<h3>🤝 {t('tips.etiquette.title')}</h3>
 						<div class="etiquette-tips">
-							<h4>✅ Hacer</h4>
+							<h4>✅ {t('tips.etiquette.do')}</h4>
 							<ul>
-								<li>Saluda con la mano derecha</li>
-								<li>Acepta invitaciones a té</li>
-								<li>Quítate los zapatos en casas</li>
-								<li>Respeta a los mayores</li>
-								<li>Pide permiso para fotografiar personas</li>
+								<li>{t('tips.etiquette.do_handshake')}</li>
+								<li>{t('tips.etiquette.do_tea')}</li>
+								<li>{t('tips.etiquette.do_shoes')}</li>
+								<li>{t('tips.etiquette.do_elders')}</li>
+								<li>{t('tips.etiquette.do_photos')}</li>
 							</ul>
 							
-							<h4>❌ Evitar</h4>
+							<h4>❌ {t('tips.etiquette.avoid')}</h4>
 							<ul>
-								<li>Mostrar plantas de los pies</li>
-								<li>Usar la mano izquierda para comer</li>
-								<li>Rechazar hospitalidad bruscamente</li>
-								<li>Displays públicos de afecto</li>
-								<li>Alcohol en público (excepto restaurantes)</li>
+								<li>{t('tips.etiquette.avoid_feet')}</li>
+								<li>{t('tips.etiquette.avoid_left')}</li>
+								<li>{t('tips.etiquette.avoid_refuse')}</li>
+								<li>{t('tips.etiquette.avoid_pda')}</li>
+								<li>{t('tips.etiquette.avoid_alcohol')}</li>
 							</ul>
 						</div>
 					</div>
@@ -221,27 +221,27 @@ const t = useTranslations(lang);
 	<section class="section health-safety">
 		<div class="container">
 			<div class="section-content">
-				<h2>🏥 Salud y Seguridad</h2>
+				<h2>🏥 {t('tips.health.title')}</h2>
 				<div class="health-grid">
 					<div class="health-card vaccinations">
-						<h3>💉 Vacunas y Salud</h3>
+						<h3>💉 {t('tips.vaccinations.title')}</h3>
 						<ul>
-							<li><strong>Obligatorias:</strong> Ninguna para españoles</li>
-							<li><strong>Recomendadas:</strong> Hepatitis A, Tétanos actualizado</li>
-							<li><strong>Agua:</strong> Bebe agua embotellada</li>
-							<li><strong>Comida:</strong> Restaurantes establecidos son seguros</li>
-							<li><strong>Seguro:</strong> Contrata seguro médico internacional</li>
+							<li><strong>{t('tips.vaccinations.required')}</strong></li>
+							<li><strong>{t('tips.vaccinations.recommended')}</strong></li>
+							<li><strong>{t('tips.vaccinations.water')}</strong></li>
+							<li><strong>{t('tips.vaccinations.food')}</strong></li>
+							<li><strong>{t('tips.vaccinations.insurance')}</strong></li>
 						</ul>
 					</div>
 					
 					<div class="health-card safety">
-						<h3>🛡️ Seguridad General</h3>
+						<h3>🛡️ {t('tips.safety.title')}</h3>
 						<ul>
-							<li>Uzbekistán es muy seguro para turistas</li>
-							<li>Criminalidad baja en zonas turísticas</li>
-							<li>Policía turística en sitios principales</li>
-							<li>Evita frontera con Afganistán</li>
-							<li>Guarda copias de documentos importantes</li>
+							<li>{t('tips.safety.safe')}</li>
+							<li>{t('tips.safety.crime')}</li>
+							<li>{t('tips.safety.police')}</li>
+							<li>{t('tips.safety.border')}</li>
+							<li>{t('tips.safety.documents')}</li>
 						</ul>
 					</div>
 				</div>
@@ -252,25 +252,25 @@ const t = useTranslations(lang);
 	<section class="section emergency-contacts">
 		<div class="container">
 			<div class="section-content">
-				<h2>🚨 Contactos de Emergencia</h2>
+				<h2>🚨 {t('tips.emergency.title')}</h2>
 				<div class="emergency-grid">
 					<div class="emergency-card">
-						<h3>📞 Números Útiles</h3>
+						<h3>📞 {t('tips.emergency.numbers')}</h3>
 						<ul class="emergency-list">
-							<li><strong>Emergencias:</strong> 112</li>
-							<li><strong>Policía:</strong> 102</li>
-							<li><strong>Bomberos:</strong> 101</li>
-							<li><strong>Ambulancia:</strong> 103</li>
-							<li><strong>Embajada España en Tashkent:</strong> +998 71 120 8660</li>
+							<li><strong>{t('tips.emergency.general')}</strong></li>
+							<li><strong>{t('tips.emergency.police')}</strong></li>
+							<li><strong>{t('tips.emergency.fire')}</strong></li>
+							<li><strong>{t('tips.emergency.ambulance')}</strong></li>
+							<li><strong>{t('tips.emergency.embassy')}</strong></li>
 						</ul>
 					</div>
 					
 					<div class="emergency-card">
-						<h3>🏢 Servicios Consulares</h3>
-						<p><strong>Embajada de España en Uzbekistán</strong></p>
-						<p>Dirección: Afrosiyob St 8, Tashkent</p>
-						<p>Email: emb.tashkent@maec.es</p>
-						<p>Horario: Lunes-Viernes 9:00-17:00</p>
+						<h3>🏢 {t('tips.emergency.consular')}</h3>
+						<p><strong>{t('tips.emergency.embassy_name')}</strong></p>
+						<p>{t('tips.emergency.embassy_address')}</p>
+						<p>{t('tips.emergency.embassy_email')}</p>
+						<p>{t('tips.emergency.embassy_hours')}</p>
 					</div>
 				</div>
 				
