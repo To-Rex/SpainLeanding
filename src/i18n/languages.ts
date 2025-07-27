@@ -851,7 +851,7 @@ export const ui = {
     'tips.sim.beeline_desc': 'Yaxshi 4G tezligi',
     'tips.sim.beeline_price': 'Narx: 3-8 EUR (3-8 GB)',
     'tips.sim.ums': 'UMS',
-      
+    
     'tips.sim.ums_desc': 'Arzon variant',
     'tips.sim.ums_price': 'Narx: 2-5 EUR (2-5 GB)',
     'tips.sim.note': 'Aeroportda yoki rasmiy do\'konlardan xarid qiling. Ro\'yxatdan o\'tish uchun pasport kerak.',
