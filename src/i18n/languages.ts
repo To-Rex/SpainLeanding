@@ -244,7 +244,17 @@ export const ui = {
     'gallery.communication_tip.title': 'Comunicación',
     'gallery.communication_tip.desc': 'Compra una tarjeta SIM local en el aeropuerto para tener internet siempre.',
     'gallery.share.title': '📤 Comparte tu Experiencia',
-    'gallery.share.desc': '¿Has visitado Uzbekistán? Comparte tus fotos y experiencias con otros viajeros.',
+    'gallery.share.desc': 'Comparte tus fotos y experiencias con otros viajeros españoles',
+    
+    // Contact CTA Section
+    'home.contact.title': 'Planifica tu Aventura Uzbeka',
+    'home.contact.subtitle': 'Diseñamos experiencias únicas adaptadas a tus intereses y presupuesto',
+    'home.contact.personalized': 'Itinerarios personalizados',
+    'home.contact.consultation': 'Consulta gratuita',
+    'home.contact.planning': 'Planificación completa',
+    'home.contact.start': 'Comenzar mi viaje',
+    'home.contact.whatsapp': 'WhatsApp directo',
+    'home.contact.dream_trip': 'Mi Viaje Soñado'
     'gallery.share.photos': 'Enviar fotos',
     'gallery.share.review': 'Escribir reseña',
     
@@ -546,7 +556,17 @@ export const ui = {
     'gallery.communication_tip.title': 'Aloqa',
     'gallery.communication_tip.desc': 'Har doim internetga ega bo\'lish uchun aeroportda mahalliy SIM karta sotib oling.',
     'gallery.share.title': '📤 Tajribangizni baham ko\'ring',
-    'gallery.share.desc': 'O\'zbekistonga tashrif buyurdingizmi? Suratlaringiz va tajribalaringizni boshqa sayohatchilar bilan baham ko\'ring.',
+    'gallery.share.desc': 'Boshqa sayohatchilar bilan foto va tajribalaringizni ulashing',
+    
+    // Contact CTA Section
+    'home.contact.title': 'O\'zbek Sarguzashtingizni Rejalashtiring',
+    'home.contact.subtitle': 'Sizning qiziqishlaringiz va byudjetingizga mos noyob tajribalar yaratamiz',
+    'home.contact.personalized': 'Shaxsiy marshrutlar',
+    'home.contact.consultation': 'Bepul maslahat',
+    'home.contact.planning': 'To\'liq rejalashtirish',
+    'home.contact.start': 'Sayohatimni boshlash',
+    'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
+    'home.contact.dream_trip': 'Orzuimdagi Sayohat'
     'gallery.share.photos': 'Suratlar yuborish',
     'gallery.share.review': 'Sharh yozish',
     
@@ -848,7 +868,17 @@ export const ui = {
     'gallery.communication_tip.title': 'Communication',
     'gallery.communication_tip.desc': 'Buy a local SIM card at the airport to always have internet.',
     'gallery.share.title': '📤 Share Your Experience',
-    'gallery.share.desc': 'Have you visited Uzbekistan? Share your photos and experiences with other travelers.',
+    'gallery.share.desc': 'Share your photos and experiences with other travelers',
+    
+    // Contact CTA Section
+    'home.contact.title': 'Plan Your Uzbek Adventure',
+    'home.contact.subtitle': 'We design unique experiences tailored to your interests and budget',
+    'home.contact.personalized': 'Personalized itineraries',
+    'home.contact.consultation': 'Free consultation',
+    'home.contact.planning': 'Complete planning',
+    'home.contact.start': 'Start my journey',
+    'home.contact.whatsapp': 'Direct WhatsApp',
+    'home.contact.dream_trip': 'My Dream Trip'
     'gallery.share.photos': 'Send photos',
     'gallery.share.review': 'Write review',
     
@@ -1150,7 +1180,17 @@ export const ui = {
     'gallery.communication_tip.title': 'Связь',
     'gallery.communication_tip.desc': 'Купите местную SIM-карту в аэропорту, чтобы всегда иметь интернет.',
     'gallery.share.title': '📤 Поделитесь своим опытом',
-    'gallery.share.desc': 'Посещали Узбекистан? Поделитесь своими фотографиями и опытом с другими путешественниками.',
+    'gallery.share.desc': 'Поделитесь своими фотографиями и опытом с другими путешественниками',
+    
+    // Contact CTA Section
+    'home.contact.title': 'Спланируйте Ваше Узбекское Приключение',
+    'home.contact.subtitle': 'Мы создаем уникальные впечатления, адаптированные к вашим интересам и бюджету',
+    'home.contact.personalized': 'Персональные маршруты',
+    'home.contact.consultation': 'Бесплатная консультация',
+    'home.contact.planning': 'Полное планирование',
+    'home.contact.start': 'Начать мое путешествие',
+    'home.contact.whatsapp': 'Прямой WhatsApp',
+    'home.contact.dream_trip': 'Путешествие Мечты'
     'gallery.share.photos': 'Отправить фото',
     'gallery.share.review': 'Написать отзыв',
     
