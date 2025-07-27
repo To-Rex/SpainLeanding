@@ -358,7 +358,7 @@ export const ui = {
     'site.description': 'O\'zbekistonning boy madaniyati, tarixi va an\'analarini kashf eting. Ispaniyalik sayyohlar uchun to\'liq qo\'llanma.',
     
     // Navigation
-    'nav.home': 'Bosh sahifa',
+    'nav.home': 'Uy',
     'nav.culture': 'Madaniyat',
     'nav.destinations': 'Yo\'nalishlar',
     'nav.tips': 'Maslahatlar',
