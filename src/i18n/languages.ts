@@ -254,7 +254,7 @@ export const ui = {
     'home.contact.planning': 'Planificación completa',
     'home.contact.start': 'Comenzar mi viaje',
     'home.contact.whatsapp': 'WhatsApp directo',
-    'home.contact.dream_trip': 'Mi Viaje Soñado',
+    'gallery.share.photos': 'Enviar fotos',
     'gallery.share.review': 'Escribir reseña',
     
     'contact.title': 'Contacto',
@@ -566,7 +566,7 @@ export const ui = {
     'home.contact.start': 'Sayohatimni boshlash',
     'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
     'home.contact.dream_trip': 'Orzuimdagi Sayohat',
-    'gallery.share.photos': 'Suratlar yuborish',
+    'gallery.share.photos': 'Foto yuborish',
     'gallery.share.review': 'Sharh yozish',
     
     'contact.title': 'Aloqa',
