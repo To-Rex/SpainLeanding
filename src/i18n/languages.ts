@@ -255,7 +255,6 @@ export const ui = {
     'home.contact.start': 'Comenzar mi viaje',
     'home.contact.whatsapp': 'WhatsApp directo',
     'home.contact.dream_trip': 'Mi Viaje Soñado'
-    'gallery.share.photos': 'Enviar fotos',
     'gallery.share.review': 'Escribir reseña',
     
     'contact.title': 'Contacto',
