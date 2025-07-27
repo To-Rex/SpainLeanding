@@ -490,7 +490,7 @@ export const ui = {
     'itineraries.phase4_desc': 'Vuelo a Urgench y exploración de Ichan-Kala. Experiencia de dormir dentro de la ciudad amurallada y visita al desierto de Kyzylkum.',
     'itineraries.phase5': 'Fase 5: Valle de Ferghana (Días 9-10)',
     'itineraries.phase5_desc': 'Viaje al corazón artesanal de Uzbekistán: talleres de seda en Margilan, cerámica en Rishtan, y paisajes montañosos.',
-  
+  },
   uz: {
     // Site meta
     'site.title': 'O\'zbekiston - Ispaniyalik Sayyohlar Uchun Madaniy Qo\'llanma',
