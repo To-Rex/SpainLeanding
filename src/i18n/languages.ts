@@ -252,8 +252,6 @@ export const ui = {
     'home.contact.personalized': 'Itinerarios personalizados',
     'home.contact.consultation': 'Consulta gratuita',
     'home.contact.planning': 'Planificación completa',
-    'home.contact.start': 'Comenzar mi viaje',
-    'home.contact.whatsapp': 'WhatsApp directo',
     
     // Contact section translations
     'home.contact.title': 'Planifica tu Aventura Uzbeka',
@@ -326,8 +324,6 @@ export const ui = {
     'home.contact.consultation': 'Consulta gratuita',
     'home.contact.planning': 'Planificación completa',
     'home.contact.start': 'Comenzar mi viaje',
-    'home.contact.whatsapp': 'WhatsApp directo',
-    'home.contact.dream_trip': 'Tu viaje soñado'
   },
   uz: {
     'site.title': 'O\'zbekiston - Madaniy va Sayohat Qo\'llanmasi',
@@ -574,7 +570,6 @@ export const ui = {
     'home.contact.consultation': 'Bepul maslahat',
     'home.contact.planning': 'To\'liq rejalashtirish',
     'home.contact.start': 'Sayohatimni boshlash',
-    'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
     
     // Contact section translations
     'home.contact.title': 'O\'zbek Sarguzashtingizni Rejalashtiring',
@@ -582,9 +577,7 @@ export const ui = {
     'home.contact.personalized': 'Shaxsiy marshrutlar',
     'home.contact.consultation': 'Bepul maslahat',
     'home.contact.planning': 'To\'liq rejalashtirish',
-    'home.contact.start': 'Sayohatimni boshlash',
     'home.contact.whatsapp': 'WhatsApp',
-    'home.contact.dream_trip': 'Orzuimdagi Sayohat',
     'home.contact.dream_trip': 'Orzuingizdagi sayohat',
     'gallery.share.photos': 'Foto yuborish',
     'gallery.share.review': 'Sharh yozish',
@@ -647,9 +640,6 @@ export const ui = {
     'home.contact.personalized': 'Shaxsiy marshrutlar',
     'home.contact.consultation': 'Bepul maslahat',
     'home.contact.planning': 'To\'liq rejalashtirish',
-    'home.contact.start': 'Sayohatimni boshlash',
-    'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
-    'home.contact.dream_trip': 'Orzuingizdagi sayohat'
   },
   en: {
     'site.title': 'Uzbekistan - Cultural and Travel Guide',
@@ -895,8 +885,6 @@ export const ui = {
     'home.contact.personalized': 'Personalized itineraries',
     'home.contact.consultation': 'Free consultation',
     'home.contact.planning': 'Complete planning',
-    'home.contact.start': 'Start my journey',
-    'home.contact.whatsapp': 'Direct WhatsApp',
     
     // Contact section translations
     'home.contact.title': 'Plan Your Uzbek Adventure',
@@ -907,7 +895,6 @@ export const ui = {
     'home.contact.start': 'Start my journey',
     'home.contact.whatsapp': 'WhatsApp',
     'home.contact.dream_trip': 'My Dream Trip',
-    'home.contact.dream_trip': 'Your dream trip',
     'gallery.share.photos': 'Send photos',
     'gallery.share.review': 'Write review',
     
@@ -969,9 +956,6 @@ export const ui = {
     'home.contact.personalized': 'Personalized itineraries',
     'home.contact.consultation': 'Free consultation',
     'home.contact.planning': 'Complete planning',
-    'home.contact.start': 'Start my journey',
-    'home.contact.whatsapp': 'Direct WhatsApp',
-    'home.contact.dream_trip': 'Your dream trip'
   },
   ru: {
     'site.title': 'Узбекистан - Культурный и туристический гид',
@@ -1217,8 +1201,6 @@ export const ui = {
     'home.contact.personalized': 'Персональные маршруты',
     'home.contact.consultation': 'Бесплатная консультация',
     'home.contact.planning': 'Полное планирование',
-    'home.contact.start': 'Начать мое путешествие',
-    'home.contact.whatsapp': 'Прямой WhatsApp',
     
     // Contact section translations
     'home.contact.title': 'Спланируйте Ваше Узбекское Приключение',
@@ -1229,7 +1211,6 @@ export const ui = {
     'home.contact.start': 'Начать мое путешествие',
     'home.contact.whatsapp': 'WhatsApp',
     'home.contact.dream_trip': 'Путешествие Мечты',
-    'home.contact.dream_trip': 'Путешествие вашей мечты',
     'gallery.share.photos': 'Отправить фото',
     'gallery.share.review': 'Написать отзыв',
     
@@ -1291,8 +1272,5 @@ export const ui = {
     'home.contact.personalized': 'Персональные маршруты',
     'home.contact.consultation': 'Бесплатная консультация',
     'home.contact.planning': 'Полное планирование',
-    'home.contact.start': 'Начать мое путешествие',
-    'home.contact.whatsapp': 'Прямой WhatsApp',
-    'home.contact.dream_trip': 'Путешествие вашей мечты'
   }
 } as const;
