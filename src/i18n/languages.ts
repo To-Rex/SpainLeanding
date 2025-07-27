@@ -842,7 +842,7 @@ export const ui = {
   },
 
     // Communication and Internet
-    'tips.communication.title': 'Aloqa va Internet',
+    //'tips.communication.title': 'Aloqa va Internet',
     'tips.sim.title': 'SIM kartalar',
     'tips.sim.ucell': 'Ucell',
     'tips.sim.ucell_desc': 'Eng yaxshi milliy qamrov',
