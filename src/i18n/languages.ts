@@ -254,7 +254,7 @@ export const ui = {
     'home.contact.planning': 'Planificación completa',
     'home.contact.start': 'Comenzar mi viaje',
     'home.contact.whatsapp': 'WhatsApp directo',
-    'home.contact.dream_trip': 'Mi Viaje Soñado'
+    'home.contact.dream_trip': 'Mi Viaje Soñado',
     'gallery.share.review': 'Escribir reseña',
     
     'contact.title': 'Contacto',
@@ -565,7 +565,7 @@ export const ui = {
     'home.contact.planning': 'To\'liq rejalashtirish',
     'home.contact.start': 'Sayohatimni boshlash',
     'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
-    'home.contact.dream_trip': 'Orzuimdagi Sayohat'
+    'home.contact.dream_trip': 'Orzuimdagi Sayohat',
     'gallery.share.photos': 'Suratlar yuborish',
     'gallery.share.review': 'Sharh yozish',
     
@@ -877,7 +877,7 @@ export const ui = {
     'home.contact.planning': 'Complete planning',
     'home.contact.start': 'Start my journey',
     'home.contact.whatsapp': 'Direct WhatsApp',
-    'home.contact.dream_trip': 'My Dream Trip'
+    'home.contact.dream_trip': 'My Dream Trip',
     'gallery.share.photos': 'Send photos',
     'gallery.share.review': 'Write review',
     
@@ -1189,7 +1189,7 @@ export const ui = {
     'home.contact.planning': 'Полное планирование',
     'home.contact.start': 'Начать мое путешествие',
     'home.contact.whatsapp': 'Прямой WhatsApp',
-    'home.contact.dream_trip': 'Путешествие Мечты'
+    'home.contact.dream_trip': 'Путешествие Мечты',
     'gallery.share.photos': 'Отправить фото',
     'gallery.share.review': 'Написать отзыв',
     
