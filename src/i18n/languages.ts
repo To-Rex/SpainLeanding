@@ -492,7 +492,7 @@ export const ui = {
     'itineraries.phase5_desc': 'Viaje al corazón artesanal de Uzbekistán: talleres de seda en Margilan, cerámica en Rishtan, y paisajes montañosos.',
   },
   uz: {
-    'site.title': 'O\'zbekiston - Ispaniyalik Sayyohlar Uchun Madaniy Qo\'llanma',
+    'tips.communication.title': 'Aloqa va Internet',
     'site.description': 'O\'zbekistonning boy madaniyati, tarixi va an\'analarini kashf eting. Ispaniyalik
   sayyohlar uchun to\'liq qo\'llanma.',
     'nav.home': 'Uy',
