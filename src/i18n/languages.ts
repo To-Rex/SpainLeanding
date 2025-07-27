@@ -34,7 +34,7 @@ export const ui = {
     'home.cta.destinations': 'Ver destinos',
     'home.slider.title': '🏛️ Momentos Únicos',
     'home.slider.desc': 'Descubre los tesoros arquitectónicos y culturales de Uzbekistán',
-    'home.cta.tips': 'Consejos útiles',
+    'home.cta.consultation': 'Obtener Consulta',
     
     'home.slider.title': 'Momentos Únicos',
     'home.slider.desc': 'Cada rincón de Uzbekistán cuenta una historia milenaria',
@@ -535,7 +535,7 @@ export const ui = {
     'home.cta.destinations': 'Yo\'nalishlarni ko\'rish',
     'home.slider.title': '🏛️ Noyob Lahzalar',
     'home.slider.desc': 'O\'zbekistonning me\'moriy va madaniy xazinalarini kashf eting',
-    'home.cta.tips': 'Foydali maslahatlar',
+    'home.cta.consultation': 'Maslahat Olish',
     
     'home.slider.title': 'Noyob Lahzalar',
     'home.slider.desc': 'O\'zbekistonning har bir burchagi ming yillik tarixni hikoya qiladi',
@@ -1039,7 +1039,7 @@ export const ui = {
     'home.cta.destinations': 'View destinations',
     'home.slider.title': '🏛️ Unique Moments',
     'home.slider.desc': 'Discover the architectural and cultural treasures of Uzbekistan',
-    'home.cta.tips': 'Useful tips',
+    'home.cta.consultation': 'Get Consultation',
     
     'home.slider.title': 'Unique Moments',
     'home.slider.desc': 'Every corner of Uzbekistan tells a millenary story',
@@ -1543,7 +1543,7 @@ export const ui = {
     'home.cta.destinations': 'Посмотреть направления',
     'home.slider.title': '🏛️ Уникальные Моменты',
     'home.slider.desc': 'Откройте архитектурные и культурные сокровища Узбекистана',
-    'home.cta.tips': 'Полезные советы',
+    'home.cta.consultation': 'Получить Консультацию',
     
     'home.slider.title': 'Уникальные Моменты',
     'home.slider.desc': 'Каждый уголок Узбекистана рассказывает тысячелетнюю историю',
