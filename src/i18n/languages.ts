@@ -254,6 +254,16 @@ export const ui = {
     'home.contact.planning': 'Planificación completa',
     'home.contact.start': 'Comenzar mi viaje',
     'home.contact.whatsapp': 'WhatsApp directo',
+    
+    // Contact section translations
+    'home.contact.title': 'Planifica tu Aventura Uzbeka',
+    'home.contact.subtitle': 'Creamos experiencias únicas y personalizadas para cada viajero',
+    'home.contact.personalized': 'Itinerarios personalizados',
+    'home.contact.consultation': 'Consulta gratuita',
+    'home.contact.planning': 'Planificación completa',
+    'home.contact.start': 'Comenzar mi viaje',
+    'home.contact.whatsapp': 'WhatsApp',
+    'home.contact.dream_trip': 'Mi Viaje Soñado',
     'gallery.share.photos': 'Enviar fotos',
     'gallery.share.review': 'Escribir reseña',
     
@@ -565,7 +575,17 @@ export const ui = {
     'home.contact.planning': 'To\'liq rejalashtirish',
     'home.contact.start': 'Sayohatimni boshlash',
     'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
+    
+    // Contact section translations
+    'home.contact.title': 'O\'zbek Sarguzashtingizni Rejalashtiring',
+    'home.contact.subtitle': 'Har bir sayohatchi uchun noyob va shaxsiy tajribalar yaratamiz',
+    'home.contact.personalized': 'Shaxsiy marshrutlar',
+    'home.contact.consultation': 'Bepul maslahat',
+    'home.contact.planning': 'To\'liq rejalashtirish',
+    'home.contact.start': 'Sayohatimni boshlash',
+    'home.contact.whatsapp': 'WhatsApp',
     'home.contact.dream_trip': 'Orzuimdagi Sayohat',
+    'home.contact.dream_trip': 'Orzuingizdagi sayohat',
     'gallery.share.photos': 'Foto yuborish',
     'gallery.share.review': 'Sharh yozish',
     
@@ -877,7 +897,17 @@ export const ui = {
     'home.contact.planning': 'Complete planning',
     'home.contact.start': 'Start my journey',
     'home.contact.whatsapp': 'Direct WhatsApp',
+    
+    // Contact section translations
+    'home.contact.title': 'Plan Your Uzbek Adventure',
+    'home.contact.subtitle': 'We create unique and personalized experiences for every traveler',
+    'home.contact.personalized': 'Personalized itineraries',
+    'home.contact.consultation': 'Free consultation',
+    'home.contact.planning': 'Complete planning',
+    'home.contact.start': 'Start my journey',
+    'home.contact.whatsapp': 'WhatsApp',
     'home.contact.dream_trip': 'My Dream Trip',
+    'home.contact.dream_trip': 'Your dream trip',
     'gallery.share.photos': 'Send photos',
     'gallery.share.review': 'Write review',
     
@@ -1189,7 +1219,17 @@ export const ui = {
     'home.contact.planning': 'Полное планирование',
     'home.contact.start': 'Начать мое путешествие',
     'home.contact.whatsapp': 'Прямой WhatsApp',
+    
+    // Contact section translations
+    'home.contact.title': 'Спланируйте Ваше Узбекское Приключение',
+    'home.contact.subtitle': 'Мы создаем уникальные и персонализированные впечатления для каждого путешественника',
+    'home.contact.personalized': 'Персональные маршруты',
+    'home.contact.consultation': 'Бесплатная консультация',
+    'home.contact.planning': 'Полное планирование',
+    'home.contact.start': 'Начать мое путешествие',
+    'home.contact.whatsapp': 'WhatsApp',
     'home.contact.dream_trip': 'Путешествие Мечты',
+    'home.contact.dream_trip': 'Путешествие вашей мечты',
     'gallery.share.photos': 'Отправить фото',
     'gallery.share.review': 'Написать отзыв',
     
