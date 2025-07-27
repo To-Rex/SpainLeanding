@@ -1,6 +1,389 @@
-@@ .. @@
- 	<section class="section contact-form">
- 		<div class="container">
--			<div class="section-content">
-+			<div class="section-content" id="consultation-form">
- 				<div class="form-container">
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
+import ContactForm from '../components/ContactForm.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={t('contact.title')} description={t('contact.subtitle')}>
+	<Navigation />
+	
+	<section class="section hero-contact">
+		<div class="container">
+			<div class="section-content">
+				<h1>{t('contact.title')}</h1>
+				<p class="lead">{t('contact.subtitle')}</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contact-options">
+		<div class="container">
+			<div class="section-content">
+				<div class="contact-grid">
+					<div class="contact-card">
+						<div class="contact-icon">📧</div>
+						<h3>{t('contact.email.title')}</h3>
+						<p>{t('contact.email.desc')}</p>
+						<a href="mailto:umidyusupov258@gmail.com" class="contact-link">umidyusupov258@gmail.com</a>
+						<small>{t('contact.email.response')}</small>
+					</div>
+					
+					<div class="contact-card">
+						<div class="contact-icon">📱</div>
+						<h3>{t('contact.whatsapp.title')}</h3>
+						<p>{t('contact.whatsapp.desc')}</p>
+						<a href="https://wa.me/998910216001" class="contact-link" target="_blank">+998 91 021 60 01</a>
+						<small>{t('contact.whatsapp.hours')}</small>
+					</div>
+					
+					<div class="contact-card">
+						<div class="contact-icon">✈️</div>
+						<h3>{t('contact.telegram.title')}</h3>
+						<p>{t('contact.telegram.desc')}</p>
+						<a href="https://t.me/+998910216001" class="contact-link" target="_blank">+998 91 021 60 01</a>
+						<small>{t('contact.telegram.support')}</small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contact-form">
+		<div class="container">
+			<div class="section-content" id="consultation-form">
+				<div class="form-container">
+					<div class="form-header">
+						<h2>{t('contact.form.title')}</h2>
+						<p>{t('contact.form.desc')}</p>
+					</div>
+					
+					<ContactForm lang={lang} />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section services">
+		<div class="container">
+			<div class="section-content">
+				<h2>{t('contact.services.title')}</h2>
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-icon">🗺️</div>
+						<h3>{t('contact.services.itineraries.title')}</h3>
+						<p>{t('contact.services.itineraries.desc')}</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">🏨</div>
+						<h3>{t('contact.services.accommodation.title')}</h3>
+						<p>{t('contact.services.accommodation.desc')}</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">🚗</div>
+						<h3>{t('contact.services.transport.title')}</h3>
+						<p>{t('contact.services.transport.desc')}</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">👥</div>
+						<h3>{t('contact.services.cultural.title')}</h3>
+						<p>{t('contact.services.cultural.desc')}</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">📋</div>
+						<h3>{t('contact.services.visa.title')}</h3>
+						<p>{t('contact.services.visa.desc')}</p>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">🎯</div>
+						<h3>{t('contact.services.consulting.title')}</h3>
+						<p>{t('contact.services.consulting.desc')}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section faq">
+		<div class="container">
+			<div class="section-content">
+				<h2>{t('contact.faq.title')}</h2>
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>{t('contact.faq.cost.q')}</h3>
+						<p>{t('contact.faq.cost.a')}</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>{t('contact.faq.season.q')}</h3>
+						<p>{t('contact.faq.season.a')}</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>{t('contact.faq.visa_faq.q')}</h3>
+						<p>{t('contact.faq.visa_faq.a')}</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>{t('contact.faq.safety.q')}</h3>
+						<p>{t('contact.faq.safety.a')}</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>{t('contact.faq.language.q')}</h3>
+						<p>{t('contact.faq.language.a')}</p>
+					</div>
+					
+					<div class="faq-item">
+						<h3>{t('contact.faq.duration.q')}</h3>
+						<p>{t('contact.faq.duration.a')}</p>
+					</div>
+				</div>
+				
+				<a href={getLocalizedPath('/', lang)} class="back-to-top">{t('back.home')}</a>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero-contact {
+		background: linear-gradient(135deg, #764BA2 0%, #667EEA 100%);
+		color: white;
+		text-align: center;
+		padding: 8rem 0 5rem;
+	}
+
+	.hero-contact h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		color: white;
+	}
+
+	.lead {
+		font-size: 1.3rem;
+		color: rgba(255, 255, 255, 0.9);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.contact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.contact-card {
+		background: white;
+		padding: 2.5rem;
+		border-radius: 16px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.contact-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.contact-icon {
+		font-size: 3rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-card h3 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.contact-card p {
+		color: #4A5568;
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-link {
+		display: inline-block;
+		color: #D4AF37;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+		transition: color 0.3s ease;
+	}
+
+	.contact-link:hover {
+		color: #B8860B;
+	}
+
+	.contact-card small {
+		color: #718096;
+		font-size: 0.9rem;
+	}
+
+	.contact-form {
+		background: #F8F9FA;
+		padding: 6rem 0;
+	}
+
+	.form-container {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.form-header {
+		text-align: center;
+		margin-bottom: 4rem;
+		position: relative;
+		z-index: 2;
+	}
+
+	.form-header h2 {
+		background: linear-gradient(135deg, #1A365D 0%, #2C5282 50%, #D4AF37 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin-bottom: 1.5rem;
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+		position: relative;
+	}
+
+	.form-header h2::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80px;
+		height: 4px;
+		background: linear-gradient(90deg, #D4AF37, #F7DC6F, #D4AF37);
+		border-radius: 2px;
+		box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+	}
+
+	.form-header p {
+		color: #4A5568;
+		font-size: 1.2rem;
+		line-height: 1.6;
+		max-width: 500px;
+		margin: 0 auto;
+		font-weight: 400;
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.service-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		transition: transform 0.3s ease;
+	}
+
+	.service-card:hover {
+		transform: translateY(-3px);
+	}
+
+	.service-icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.service-card h3 {
+		color: #2C5282;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.service-card p {
+		color: #4A5568;
+		line-height: 1.6;
+	}
+
+	.faq {
+		background: #F8F9FA;
+		padding: 6rem 0;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.faq-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+		border-left: 4px solid #D4AF37;
+	}
+
+	.faq-item h3 {
+		color: #1A365D;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+
+	.faq-item p {
+		color: #4A5568;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	@media (max-width: 768px) {
+		.contact-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.faq-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.form-container {
+			padding: 2.5rem 2rem;
+			margin: 0 1rem;
+		}
+
+		.form-header h2 {
+			font-size: 2rem;
+		}
+
+		.hero-contact h1 {
+			font-size: 2.5rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.form-container {
+			padding: 2rem 1.5rem;
+			margin: 0 0.5rem;
+		}
+
+		.form-header h2 {
+			font-size: 1.8rem;
+		}
+	}
+</style>
