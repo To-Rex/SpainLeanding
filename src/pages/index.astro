@@ -9,8 +9,6 @@ import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-console.log('Lang:', lang);
-console.log('Title:', t('home.contact.title'));
 ---
 
 <Layout title={t('site.title')} description={t('site.description')}>
@@ -20,42 +18,42 @@ console.log('Title:', t('home.contact.title'));
 	<section class="section highlights">
 		<div class="container">
 			<div class="section-content">
-				<h2>{t('home.why_visit')}</h2>
+				<h2>¿Por qué visitar Uzbekistán?</h2>
 				<div class="highlights-grid">
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt={t('home.unesco.title')} />
+							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="UNESCO World Heritage Sites" />
 						</div>
-						<h3>{t('home.unesco.title')}</h3>
-						<p>{t('home.unesco.desc')}</p>
+						<h3>Patrimonio UNESCO</h3>
+						<p>Cuatro sitios declarados Patrimonio de la Humanidad con arquitectura islámica única en el mundo.</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=100&h=100&q=80" alt={t('home.gastronomy.title')} />
+							<img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=100&h=100&q=80" alt="Uzbek Gastronomy" />
 						</div>
-						<h3>{t('home.gastronomy.title')}</h3>
-						<p>{t('home.gastronomy.desc')}</p>
+						<h3>Gastronomía Auténtica</h3>
+						<p>Descubre el verdadero plov, somsa y té tradicional en su lugar de origen.</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=100&h=100&q=80" alt={t('home.easy.title')} />
+							<img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=100&h=100&q=80" alt="Easy Travel" />
 						</div>
-						<h3>{t('home.easy.title')}</h3>
-						<p>{t('home.easy.desc')}</p>
+						<h3>Fácil de Viajar</h3>
+						<p>Sin visa para españoles, tren de alta velocidad y excelente infraestructura turística.</p>
 					</div>
 				</div>
 				
 				<div class="cta-section">
-					<h2>{t('home.cta.title')}</h2>
-					<p>{t('home.cta.desc')}</p>
+					<h2>¿Listo para tu aventura?</h2>
+					<p>Comienza a planificar tu viaje perfecto a Uzbekistán con nuestros expertos locales.</p>
 					<div class="cta-buttons">
-						<a href={getLocalizedPath('/destinos', lang)} class="btn">{t('home.cta.destinations')}</a>
-						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">{t('home.cta.tips')}</a>
+						<a href={getLocalizedPath('/destinos', lang)} class="btn">Ver Destinos</a>
+						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">Consejos de Viaje</a>
 						<a href={getLocalizedPath('/contacto', lang)} class="btn-contact-minimal">
 							<span class="contact-icon">💬</span>
-							<span class="contact-text">{t('nav.contact')}</span>
+							<span class="contact-text">Contacto</span>
 							<span class="contact-arrow">→</span>
 						</a>
 					</div>
@@ -67,62 +65,62 @@ console.log('Title:', t('home.contact.title'));
 	<section class="section image-slider">
 		<div class="container">
 			<div class="section-content">
-				<h2>{t('home.slider.title')}</h2>
-				<p class="slider-description">{t('home.slider.desc')}</p>
+				<h2>🏛️ Momentos Únicos</h2>
+				<p class="slider-description">Descubre los tesoros arquitectónicos y culturales que hacen de Uzbekistán un destino único en Asia Central.</p>
 				
 				<div class="main-slider" id="mainSlider">
 					<div class="slider-container">
 						<div class="slider-slide active">
-							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt={t('slider.registan.title')} />
+							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="Plaza del Registán" />
 							<div class="slide-content">
-								<h3>{t('slider.registan.title')}</h3>
-								<p>{t('slider.registan.desc')}</p>
-								<span class="slide-location">📍 {t('slider.registan.location')}</span>
+								<h3>Plaza del Registán</h3>
+								<p>El corazón de Samarcanda y una de las plazas más hermosas del mundo islámico</p>
+								<span class="slide-location">📍 Samarcanda, Uzbekistán</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://i.pinimg.com/originals/4d/ed/6f/4ded6fb046f27e10c43b843b66c5dc22.jpg" alt={t('slider.khiva.title')} />
+							<img src="https://i.pinimg.com/originals/4d/ed/6f/4ded6fb046f27e10c43b843b66c5dc22.jpg" alt="Ichan-Kala, Khiva" />
 							<div class="slide-content">
-								<h3>{t('slider.khiva.title')}</h3>
-								<p>{t('slider.khiva.desc')}</p>
-								<span class="slide-location">📍 {t('slider.khiva.location')}</span>
+								<h3>Ichan-Kala, Khiva</h3>
+								<p>Ciudad amurallada perfectamente conservada, como un museo al aire libre</p>
+								<span class="slide-location">📍 Khiva, Uzbekistán</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://wallpapers.com/images/hd/khiva-textiles-for-sale-gd2sxjotwxypuyyy.jpg" alt={t('slider.crafts.title')} />
+							<img src="https://wallpapers.com/images/hd/khiva-textiles-for-sale-gd2sxjotwxypuyyy.jpg" alt="Artesanías Tradicionales" />
 							<div class="slide-content">
-								<h3>{t('slider.crafts.title')}</h3>
-								<p>{t('slider.crafts.desc')}</p>
-								<span class="slide-location">📍 {t('slider.crafts.location')}</span>
+								<h3>Artesanías Tradicionales</h3>
+								<p>Textiles de seda, cerámicas y alfombras hechas con técnicas milenarias</p>
+								<span class="slide-location">📍 Valle de Fergana</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://media.vand.ru/tourgallery/123127/ib17300449413337.webp" alt={t('slider.bukhara.title')} />
+							<img src="https://media.vand.ru/tourgallery/123127/ib17300449413337.webp" alt="Centro Histórico de Bukhara" />
 							<div class="slide-content">
-								<h3>{t('slider.bukhara.title')}</h3>
-								<p>{t('slider.bukhara.desc')}</p>
-								<span class="slide-location">📍 {t('slider.bukhara.location')}</span>
+								<h3>Centro Histórico de Bukhara</h3>
+								<p>Más de 140 monumentos arquitectónicos en una ciudad viva y auténtica</p>
+								<span class="slide-location">📍 Bukhara, Uzbekistán</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://i.pinimg.com/736x/c9/76/ae/c976ae20a2064eada0913fbdc0fec064.jpg" alt={t('slider.madrasas.title')} />
+							<img src="https://i.pinimg.com/736x/c9/76/ae/c976ae20a2064eada0913fbdc0fec064.jpg" alt="Madrasas y Mezquitas" />
 							<div class="slide-content">
-								<h3>{t('slider.madrasas.title')}</h3>
-								<p>{t('slider.madrasas.desc')}</p>
-								<span class="slide-location">📍 {t('slider.madrasas.location')}</span>
+								<h3>Madrasas y Mezquitas</h3>
+								<p>Arquitectura islámica con mosaicos turquesa únicos en el mundo</p>
+								<span class="slide-location">📍 Ruta de la Seda</span>
 							</div>
 						</div>
 						
 						<div class="slider-slide">
-							<img src="https://a.d-cd.net/6f5f8804l8c-1920.jpg" alt={t('slider.evening.title')} />
+							<img src="https://a.d-cd.net/6f5f8804l8c-1920.jpg" alt="Atardeceres Mágicos" />
 							<div class="slide-content">
-								<h3>{t('slider.evening.title')}</h3>
-								<p>{t('slider.evening.desc')}</p>
-								<span class="slide-location">📍 {t('slider.evening.location')}</span>
+								<h3>Atardeceres Mágicos</h3>
+								<p>Los monumentos cobran vida con la luz dorada del atardecer</p>
+								<span class="slide-location">📍 Ciudades Históricas</span>
 							</div>
 						</div>
 					</div>
@@ -187,7 +185,7 @@ console.log('Title:', t('home.contact.title'));
 									<span></span>
 									<span></span>
 									<span></span>
-								</div>
+									<div class="card-title">Tu viaje soñado</div>
 								<div class="card-title">{t('home.contact.dream_trip')}</div>
 							</div>
 							<div class="card-content">
@@ -201,26 +199,26 @@ console.log('Title:', t('home.contact.title'));
 								</div>
 								<div class="trip-item">
 									<div class="trip-icon">🕌</div>
-									<div class="trip-text">
+									<span>Itinerarios personalizados</span>
 										<div class="trip-name">Buxoro</div>
 										<div class="trip-duration">2 kun</div>
 									</div>
-									<div class="trip-status">✓</div>
+									<span>Consulta gratuita</span>
 								</div>
 								<div class="trip-item">
 									<div class="trip-icon">🏰</div>
-									<div class="trip-text">
+									<span>Planificación completa</span>
 										<div class="trip-name">Xiva</div>
 										<div class="trip-duration">2 kun</div>
 									</div>
 									<div class="trip-status">⏳</div>
 								</div>
-							</div>
+									<span class="btn-text">Comenzar planificación</span>
 						</div>
-						
-						<div class="floating-elements">
+							<h2 class="contact-title">Planifica tu Aventura Uzbeka</h2>
+							<p class="contact-subtitle">Obtén asesoramiento personalizado para tu viaje perfecto</p>
 							<div class="floating-item item-1">🎨</div>
-							<div class="floating-item item-2">🍽️</div>
+									<span class="btn-text">WhatsApp directo</span>
 							<div class="floating-item item-3">📸</div>
 							<div class="floating-item item-4">🎭</div>
 						</div>
