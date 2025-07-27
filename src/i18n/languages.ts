@@ -20,7 +20,7 @@ export const ui = {
     'hero.plan': 'Planifica tu viaje',
     'hero.explore': 'Explorar cultura',
     
-    // Home page
+    'hero.explore': 'Obtener Consulta',
     'home.why_visit': '¿Por qué visitar Uzbekistán?',
     'home.unesco.title': 'Patrimonio UNESCO',
     'home.unesco.desc': 'Ciudades históricas como Samarkand, Bukhara y Khiva son Patrimonio de la Humanidad.',
@@ -519,7 +519,7 @@ export const ui = {
     'hero.subtitle': 'Markaziy Osiyoning Gavhari',
     'hero.description': 'Ipak yo\'li bo\'ylab noyob sayohat, bu yerda tarix har bir burchakda jonlanadi.',
     'hero.plan': 'Sayohatingizni rejalashtiring',
-    'hero.explore': 'Madaniyatni o\'rganing',
+    'hero.explore': 'Maslahat olish',
     
     // Home page
     'home.why_visit': 'Nega O\'zbekistonni ziyorat qilish kerak?',
@@ -1025,7 +1025,7 @@ export const ui = {
     'hero.plan': 'Plan your trip',
     'hero.explore': 'Explore culture',
     
-    // Home page
+    'hero.explore': 'Get Consultation',
     'home.why_visit': 'Why visit Uzbekistan?',
     'home.unesco.title': 'UNESCO Heritage',
     'home.unesco.desc': 'Historic cities like Samarkand, Bukhara and Khiva are World Heritage Sites.',
@@ -1529,7 +1529,7 @@ export const ui = {
     'hero.plan': 'Планируйте поездку',
     'hero.explore': 'Изучайте культуру',
     
-    // Home page
+    'hero.explore': 'Получить Консультацию',
     'home.why_visit': 'Почему стоит посетить Узбекистан?',
     'home.unesco.title': 'Наследие ЮНЕСКО',
     'home.unesco.desc': 'Исторические города как Самарканд, Бухара и Хива являются объектами Всемирного наследия.',
