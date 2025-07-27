@@ -23,7 +23,7 @@ const t = useTranslations(lang);
 	<section class="section highlights">
 		<div class="container">
 			<div class="section-content">
-				<h2>¿Por qué visitar Uzbekistán?</h2>
+				<h2>{t('home.why_visit')}</h2>
 				<div class="highlights-grid">
 					<div class="highlight-card">
 						<div class="highlight-icon">
@@ -47,11 +47,177 @@ const t = useTranslations(lang);
 				</div>
 				
 				<div class="cta-section">
-					<h3>{t('home.cta.title')}</h3>
+					<h2>{t('home.cta.title')}</h2>
 					<p>{t('home.cta.desc')}</p>
 					<div class="cta-buttons">
 						<a href={getLocalizedPath('/destinos', lang)} class="btn">{t('home.cta.destinations')}</a>
 						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">{t('home.cta.tips')}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section image-slider">
+		<div class="container">
+			<div class="section-content">
+				<h2>{t('home.slider.title')}</h2>
+				<p class="slider-description">{t('home.slider.desc')}</p>
+				
+				<div class="main-slider" id="mainSlider">
+					<div class="slider-container">
+						<div class="slider-slide active">
+							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="Plaza del Registán" />
+							<div class="slide-content">
+								<h3>Plaza del Registán</h3>
+								<p>El corazón de Samarcanda y una de las plazas más hermosas del mundo islámico</p>
+								<span class="slide-location">📍 Samarcanda, Uzbekistán</span>
+							</div>
+						</div>
+						
+						<div class="slider-slide">
+							<img src="https://i.pinimg.com/originals/4d/ed/6f/4ded6fb046f27e10c43b843b66c5dc22.jpg" alt="Ichan-Kala, Khiva" />
+							<div class="slide-content">
+								<h3>Ichan-Kala, Khiva</h3>
+								<p>Ciudad amurallada perfectamente conservada, como un museo al aire libre</p>
+								<span class="slide-location">📍 Khiva, Uzbekistán</span>
+							</div>
+						</div>
+						
+						<div class="slider-slide">
+							<img src="https://wallpapers.com/images/hd/khiva-textiles-for-sale-gd2sxjotwxypuyyy.jpg" alt="Artesanías Tradicionales" />
+							<div class="slide-content">
+								<h3>Artesanías Tradicionales</h3>
+								<p>Textiles de seda, cerámicas y alfombras hechas con técnicas milenarias</p>
+								<span class="slide-location">📍 Valle de Fergana</span>
+							</div>
+						</div>
+						
+						<div class="slider-slide">
+							<img src="https://media.vand.ru/tourgallery/123127/ib17300449413337.webp" alt="Centro Histórico de Bukhara" />
+							<div class="slide-content">
+								<h3>Centro Histórico de Bukhara</h3>
+								<p>Más de 140 monumentos arquitectónicos en una ciudad viva y auténtica</p>
+								<span class="slide-location">📍 Bukhara, Uzbekistán</span>
+							</div>
+						</div>
+						
+						<div class="slider-slide">
+							<img src="https://i.pinimg.com/736x/c9/76/ae/c976ae20a2064eada0913fbdc0fec064.jpg" alt="Madrasas y Mezquitas" />
+							<div class="slide-content">
+								<h3>Madrasas y Mezquitas</h3>
+								<p>Arquitectura islámica con mosaicos turquesa únicos en el mundo</p>
+								<span class="slide-location">📍 Ruta de la Seda</span>
+							</div>
+						</div>
+						
+						<div class="slider-slide">
+							<img src="https://a.d-cd.net/6f5f8804l8c-1920.jpg" alt="Atardeceres Mágicos" />
+							<div class="slide-content">
+								<h3>Atardeceres Mágicos</h3>
+								<p>Los monumentos cobran vida con la luz dorada del atardecer</p>
+								<span class="slide-location">📍 Ciudades Históricas</span>
+							</div>
+						</div>
+					</div>
+					
+					<button class="slider-nav prev" id="prevSlide">‹</button>
+					<button class="slider-nav next" id="nextSlide">›</button>
+					
+					<div class="slider-dots" id="sliderDots"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section contact-cta">
+		<div class="container">
+			<div class="section-content">
+				<div class="contact-hero">
+					<div class="contact-content">
+						<div class="contact-icon-wrapper">
+							<div class="contact-icon">✈️</div>
+							<div class="contact-sparkles">
+								<span class="sparkle">✨</span>
+								<span class="sparkle">⭐</span>
+								<span class="sparkle">💫</span>
+							</div>
+						</div>
+						
+						<h2 class="contact-title">{t('home.contact.title')}</h2>
+						<p class="contact-subtitle">{t('home.contact.subtitle')}</p>
+						
+						<div class="contact-features">
+							<div class="feature-item">
+								<div class="feature-icon">🎯</div>
+								<span>{t('home.contact.personalized')}</span>
+							</div>
+							<div class="feature-item">
+								<div class="feature-icon">💬</div>
+								<span>{t('home.contact.consultation')}</span>
+							</div>
+							<div class="feature-item">
+								<div class="feature-icon">🚀</div>
+								<span>{t('home.contact.planning')}</span>
+							</div>
+						</div>
+						
+						<div class="contact-buttons">
+							<a href={getLocalizedPath('/contacto', lang)} class="btn-contact primary">
+								<span class="btn-text">{t('home.contact.start')}</span>
+								<div class="btn-arrow">→</div>
+							</a>
+							<a href="https://wa.me/998910216001" class="btn-contact secondary" target="_blank">
+								<span class="btn-icon">📱</span>
+								<span class="btn-text">{t('home.contact.whatsapp')}</span>
+							</a>
+						</div>
+					</div>
+					
+					<div class="contact-visual">
+						<div class="visual-card">
+							<div class="card-header">
+								<div class="card-dots">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="card-title">{t('home.contact.dream_trip')}</div>
+							</div>
+							<div class="card-content">
+								<div class="trip-item">
+									<div class="trip-icon">🏛️</div>
+									<div class="trip-text">
+										<div class="trip-name">Samarqand</div>
+										<div class="trip-duration">3 kun</div>
+									</div>
+									<div class="trip-status">✓</div>
+								</div>
+								<div class="trip-item">
+									<div class="trip-icon">🕌</div>
+									<div class="trip-text">
+										<div class="trip-name">Buxoro</div>
+										<div class="trip-duration">2 kun</div>
+									</div>
+									<div class="trip-status">✓</div>
+								</div>
+								<div class="trip-item">
+									<div class="trip-icon">🏰</div>
+									<div class="trip-text">
+										<div class="trip-name">Xiva</div>
+										<div class="trip-duration">2 kun</div>
+									</div>
+									<div class="trip-status">⏳</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="floating-elements">
+							<div class="floating-item item-1">🎨</div>
+							<div class="floating-item item-2">🍽️</div>
+							<div class="floating-item item-3">📸</div>
+							<div class="floating-item item-4">🎭</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -166,3 +332,63 @@ const t = useTranslations(lang);
 		}
 	}
 </style>
+
+<script>
+	// Main page slider functionality
+	let currentMainSlide = 0;
+	const mainSlides = document.querySelectorAll('.slider-slide');
+	const totalMainSlides = mainSlides.length;
+	
+	// Create dots for main slider
+	const mainDotsContainer = document.getElementById('sliderDots');
+	for (let i = 0; i < totalMainSlides; i++) {
+		const dot = document.createElement('div');
+		dot.classList.add('slider-dot');
+		if (i === 0) dot.classList.add('active');
+		dot.addEventListener('click', () => goToMainSlide(i));
+		mainDotsContainer?.appendChild(dot);
+	}
+	
+	const mainDots = document.querySelectorAll('.slider-dot');
+	
+	function showMainSlide(index: number) {
+		mainSlides.forEach((slide, i) => {
+			slide.classList.toggle('active', i === index);
+		});
+		mainDots.forEach((dot, i) => {
+			dot.classList.toggle('active', i === index);
+		});
+	}
+	
+	function nextMainSlide() {
+		currentMainSlide = (currentMainSlide + 1) % totalMainSlides;
+		showMainSlide(currentMainSlide);
+	}
+	
+	function prevMainSlide() {
+		currentMainSlide = (currentMainSlide - 1 + totalMainSlides) % totalMainSlides;
+		showMainSlide(currentMainSlide);
+	}
+	
+	function goToMainSlide(index: number) {
+		currentMainSlide = index;
+		showMainSlide(currentMainSlide);
+	}
+	
+	// Event listeners for main slider
+	document.getElementById('nextSlide')?.addEventListener('click', nextMainSlide);
+	document.getElementById('prevSlide')?.addEventListener('click', prevMainSlide);
+	
+	// Auto-play main slider
+	let mainAutoPlay = setInterval(nextMainSlide, 4000);
+	
+	// Pause on hover for main slider
+	const mainSlider = document.getElementById('mainSlider');
+	mainSlider?.addEventListener('mouseenter', () => {
+		clearInterval(mainAutoPlay);
+	});
+	
+	mainSlider?.addEventListener('mouseleave', () => {
+		mainAutoPlay = setInterval(nextMainSlide, 4000);
+	});
+</script>

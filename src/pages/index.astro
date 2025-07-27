@@ -18,39 +18,39 @@ const t = useTranslations(lang);
 	<section class="section highlights">
 		<div class="container">
 			<div class="section-content">
-				<h2>¿Por qué visitar Uzbekistán?</h2>
+				<h2>{t('home.why_visit')}</h2>
 				<div class="highlights-grid">
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="UNESCO World Heritage Sites" />
+							<img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/5b/23/f7/caption.jpg?w=1200&h=1200&s=1" alt="Registan Square UNESCO Heritage" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
 						</div>
-						<h3>Patrimonio UNESCO</h3>
-						<p>Cuatro sitios declarados Patrimonio de la Humanidad con arquitectura islámica única en el mundo.</p>
+						<h3>{t('home.unesco.title')}</h3>
+						<p>{t('home.unesco.desc')}</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=100&h=100&q=80" alt="Uzbek Gastronomy" />
+							<div class="highlight-icon">🍽️</div>
 						</div>
-						<h3>Gastronomía Auténtica</h3>
-						<p>Descubre el verdadero plov, somsa y té tradicional en su lugar de origen.</p>
+						<h3>{t('home.gastronomy.title')}</h3>
+						<p>{t('home.gastronomy.desc')}</p>
 					</div>
 					
 					<div class="highlight-card">
 						<div class="highlight-icon">
-							<img src="https://images.unsplash.com/photo-1590736969955-71cc94901144?auto=format&fit=crop&w=100&h=100&q=80" alt="Easy Travel" />
+							<div class="highlight-icon">🚗</div>
 						</div>
-						<h3>Fácil de Viajar</h3>
-						<p>Sin visa para españoles, tren de alta velocidad y excelente infraestructura turística.</p>
+						<h3>{t('home.easy.title')}</h3>
+						<p>{t('home.easy.desc')}</p>
 					</div>
 				</div>
 				
 				<div class="cta-section">
-					<h2>¿Listo para tu aventura?</h2>
-					<p>Comienza a planificar tu viaje perfecto a Uzbekistán con nuestros expertos locales.</p>
+					<h3>{t('home.cta.title')}</h3>
+					<p>{t('home.cta.desc')}</p>
 					<div class="cta-buttons">
-						<a href={getLocalizedPath('/destinos', lang)} class="btn">Ver Destinos</a>
-						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">Consejos de Viaje</a>
+						<a href={getLocalizedPath('/destinos', lang)} class="btn">{t('home.cta.destinations')}</a>
+						<a href={getLocalizedPath('/consejos', lang)} class="btn btn-outline">{t('home.cta.tips')}</a>
 						<a href={getLocalizedPath('/contacto', lang)} class="btn-contact-minimal">
 							<span class="contact-icon">💬</span>
 							<span class="contact-text">Contacto</span>
@@ -65,8 +65,8 @@ const t = useTranslations(lang);
 	<section class="section image-slider">
 		<div class="container">
 			<div class="section-content">
-				<h2>🏛️ Momentos Únicos</h2>
-				<p class="slider-description">Descubre los tesoros arquitectónicos y culturales que hacen de Uzbekistán un destino único en Asia Central.</p>
+				<h2>{t('home.slider.title')}</h2>
+				<p class="slider-description">{t('home.slider.desc')}</p>
 				
 				<div class="main-slider" id="mainSlider">
 					<div class="slider-container">
@@ -185,40 +185,28 @@ const t = useTranslations(lang);
 									<span></span>
 									<span></span>
 									<span></span>
-									<div class="card-title">Tu viaje soñado</div>
+								</div>
 								<div class="card-title">{t('home.contact.dream_trip')}</div>
 							</div>
 							<div class="card-content">
 								<div class="trip-item">
 									<div class="trip-icon">🏛️</div>
-									<div class="trip-text">
-										<div class="trip-name">Samarqand</div>
-										<div class="trip-duration">3 kun</div>
+									<span>{t('home.contact.personalized')}</span>
 									</div>
-									<div class="trip-status">✓</div>
-								</div>
 								<div class="trip-item">
 									<div class="trip-icon">🕌</div>
-									<span>Itinerarios personalizados</span>
-										<div class="trip-name">Buxoro</div>
-										<div class="trip-duration">2 kun</div>
-									</div>
-									<span>Consulta gratuita</span>
+									<span>{t('home.contact.consultation')}</span>
 								</div>
 								<div class="trip-item">
 									<div class="trip-icon">🏰</div>
-									<span>Planificación completa</span>
-										<div class="trip-name">Xiva</div>
-										<div class="trip-duration">2 kun</div>
-									</div>
-									<div class="trip-status">⏳</div>
+									<span>{t('home.contact.planning')}</span>
 								</div>
-									<span class="btn-text">Comenzar planificación</span>
+							</div>
 						</div>
-							<h2 class="contact-title">Planifica tu Aventura Uzbeka</h2>
-							<p class="contact-subtitle">Obtén asesoramiento personalizado para tu viaje perfecto</p>
+						
+						<div class="floating-elements">
 							<div class="floating-item item-1">🎨</div>
-									<span class="btn-text">WhatsApp directo</span>
+							<div class="floating-item item-2">🍽️</div>
 							<div class="floating-item item-3">📸</div>
 							<div class="floating-item item-4">🎭</div>
 						</div>
