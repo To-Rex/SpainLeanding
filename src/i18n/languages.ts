@@ -493,8 +493,7 @@ export const ui = {
   },
   uz: {
     'tips.communication.title': 'Aloqa va Internet',
-    'site.description': 'O\'zbekistonning boy madaniyati, tarixi va an\'analarini kashf eting. Ispaniyalik
-  sayyohlar uchun to\'liq qo\'llanma.',
+    'site.description': 'O\'zbekistonning boy madaniyati, tarixi va an\'analarini kashf eting. Ispaniyalik sayyohlar uchun to\'liq qo\'llanma.',
     'nav.home': 'Uy',
     'nav.culture': 'Madaniyat',
     'nav.destinations': 'Yo\'nalishlar',
