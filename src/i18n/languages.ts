@@ -346,6 +346,16 @@ export const ui = {
     
     // Common
     'back.home': 'Volver al inicio',
+    
+    // Contact CTA section
+    'home.contact.title': 'Planifica tu Aventura Uzbeka',
+    'home.contact.subtitle': 'Obtén asesoramiento personalizado para tu viaje perfecto',
+    'home.contact.personalized': 'Itinerarios personalizados',
+    'home.contact.consultation': 'Consulta gratuita',
+    'home.contact.planning': 'Planificación completa',
+    'home.contact.start': 'Comenzar planificación',
+    'home.contact.whatsapp': 'WhatsApp directo',
+    'home.contact.dream_trip': 'Tu viaje soñado',
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
@@ -835,6 +845,16 @@ export const ui = {
     
     // Common
     'back.home': 'Bosh sahifaga qaytish',
+    
+    // Contact CTA section
+    'home.contact.title': 'O\'zbekiston Sarguzashtingizni Rejalashtiring',
+    'home.contact.subtitle': 'Mukammal sayohatingiz uchun shaxsiy maslahat oling',
+    'home.contact.personalized': 'Shaxsiy marshrutlar',
+    'home.contact.consultation': 'Bepul maslahat',
+    'home.contact.planning': 'To\'liq rejalashtirish',
+    'home.contact.start': 'Rejalashtirishni boshlash',
+    'home.contact.whatsapp': 'To\'g\'ridan-to\'g\'ri WhatsApp',
+    'home.contact.dream_trip': 'Orzuingizdagi sayohat',
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
@@ -1327,6 +1347,16 @@ export const ui = {
     
     // Common
     'back.home': 'Back to home',
+    
+    // Contact CTA section
+    'home.contact.title': 'Plan Your Uzbekistan Adventure',
+    'home.contact.subtitle': 'Get personalized advice for your perfect trip',
+    'home.contact.personalized': 'Personalized itineraries',
+    'home.contact.consultation': 'Free consultation',
+    'home.contact.planning': 'Complete planning',
+    'home.contact.start': 'Start planning',
+    'home.contact.whatsapp': 'Direct WhatsApp',
+    'home.contact.dream_trip': 'Your dream trip',
     'languages.es': 'Español',
     'languages.uz': 'O\'zbekcha',
     'languages.en': 'English',
@@ -1732,6 +1762,16 @@ export const ui = {
     'gallery.share.photos': 'Отправить фото',
     'gallery.share.review': 'Написать отзыв',
     
+    
+    // Contact CTA section
+    'home.contact.title': 'Спланируйте Ваше Приключение в Узбекистане',
+    'home.contact.subtitle': 'Получите персональные советы для идеального путешествия',
+    'home.contact.personalized': 'Персональные маршруты',
+    'home.contact.consultation': 'Бесплатная консультация',
+    'home.contact.planning': 'Полное планирование',
+    'home.contact.start': 'Начать планирование',
+    'home.contact.whatsapp': 'Прямой WhatsApp',
+    'home.contact.dream_trip': 'Путешествие вашей мечты',
     // Contact page
     'contact.title': 'Свяжитесь с Нами',
     'contact.subtitle': 'Получите персональные советы для поездки в Узбекистан',
